@@ -1,5 +1,5 @@
 <div class="certificate__container">
-    <div class="certificate__content">
+    <div>
         <h1 class="content__title">
             Gerador de certificados
         </h1>
@@ -7,113 +7,146 @@
             Você pode criar certificados personalizados de forma rápida e fácil de para reconhecimento e autenticação.
         </p>
     </div>
-    <form>
-        <div>
-            <div>
-                <h3>1. Selecione o tipo de certificado:</h3>
-                <ul>
-                    <li>
-                        <input type="radio" name="type" id="participation">
-                        <label for="participation">Participação</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="type" id="speaker">
-                        <label for="speaker">Palestrante</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="type" id="course">
-                        <label for="course">Curso</label>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3>
-                    2.Preencha as informações do certificado
-                </h3>
-                <div>
-                    <label for="worksheet">
-                        Nomes dos(as) participantes:
-                    </label>
-                    <input type="file" name="worksheet" id="worksheet" accept=".csv" />
+    <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form__container">
+            <div class="certificate__content">
+                <div class="form-group">
+                    <h3>1. Selecione o tipo de certificado:</h3>
+                    <ul class="form-group__content">
+                        <li>
+                            <label for="participation" class="content__name">
+                                Participação
+                                <input type="radio" checked value="PARTICIPATION" name="certificateTypeEnum"
+                                    formControlName="certificateTypeEnum" id="participation">
+                            </label>
+                        </li>
+                        <li>
+                            <label for="speaker" class="content__name">
+                                <input type="radio" value="SPEAKER" name="certificateTypeEnum"
+                                    formControlName="certificateTypeEnum" id="speaker">
+                                Palestrante
+                            </label>
+                        </li>
+                        <li>
+                            <label for="course" class="content__name">
+                                <input type="radio" value="COURCE" name="certificateTypeEnum"
+                                    formControlName="certificateTypeEnum" id="course">
+                                Curso
+                            </label>
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <label for="eventName">
-                        Nome do evento/curso:
-                    </label>
-                    <input type="text" id="eventName" placeholder="Primeiros socorros">
-                </div>
-                <div>
-                    <label for="speakerName">
-                        Nome do(a) organizador(a):
-                    </label>
-                    <input type="text" id="speakerName" placeholder="José Maria">
-                </div>
+                <div class="form-group">
+                    <h3>
+                        2. Preencha as informações do certificado
+                    </h3>
+                    <div class="form-group__content">
+                        <label class="content__name" class="content__name" for="worksheet">
+                            Nomes dos(as) participantes:
+                        </label>
+                        <input type="file" name="worksheet" (change)="onChange($event)" id="worksheet" accept=".csv" />
+                    </div>
+                    <div class="form-group__content">
+                        <label class="content__name" for="eventName">
+                            Nome do evento/curso:
+                        </label>
+                        <input class="content__input" class="content__input" type="text" id="eventName"
+                            formControlName="eventName" placeholder="Primeiros socorros">
+                    </div>
+                    <div class="form-group__content">
+                        <label class="content__name" for="speakerName">
+                            Nome do(a) organizador(a):
+                        </label>
+                        <input class="content__input" type="text" id="speakerName" formControlName="speakerName"
+                            placeholder="José Maria">
+                    </div>
 
-                <div>
-                    <label for="speakerRole">
-                        Cargo do(a) organizador(a):
-                    </label>
-                    <input type="text" id="speakerRole" placeholder="Diretor">
-                </div>
-                <div>
-                    <label for="eventWorkLoad">
-                        Carga horária:
-                    </label>
-                    <input type="text" id="eventWorkLoad" placeholder="120 horas">
-                </div>
-                <div>
-                    <label for="eventDate">
-                        Data do evento/curso:
-                    </label>
-                    <input type="date"  id="eventDate" placeholder="22-03-2022">
-                </div>
-                <div>
-                    <label for="dateIssue">
+                    <div class="form-group__content">
+                        <label class="content__name" for="speakerRole">
+                            Cargo do(a) organizador(a):
+                        </label>
+                        <input class="content__input" type="text" id="speakerRole" formControlName="speakerRole"
+                            placeholder="Diretor">
+                    </div>
+                    <div class="form-group__content">
+                        <label class="content__name" for="eventWorkLoad">
+                            Carga horária:
+                        </label>
+                        <input class="content__input" type="text" id="eventWorkLoad" formControlName="eventWorkLoad"
+                            placeholder="120 horas">
+                    </div>
+                    <div class="form-group__content">
+                        <label class="content__name" for="eventDate">
+                            Data do evento/curso:
+                        </label>
+                        <input class="content__input" type="text" id="eventDate" formControlName="eventDate"
+                            placeholder="22-03-2022">
+                    </div>
+                    <!-- <div>
+                    <label class="content__name" for="dateIssue">
                         Data de emissão do certificado:
                     </label>
-                    <input type="date"  id="dateIssue" placeholder="28-06-2022">
-                </div>
-                <div>
-                    <label for="eventLocale">
-                        Local de emissão do certificado:
-                    </label>
-                    <input type="text" id="eventLocale" placeholder="São Paulo - SP">
+                    <input class="content__input" type="text"  id="dateIssue" formControlName="dateIssue" placeholder="28-06-2022">
+                </div> -->
+                    <div class="form-group__content">
+                        <label class="content__name" for="eventLocale">
+                            Local de emissão do certificado:
+                        </label>
+                        <input class="content__input" type="text" id="eventLocale" formControlName="eventLocale"
+                            placeholder="São Paulo - SP">
+                    </div>
                 </div>
             </div>
 
-            <div class="certificate-model__container">
-                <h3>
-                    Escolha o modelo do certificado:
-                </h3>
-                <ul>
-                    <li>
-                        <label for="firstModel">Certificado 1</label>
-                        <input type="radio" id="firstModel" name="model">
-                    </li>
-                    <li>
-                        <label for="secondModel">Certificado 2</label>
-                        <input type="radio" id="secondModel" name="model">
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3>Previsualização do Certificado</h3>
+            <div class="certificate__model">
+
+                <div class="form-group">
+                    <h3>
+                        3. Escolha o modelo do certificado:
+                    </h3>
+                    <ul class="form-group__content">
+                        <li class="">
+                            <label for="firstModel" class="content__name">
+                                Certificado 1
+                                <div>
+
+                                </div>
+                                <input type="radio" id="firstModel" value="1" formControlName="certificateModelId"
+                                    name="certificateModelId">
+                            </label>
+                        </li>
+                        <li >
+                            <label for="secondModel" class="content__name">
+                                Certificado 2
+                                <input type="radio" id="secondModel" value="2" formControlName="certificateModelId"
+                                    name="certificateModelId">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
                 <div class="certificate-preview__container">
-                    <p>
-                        Certificamos que <span>[Nome do Participante]</span> participou do evento <span>[Nome do Evento]</span>, realizado no dia
-                        <span>[Data do Evento]</span>, com uma carga horária total de <span>[Carga Horária]</span> horas.
-                        Este certificado é concedido como reconhecimento pela dedicação e comprometimento de <span>[Nome do Participante]</span>
-                        em aprimorar suas habilidades e conhecimentos na área abordada pelo evento.
-                        Local/Data: <span>[Local de Emissão do Certificado]</span>, <span>[Data de Emissão do Certificado]</span>.
-                        Assinatura: <span>[Nome do Organizador]</span>
-                        Cargo: <span>[Cargo do Organizador]</span>
-                    </p>
+                    <h3>Previsualização do Certificado</h3>
+                    <div class="certificate-preview__content">
+                        <p class="certificate__preview">
+                            Certificamos que <span class="highlight">[Nome do Participante]</span> participou do evento
+                            <span class="highlight">[Nome do Evento]</span>, realizado no dia
+                            <span class="highlight">[Data do Evento]</span>, com uma carga horária total de <span
+                                class="highlight">[Carga Horária]</span> horas.
+                            Este certificado é concedido como reconhecimento pela dedicação e comprometimento de <span
+                                class="highlight">[Nome do Participante]</span>
+                            em aprimorar suas habilidades e conhecimentos na área abordada pelo evento.
+                            Local/Data: <span class="highlight">[Local de Emissão do Certificado]</span>, <span
+                                class="highlight">[Data de Emissão do Certificado]</span>.
+                            Assinatura: <span class="highlight">[Nome do Organizador]</span>
+                            Cargo: <span class="highlight">[Cargo do Organizador]</span>
+                        </p>
 
+                    </div>
                 </div>
             </div>
         </div>
-        <app-button-download />
+        <app-button-download (submitEmitter)="submit" />
     </form>
-    <app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'"/>
-    <app-buttons-homer-help [iconName]="'undo'" [idName]="'button-home'" [routerName]="'/home'"/>
 </div>
+<app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'" />
+<app-buttons-homer-help [iconName]="'undo'" [idName]="'button-home'" [routerName]="'/home'" />

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button-download',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./button-download.component.css']
 })
 export class ButtonDownloadComponent {
+
+  @Output() submitEmitter = new EventEmitter<any>();
+
+
+  onSubmit(){
+    this.submitEmitter.emit();
+  }
 
 }
