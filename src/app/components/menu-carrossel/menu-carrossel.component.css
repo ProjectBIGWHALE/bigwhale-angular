@@ -25,11 +25,11 @@
     justify-content: space-between;
 }
   
-.carrossel {
-    display: flex;
-    
-    
+.cards{
+  display: flex;
+  flex-direction: row;
 }
+
 
 .setas button {
     background-color: transparent;

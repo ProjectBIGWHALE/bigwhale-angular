@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CardModel } from 'src/app/models/cardModel';
 
 @Component({
   selector: 'app-menu-carrossel',
@@ -9,5 +10,9 @@ export class MenuCarrosselComponent {
 
   @Input()
   title:string =''
+
+  @Input()
+  cards: CardModel[] =[
+  ] 
 
 }
