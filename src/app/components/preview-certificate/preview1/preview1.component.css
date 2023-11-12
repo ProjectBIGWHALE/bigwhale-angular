@@ -1,0 +1,50 @@
+.first-model__container{
+    background-image: url('/assets/images/clean_certificado_1.png');
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.first-model__container .space{
+    width: 20%;
+}
+
+.first-model__content{
+    position: relative;
+    width: 80%;
+    font-size: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.first-model__content .title,.first-model__content .speaker{
+    font-weight: 600;
+    position: absolute;
+    font-size: 83%;
+}
+
+.first-model__content .title{
+    color: #fff;
+}
+
+.first-model__content .description{
+    font-size: 72%;
+    position: absolute;
+}
+
+
+.first-model__content .place-date{
+    position: absolute;
+    font-size: 60%;
+}
+
+.first-model__content .speaker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

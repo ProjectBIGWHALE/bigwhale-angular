@@ -1,0 +1,19 @@
+.preview__container{
+    width: 100%;
+    height: 100%;
+}
+
+.highlight{
+    font-size: 110%;
+    font-weight: 600;
+}
+
+
+.preview1__wrapper, .preview2__wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.none{
+    display: none;
+}

@@ -38,7 +38,7 @@ export class CertificateService{
 
     }
 
-    getDateIssue():string {
+    private getDateIssue():string {
         const date = new Date();
         const day = date.getDate();
         const month = date.getMonth() + 1;

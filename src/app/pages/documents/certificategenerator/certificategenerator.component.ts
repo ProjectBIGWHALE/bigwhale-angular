@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Certificate } from 'src/app/models/Certificate.interface';
 import { CertificateService } from 'src/app/services/certificate.service';
 
 @Component({
   selector: 'app-certificategenerator',
   templateUrl: './certificategenerator.component.html',
-  styleUrls: ['./certificategenerator.component.css'],
+  styleUrls: ['./certificategenerator.component.css', './certificategenerator.responsive.component.css'],
 })
 export class CertificategeneratorComponent implements OnInit {
   form!: FormGroup;
@@ -15,19 +15,20 @@ export class CertificategeneratorComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private certificateService: CertificateService) {}
 
+
   ngOnInit(): void {
     this.form = this.fb.group({
-      certificateTypeEnum: [''],
-      worksheet: [''],
-      eventName: [''],
-      speakerName: [''],
-      speakerRole: [''],
-      eventWorkLoad: [''],
-      eventDate: [''],
+      certificateTypeEnum: ['PARTICIPATION', Validators['required']],
+      worksheet: ['', Validators['required']],
+      eventName: ['', Validators['required']],
+      speakerName: ['', Validators['required']],
+      speakerRole: ['', Validators['required']],
+      eventWorkLoad: ['', Validators['required']],
+      eventDate: ['', Validators['required']],
       dateIssue: [''],
-      eventLocale: [''],
-      certificateModelId: [''],
-    });
+      eventLocale: ['', Validators['required']],
+      certificateModelId: ['1', Validators['required']],
+    }); 
   }
 
   onChange(event: any): void{
@@ -36,6 +37,11 @@ export class CertificategeneratorComponent implements OnInit {
       worksheet: selectedFile,
      });
   }
+
+  // onChangeCertificate(event: string){
+  //   return this.certificateId = event;
+    
+  // }
 
   submit(){
     
@@ -48,7 +54,7 @@ export class CertificategeneratorComponent implements OnInit {
           const url = window.URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;
-          link.download = 'certificates.zip'; // Nome do arquivo de download
+          link.download = 'certificados.zip'; // Nome do arquivo de download
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);

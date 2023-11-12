@@ -9,14 +9,14 @@
     </div>
     <form class="form" [formGroup]="form" (ngSubmit)="submit()">
         <div class="form__container">
-            <div class="certificate__content">
-                <div class="form-group">
+            <div class="certificate__content ga-data">
+                <div class="form-group ga-type">
                     <h3>1. Selecione o tipo de certificado:</h3>
                     <ul class="form-group__content">
                         <li>
                             <label for="participation" class="content__name">
                                 Participação
-                                <input type="radio" checked value="PARTICIPATION" name="certificateTypeEnum"
+                                <input type="radio"  value="PARTICIPATION" name="certificateTypeEnum"
                                     formControlName="certificateTypeEnum" id="participation">
                             </label>
                         </li>
@@ -36,7 +36,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="form-group">
+                <div class="form-group ga-form">
                     <h3>
                         2. Preencha as informações do certificado
                     </h3>
@@ -98,9 +98,8 @@
                 </div>
             </div>
 
-            <div class="certificate__model">
-
-                <div class="form-group">
+            <div class="certificate__model ga-model">
+                <div class="form-group ga-select">
                     <h3>
                         3. Escolha o modelo do certificado:
                     </h3>
@@ -108,44 +107,35 @@
                         <li class="">
                             <label for="firstModel" class="content__name">
                                 Certificado 1
-                                <div>
-
-                                </div>
-                                <input type="radio" id="firstModel" value="1" formControlName="certificateModelId"
-                                    name="certificateModelId">
+                                <input type="radio" id="firstModel" checked value="1" formControlName="certificateModelId"
+                                name="certificateModelId">
                             </label>
                         </li>
                         <li >
                             <label for="secondModel" class="content__name">
                                 Certificado 2
                                 <input type="radio" id="secondModel" value="2" formControlName="certificateModelId"
-                                    name="certificateModelId">
+                                name="certificateModelId">
                             </label>
                         </li>
                     </ul>
                 </div>
-                <div class="certificate-preview__container">
+                <div class="certificate-preview__container ga-preview">
                     <h3>Previsualização do Certificado</h3>
                     <div class="certificate-preview__content">
-                        <p class="certificate__preview">
-                            Certificamos que <span class="highlight">[Nome do Participante]</span> participou do evento
-                            <span class="highlight">[Nome do Evento]</span>, realizado no dia
-                            <span class="highlight">[Data do Evento]</span>, com uma carga horária total de <span
-                                class="highlight">[Carga Horária]</span> horas.
-                            Este certificado é concedido como reconhecimento pela dedicação e comprometimento de <span
-                                class="highlight">[Nome do Participante]</span>
-                            em aprimorar suas habilidades e conhecimentos na área abordada pelo evento.
-                            Local/Data: <span class="highlight">[Local de Emissão do Certificado]</span>, <span
-                                class="highlight">[Data de Emissão do Certificado]</span>.
-                            Assinatura: <span class="highlight">[Nome do Organizador]</span>
-                            Cargo: <span class="highlight">[Cargo do Organizador]</span>
-                        </p>
-
+                        <app-preview-certificate [certificateId]="form.value.certificateModelId"
+                        [eventDate]="form.value.eventDate"
+                        [eventWorkLoad]="form.value.eventWorkLoad"
+                        [eventDate]="form.value.eventDate"
+                        [eventName]="form.value.eventName"
+                        [speakerName]="form.value.speakerName"
+                        [speakerRole]="form.value.speakerRole"
+                        />
                     </div>
                 </div>
             </div>
         </div>
-        <app-button-download (submitEmitter)="submit" />
+        <app-button-download (submitEmitter)="submit" [isBtnValid]="form.valid" />
     </form>
 </div>
 <app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'" />

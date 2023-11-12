@@ -1,0 +1,35 @@
+
+<div #certificate1 class="first-model__container" id="previewFirstModel">
+    <div class="space"></div>
+    <div class="first-model__content">
+        <div class="title" id="previewTitle1">
+            {{eventName || '[Nome do Evento]'}}
+        </div>
+        <div class="description" id="previewDescription1">
+            <p [ngStyle]="{'margin-bottom': '4px'}">
+                <span [ngStyle]="{'margin-left': '15px'}"> Certificamos</span> que <span class="highlight">
+                [Nome do Aluno(a)]</span> participou do evento <span class="highlight">{{eventName || '[Nome do Evento]'}}</span>
+                realizado no dia <span class="highlight">{{eventDate || '[Data do Evento]'}}</span>, com uma carga horária total
+                de
+                <span class="highlight">{{eventWorkLoad || '[Carga Horária]'}}</span>.
+            </p>
+            <p>
+                Este certificado é concedido como reconhecimento pela dedicação
+                e comprometimento de <span class="highlight">[Nome do Aluno(a)]</span> em aprimorar suas
+                habilidades e conhecimentos na área abordada pelo evento.
+            </p>
+        </div>
+        <div class="place-date" id="previewPlaceDate1">
+            <span class="highlight">
+                {{eventLocale || '[Local do Evento]'}}
+            </span>
+            <span class="highlight">
+                {{eventDate || '[Data do Evento]'}}
+            </span>
+        </div>
+        <div class="speaker" id="previewSpeaker1">
+            <p class="highlight subtitle">{{speakerName || '[organizador(a)]'}}</p>
+            <p class="highlight subtitle">{{speakerRole || '[Cargo do Organizador]'}}</p>
+        </div>
+    </div>
+</div>
