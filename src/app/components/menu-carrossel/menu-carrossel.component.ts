@@ -18,6 +18,12 @@ export class MenuCarrosselComponent {
   @Input()
   cards: CardModel[] =[] 
 
+  cardLenth:number = 0
+
+  numberCards:number =0
+
+
+  
 
 
   @ViewChild("sliderRef")
@@ -28,9 +34,19 @@ export class MenuCarrosselComponent {
  
 
   ngAfterViewInit() {
+
+    // this.cardLenth = this.cards.length
+    // if(this.cardLenth >= 4){
+    //     this.numberCards = 3
+    // }else if(this.cardLenth >= 3){
+    //   this.numberCards = 2
+    // }
+  
+  console.log(this.numberCards)
+
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
-      rtl: false,
+      rtl: true,
       slides: {
         perView: 4,
         spacing: 1,
