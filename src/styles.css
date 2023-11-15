@@ -51,3 +51,20 @@ input[type="text"], input[type="email"]{
 ul{
     list-style: none;
 }
+
+.danger{
+    color: #F00;
+}
+
+.enabled {
+    /* text-decoration: none; */
+    background: var(--label-color);
+    color: #fff;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.enabled:hover{
+    transition: 400ms ease;
+    background-color: #17a7a7;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+}

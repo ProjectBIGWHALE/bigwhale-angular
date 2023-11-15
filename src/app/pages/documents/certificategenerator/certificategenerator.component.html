@@ -16,7 +16,7 @@
                         <li>
                             <label for="participation" class="content__name">
                                 Participação
-                                <input type="radio"  value="PARTICIPATION" name="certificateTypeEnum"
+                                <input type="radio" value="PARTICIPATION" name="certificateTypeEnum"
                                     formControlName="certificateTypeEnum" id="participation">
                             </label>
                         </li>
@@ -41,10 +41,17 @@
                         2. Preencha as informações do certificado
                     </h3>
                     <div class="form-group__content">
-                        <label class="content__name" class="content__name" for="worksheet">
-                            Nomes dos(as) participantes:
+                        <label class="content__name label-file"for="worksheet">
+                            <span>Adicionar arquivo com os nomes dos participantes</span>
+                            <button *ngIf="!form.value.worksheet" class="btn-file enabled" type="button" (click)="onClick()">Arquivo csv</button>
+                            <span class="btn-file enabled" *ngIf="form.value.worksheet">
+                                Arquivo selecionado: {{form.value.worksheet.name}}
+                            </span>
                         </label>
-                        <input type="file" name="worksheet" (change)="onChange($event)" id="worksheet" accept=".csv" />
+                        <div class="danger" *ngIf="fieldValidator('eventName')">
+                            <small>Selecione o arquivo</small>
+                        </div>
+                        <input type="file" name="worksheet" (change)="onChange($event)" style="display: none;" id="worksheet" accept=".csv" />
                     </div>
                     <div class="form-group__content">
                         <label class="content__name" for="eventName">
@@ -52,6 +59,9 @@
                         </label>
                         <input class="content__input" class="content__input" type="text" id="eventName"
                             formControlName="eventName" placeholder="Primeiros socorros">
+                        <div class="danger" *ngIf="fieldValidator('eventName')">
+                            <small>Nome do evento é obrigatório</small>
+                        </div>
                     </div>
                     <div class="form-group__content">
                         <label class="content__name" for="speakerName">
@@ -59,6 +69,9 @@
                         </label>
                         <input class="content__input" type="text" id="speakerName" formControlName="speakerName"
                             placeholder="José Maria">
+                        <div class="danger" *ngIf="fieldValidator('speakerName')">
+                            <small>Nome do organizador é obrigatório</small>
+                        </div>
                     </div>
 
                     <div class="form-group__content">
@@ -66,21 +79,30 @@
                             Cargo do(a) organizador(a):
                         </label>
                         <input class="content__input" type="text" id="speakerRole" formControlName="speakerRole"
-                            placeholder="Diretor">
+                            placeholder="Diretor" />
+                        <div class="danger" *ngIf="fieldValidator('speakerRole')">
+                            <small>Cargo do organizador é obrigatório</small>
+                        </div>
                     </div>
                     <div class="form-group__content">
                         <label class="content__name" for="eventWorkLoad">
                             Carga horária:
                         </label>
                         <input class="content__input" type="text" id="eventWorkLoad" formControlName="eventWorkLoad"
-                            placeholder="120 horas">
+                            placeholder="120 horas" />
+                        <div class="danger" *ngIf="fieldValidator('eventWorkLoad')">
+                            <small>Carga Horária é obrigatória</small>
+                        </div>
                     </div>
                     <div class="form-group__content">
                         <label class="content__name" for="eventDate">
                             Data do evento/curso:
                         </label>
                         <input class="content__input" type="text" id="eventDate" formControlName="eventDate"
-                            placeholder="22-03-2022">
+                            placeholder="22-03-2022"/>
+                            <div class="danger" *ngIf="fieldValidator('eventDate')">
+                                <small>Data do evento é obrigatória</small>
+                            </div>
                     </div>
                     <!-- <div>
                     <label class="content__name" for="dateIssue">
@@ -94,6 +116,9 @@
                         </label>
                         <input class="content__input" type="text" id="eventLocale" formControlName="eventLocale"
                             placeholder="São Paulo - SP">
+                            <div class="danger" *ngIf="fieldValidator('eventLocale')">
+                                <small>Local de emissão é obrigatório</small>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -107,15 +132,15 @@
                         <li class="">
                             <label for="firstModel" class="content__name">
                                 Certificado 1
-                                <input type="radio" id="firstModel" checked value="1" formControlName="certificateModelId"
-                                name="certificateModelId">
+                                <input type="radio" id="firstModel" checked value="1"
+                                    formControlName="certificateModelId" name="certificateModelId">
                             </label>
                         </li>
-                        <li >
+                        <li>
                             <label for="secondModel" class="content__name">
                                 Certificado 2
                                 <input type="radio" id="secondModel" value="2" formControlName="certificateModelId"
-                                name="certificateModelId">
+                                    name="certificateModelId">
                             </label>
                         </li>
                     </ul>
@@ -124,13 +149,9 @@
                     <h3>Previsualização do Certificado</h3>
                     <div class="certificate-preview__content">
                         <app-preview-certificate [certificateId]="form.value.certificateModelId"
-                        [eventDate]="form.value.eventDate"
-                        [eventWorkLoad]="form.value.eventWorkLoad"
-                        [eventDate]="form.value.eventDate"
-                        [eventName]="form.value.eventName"
-                        [speakerName]="form.value.speakerName"
-                        [speakerRole]="form.value.speakerRole"
-                        />
+                            [eventDate]="form.value.eventDate" [eventWorkLoad]="form.value.eventWorkLoad"
+                            [eventDate]="form.value.eventDate" [eventName]="form.value.eventName"
+                            [speakerName]="form.value.speakerName" [speakerRole]="form.value.speakerRole" />
                     </div>
                 </div>
             </div>

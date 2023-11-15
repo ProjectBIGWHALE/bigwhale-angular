@@ -15,6 +15,9 @@ export class CertificategeneratorComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private certificateService: CertificateService) {}
 
+  fieldValidator(field: string){    
+    return this.form.get(field)?.errors?.['required'] && this.form.get(field)?.touched;
+  }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -38,10 +41,9 @@ export class CertificategeneratorComponent implements OnInit {
      });
   }
 
-  // onChangeCertificate(event: string){
-  //   return this.certificateId = event;
-    
-  // }
+  onClick(){
+    return document.getElementById("worksheet")?.click(); 
+  }
 
   submit(){
     
