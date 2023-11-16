@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 import { CardModel } from 'src/app/models/cardModel';
 
 import KeenSlider, { KeenSliderInstance } from "keen-slider"
@@ -18,9 +18,18 @@ export class MenuCarrosselComponent {
   @Input()
   cards: CardModel[] =[] 
 
+  tamanhoDaTela: string = ''
+
   cardLenth:number = 0
 
-  numberCards:number =0
+  numberCards:number = 0
+
+
+  constructor() {
+    // Inicialize a variável com base no tamanho inicial da tela
+    this.atualizarTamanhoDaTela(window.innerWidth);
+  }
+
 
 
   
@@ -42,13 +51,13 @@ export class MenuCarrosselComponent {
     //   this.numberCards = 2
     // }
   
-  console.log(this.numberCards)
+  // console.log(this.numberCards)
 
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
       rtl: true,
       slides: {
-        perView: 4,
+        perView: this.numberCards,
         spacing: 1,
       },
     })
@@ -56,6 +65,36 @@ export class MenuCarrosselComponent {
 
   ngOnDestroy() {
     if (this.slider) this.slider.destroy()
+  }
+
+
+
+ 
+  // Atualize o valor da variável quando o tamanho da tela mudar
+  @HostListener('window:resize', ['$event'])
+  onResize(event: { target: { innerWidth: number; }; }) {
+    this.atualizarTamanhoDaTela(event.target.innerWidth);
+  }
+
+  // Lógica para definir o valor da variável com base no tamanho da tela
+  private atualizarTamanhoDaTela(larguraDaTela: number) {
+    if (larguraDaTela < 600) {
+
+      this.numberCards = 1
+      this.tamanhoDaTela = 'Pequeno';
+      console.log(this.tamanhoDaTela)
+      
+    } else if (larguraDaTela < 1200) {
+      this.numberCards = 3
+
+      console.log(this.tamanhoDaTela)
+      this.tamanhoDaTela = 'Médio';
+
+    } else  {  
+      this.numberCards = 4
+      console.log(this.tamanhoDaTela)
+      this.tamanhoDaTela = 'Grande';
+    }
   }
 
 
