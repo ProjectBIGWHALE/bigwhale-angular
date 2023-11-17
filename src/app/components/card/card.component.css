@@ -35,4 +35,42 @@
     transform: scale(1.05);
     /* Ao passar o mouse, o item aumentará em 5% */
   }
+
+
+  @media screen and (max-width: 600px) {
+
+    .container__card{
+     
+      width: 16em;
+      height: 25em;
+   
+     
+    }
+    
+  }
+
+  @media screen and (max-width: 550px) {
+
+    .container__card{
+     
+      width: 12em;
+      
+    
+     
+    }
+    
+  }
+
+
+  @media screen and (max-width: 1000px) {
+
+    .container__card{
+     
+      width: 18em;
+      
+    
+     
+    }
+    
+  }
   

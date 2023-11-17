@@ -74,25 +74,43 @@ export class MenuCarrosselComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: { target: { innerWidth: number; }; }) {
     this.atualizarTamanhoDaTela(event.target.innerWidth);
+
+        // Atualize o número de cartões no slider quando o tamanho da tela mudar
+        if (this.slider) {
+          this.slider.destroy();
+          this.slider = new KeenSlider(this.sliderRef.nativeElement, {
+            loop: true,
+            rtl: true,
+            slides: {
+              perView: this.numberCards,
+              spacing: 1,
+            },
+          });
+        }
   }
 
   // Lógica para definir o valor da variável com base no tamanho da tela
   private atualizarTamanhoDaTela(larguraDaTela: number) {
-    if (larguraDaTela < 600) {
+    if (larguraDaTela < 800) {
 
       this.numberCards = 1
       this.tamanhoDaTela = 'Pequeno';
-      console.log(this.tamanhoDaTela)
+      console.log(this.tamanhoDaTela +" " + this.numberCards)
       
-    } else if (larguraDaTela < 1200) {
-      this.numberCards = 3
-
-      console.log(this.tamanhoDaTela)
+    }else if (larguraDaTela < 1000) {
+      this.numberCards = 2
       this.tamanhoDaTela = 'Médio';
+      console.log(this.tamanhoDaTela +" " +  this.numberCards)
+
+    } 
+     else if (larguraDaTela < 1300) {
+      this.numberCards = 3
+      this.tamanhoDaTela = 'Médio';
+      console.log(this.tamanhoDaTela +" " +  this.numberCards)
 
     } else  {  
       this.numberCards = 4
-      console.log(this.tamanhoDaTela)
+      console.log(this.tamanhoDaTela + " " + this.numberCards)
       this.tamanhoDaTela = 'Grande';
     }
   }
