@@ -1,0 +1,15 @@
+<div class="input-text__container">
+    <label class="label-title">
+        {{ labelTitle }}
+    </label>
+    <input [formControl]="controlName" 
+        type="text" 
+        class="input-text"
+        [placeholder]="placeholder"
+    >
+    <div class="danger" *ngIf="isError()">
+        <small>
+            {{ errorMessage }}
+        </small>
+    </div>
+</div>

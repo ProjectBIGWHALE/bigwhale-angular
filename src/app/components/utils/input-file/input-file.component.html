@@ -1,0 +1,26 @@
+<div class="input-file__container">
+    <label class="label-title" for="selectedFile">
+        {{filelabelTitle}}
+        <button 
+            class="btn-file enabled" 
+            type="button"
+            (click)="onClick()"
+            *ngIf="!fileName; else selected" 
+        >{{buttonTitle}}</button>
+        <ng-template  #selected>
+            <span class="btn-file enabled">
+                Arquivo selecionado: {{fileName}}
+            </span>
+        </ng-template>
+    </label>
+    <div *ngIf="isSelected" class="danger">
+        <small>{{errorMessage}}</small>
+    </div>
+    <input 
+        type="file" 
+        style="display: none;" 
+        id="selectedFile" 
+        accept=".csv" 
+        (change)="onChangeFile($event)"    
+    />
+</div>
