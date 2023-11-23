@@ -8,16 +8,11 @@ import { UtilsModule } from 'src/app/components/utils/utils.module';
 import { CertificategeneratorComponent } from './certificategenerator/certificategenerator.component';
 import { CompactconverterComponent } from './compactconverter/compactconverter.component';
 import { ImageconverterComponent } from './imageconverter/imageconverter.component';
-import { PreviewCertificateComponent } from 'src/app/components/preview-certificate/preview-certificate.component';
-import { PreviewsModule } from 'src/app/components/preview-certificate/previews.module';
-
 
 const importedComponents = [
   CertificategeneratorComponent,
   CompactconverterComponent,
-  ImageconverterComponent,
-  PreviewCertificateComponent,
-  
+  ImageconverterComponent,  
 ]
 
 @NgModule({
@@ -27,9 +22,7 @@ const importedComponents = [
     AppRoutingModule,
     UtilsModule,
     ReactiveFormsModule,
-    FormsModule,
-    PreviewsModule
-
+    FormsModule
   ],
   exports: importedComponents,
 })

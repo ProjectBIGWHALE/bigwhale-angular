@@ -1,1 +1,18 @@
-<p>compactconverter works!</p>
+<div class="compact-converter__container">
+    <h1>
+        Converter ZIP
+    </h1>
+    
+    <form [formGroup]="formCompact" (ngSubmit)="onSubmit()">
+        <app-input-file 
+            filelabelTitle="Selecione um ou mais arquivos ZIP"
+            buttonTitle="Arquivo zip" 
+            (fileContent)="onChangeFile($event)"
+            errorMessage="Selecione algum arquivo zip" 
+        />
+        <button type="submit"> enviar</button>
+    </form>
+</div>
+
+<app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'" />
+<app-buttons-homer-help [iconName]="'undo'" [idName]="'button-home'" [routerName]="'/home'" />

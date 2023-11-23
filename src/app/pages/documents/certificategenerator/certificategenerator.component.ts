@@ -13,6 +13,8 @@ export class CertificategeneratorComponent implements OnInit {
 
   certificate!: Certificate;
 
+  clickBtn: boolean = false;
+
   constructor(private fb: FormBuilder, private certificateService: CertificateService) {}
 
   fieldValidator(field: string){    
@@ -34,8 +36,7 @@ export class CertificategeneratorComponent implements OnInit {
     }); 
   }
 
-  onChange(event: any): void{
-    const selectedFile = <File>event.srcElement.files[0];
+  onChangeFile(selectedFile: File): void{  
      this.form.patchValue({
       worksheet: selectedFile,
      });
@@ -46,7 +47,8 @@ export class CertificategeneratorComponent implements OnInit {
   }
 
   submit(){
-    
+    this.clickBtn = true;  
+    console.log(this.form.value)
     if(this.form.valid){
       const formValues = this.form.value;
 
@@ -61,9 +63,6 @@ export class CertificategeneratorComponent implements OnInit {
           link.click();
           document.body.removeChild(link);
           window.URL.revokeObjectURL(url);
-      },
-      error => {
-          console.error(error);
       });
     }
   }

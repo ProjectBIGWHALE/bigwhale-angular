@@ -164,3 +164,13 @@ li > label:hover {
     background-color: #158E8E;
     transition: 400ms ease-in;
 }
+
+
+.certificate-view{
+    max-width: 100%;
+    width: 100%;
+}
+
+.certificate-view .certificate{
+    width: 100%;
+}

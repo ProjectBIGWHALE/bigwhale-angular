@@ -40,86 +40,75 @@
                     <h3>
                         2. Preencha as informações do certificado
                     </h3>
-                    <div class="form-group__content">
-                        <label class="content__name label-file"for="worksheet">
+                    <!-- <div class="form-group__content">
+                        <label class="content__name label-file" for="worksheet">
                             <span>Adicionar arquivo com os nomes dos participantes</span>
-                            <button *ngIf="!form.value.worksheet" class="btn-file enabled" type="button" (click)="onClick()">Arquivo csv</button>
+                            <button *ngIf="!form.value.worksheet" class="btn-file enabled" type="button"
+                                (click)="onClick()">Arquivo csv</button>
                             <span class="btn-file enabled" *ngIf="form.value.worksheet">
                                 Arquivo selecionado: {{form.value.worksheet.name}}
                             </span>
                         </label>
-                        <div class="danger" *ngIf="fieldValidator('eventName')">
+                        <div class="danger" *ngIf="fieldValidator('worksheet')">
                             <small>Selecione o arquivo</small>
                         </div>
-                        <input type="file" name="worksheet" (change)="onChange($event)" style="display: none;" id="worksheet" accept=".csv" />
-                    </div>
-                    <div class="form-group__content">
-                        <label class="content__name" for="eventName">
-                            Nome do evento/curso:
-                        </label>
-                        <input class="content__input" class="content__input" type="text" id="eventName"
-                            formControlName="eventName" placeholder="Primeiros socorros">
-                        <div class="danger" *ngIf="fieldValidator('eventName')">
-                            <small>Nome do evento é obrigatório</small>
-                        </div>
-                    </div>
-                    <div class="form-group__content">
-                        <label class="content__name" for="speakerName">
-                            Nome do(a) organizador(a):
-                        </label>
-                        <input class="content__input" type="text" id="speakerName" formControlName="speakerName"
-                            placeholder="José Maria">
-                        <div class="danger" *ngIf="fieldValidator('speakerName')">
-                            <small>Nome do organizador é obrigatório</small>
-                        </div>
-                    </div>
+                        <input type="file" name="worksheet" (change)="onChangeFile($event)" style="display: none;"
+                            id="worksheet" accept=".csv" />
+                    </div> -->
 
-                    <div class="form-group__content">
-                        <label class="content__name" for="speakerRole">
-                            Cargo do(a) organizador(a):
-                        </label>
-                        <input class="content__input" type="text" id="speakerRole" formControlName="speakerRole"
-                            placeholder="Diretor" />
-                        <div class="danger" *ngIf="fieldValidator('speakerRole')">
-                            <small>Cargo do organizador é obrigatório</small>
-                        </div>
-                    </div>
-                    <div class="form-group__content">
-                        <label class="content__name" for="eventWorkLoad">
-                            Carga horária:
-                        </label>
-                        <input class="content__input" type="text" id="eventWorkLoad" formControlName="eventWorkLoad"
-                            placeholder="120 horas" />
-                        <div class="danger" *ngIf="fieldValidator('eventWorkLoad')">
-                            <small>Carga Horária é obrigatória</small>
-                        </div>
-                    </div>
-                    <div class="form-group__content">
-                        <label class="content__name" for="eventDate">
-                            Data do evento/curso:
-                        </label>
-                        <input class="content__input" type="text" id="eventDate" formControlName="eventDate"
-                            placeholder="22-03-2022"/>
-                            <div class="danger" *ngIf="fieldValidator('eventDate')">
-                                <small>Data do evento é obrigatória</small>
-                            </div>
-                    </div>
-                    <!-- <div>
-                    <label class="content__name" for="dateIssue">
-                        Data de emissão do certificado:
-                    </label>
-                    <input class="content__input" type="text"  id="dateIssue" formControlName="dateIssue" placeholder="28-06-2022">
-                </div> -->
-                    <div class="form-group__content">
-                        <label class="content__name" for="eventLocale">
-                            Local de emissão do certificado:
-                        </label>
-                        <input class="content__input" type="text" id="eventLocale" formControlName="eventLocale"
-                            placeholder="São Paulo - SP">
-                            <div class="danger" *ngIf="fieldValidator('eventLocale')">
-                                <small>Local de emissão é obrigatório</small>
-                            </div>
-                    </div>
+                    <app-input-file
+                        filelabelTitle="Adicionar arquivo com os nomes dos participantes"
+                        buttonTitle="Arquivo csv" 
+                        (fileContent)="onChangeFile($event)"
+                        errorMessage="Selecione algum arquivo csv"
+                        [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn" 
+                    />
+
+                    <app-input-text
+                        [controlName]="form.get('eventName')"
+                        labelTitle="Nome do evento/curso:"
+                        placeholder="Primeiros socorros"
+                        errorMessage="Nome do evento é obrigatório"
+                        id="eventName"
+                    />
+
+                    <app-input-text
+                        [controlName]="form.get('speakerName')"
+                        labelTitle="Nome do(a) organizador(a):"
+                        placeholder="José Maria"
+                        errorMessage="Nome do organizador é obrigatório"
+                        id="speakerName"
+                    />
+
+                    <app-input-text
+                        [controlName]="form.get('speakerRole')"
+                        labelTitle="Cargo do(a) organizador(a):"
+                        placeholder="Diretor"
+                        errorMessage="Cargo do organizador é obrigatório"
+                        id="speakerRole"
+                    />
+
+                    <app-input-text
+                        [controlName]="form.get('eventWorkLoad')"
+                        labelTitle="Carga horária:"
+                        placeholder="120 horas"
+                        errorMessage="Carga Horária é obrigatória"
+                        id="eventWorkLoad"
+                    />
+                    <app-input-text 
+                        [controlName]="form.get('eventDate')"
+                        labelTitle="Data do evento/curso:"
+                        placeholder="22-03-2022"
+                        errorMessage="Data do evento é obrigatória"
+                        id="eventDate"
+                    />
+                    <app-input-text labelTitle="Local de emissão do certificado:" 
+                        [controlName]="form.get('eventLocale')"
+                        errorMessage="O campo Nome é obrigatório"
+                        placeholder="São Paulo - SP" 
+                        errorMessage="Local de emissão é obrigatório"
+                        id="eventLocale"
+                    />
                 </div>
             </div>
 
@@ -146,12 +135,16 @@
                     </ul>
                 </div>
                 <div class="certificate-preview__container ga-preview">
-                    <h3>Previsualização do Certificado</h3>
+                    <h3>Exemplo do Certificado</h3>
                     <div class="certificate-preview__content">
-                        <app-preview-certificate [certificateId]="form.value.certificateModelId"
-                            [eventDate]="form.value.eventDate" [eventWorkLoad]="form.value.eventWorkLoad"
-                            [eventDate]="form.value.eventDate" [eventName]="form.value.eventName"
-                            [speakerName]="form.value.speakerName" [speakerRole]="form.value.speakerRole" />
+                        <div class="certificate-view" 
+                            *ngIf="form.value.certificateModelId === '1'">
+                            <img class="certificate"
+                            src="/assets/images/Certificado1_padrao.png" alt="Certificado 1 com titulo azul e um texto padrão">
+                        </div>
+                        <div *ngIf="form.value.certificateModelId === '2'" class="certificate-view">
+                            <img class="certificate" src="/assets/images/Certificado2_padrao.png" alt="Certificado 1 com titulo Preto e um texto padrão">
+                        </div>
                     </div>
                 </div>
             </div>
