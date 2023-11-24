@@ -14,48 +14,33 @@
                     <h3>1. Selecione o tipo de certificado:</h3>
                     <ul class="form-group__content">
                         <li>
-                            <label for="participation" class="content__name">
-                                Participação
-                                <input type="radio" value="PARTICIPATION" name="certificateTypeEnum"
-                                    formControlName="certificateTypeEnum" id="participation">
-                            </label>
+                            <app-input-radio 
+                                [controlName]="form.get('certificateTypeEnum')"
+                                labelTitle="Participação"
+                                valueInput="PARTICIPATION"
+                                [isChecked]="true"
+                            />
                         </li>
                         <li>
-                            <label for="speaker" class="content__name">
-                                <input type="radio" value="SPEAKER" name="certificateTypeEnum"
-                                    formControlName="certificateTypeEnum" id="speaker">
-                                Palestrante
-                            </label>
+                            <app-input-radio 
+                                [controlName]="form.get('certificateTypeEnum')"
+                                labelTitle="Palestrante"
+                                valueInput="SPEAKER"
+                            />
                         </li>
                         <li>
-                            <label for="course" class="content__name">
-                                <input type="radio" value="COURCE" name="certificateTypeEnum"
-                                    formControlName="certificateTypeEnum" id="course">
-                                Curso
-                            </label>
+                            <app-input-radio 
+                                [controlName]="form.get('certificateTypeEnum')"
+                                labelTitle="Curso"
+                                valueInput="COURCE"
+                            />
                         </li>
                     </ul>
                 </div>
-                <div class="form-group ga-form">
+                <div class="form-group">
                     <h3>
                         2. Preencha as informações do certificado
                     </h3>
-                    <!-- <div class="form-group__content">
-                        <label class="content__name label-file" for="worksheet">
-                            <span>Adicionar arquivo com os nomes dos participantes</span>
-                            <button *ngIf="!form.value.worksheet" class="btn-file enabled" type="button"
-                                (click)="onClick()">Arquivo csv</button>
-                            <span class="btn-file enabled" *ngIf="form.value.worksheet">
-                                Arquivo selecionado: {{form.value.worksheet.name}}
-                            </span>
-                        </label>
-                        <div class="danger" *ngIf="fieldValidator('worksheet')">
-                            <small>Selecione o arquivo</small>
-                        </div>
-                        <input type="file" name="worksheet" (change)="onChangeFile($event)" style="display: none;"
-                            id="worksheet" accept=".csv" />
-                    </div> -->
-
                     <app-input-file
                         filelabelTitle="Adicionar arquivo com os nomes dos participantes"
                         buttonTitle="Arquivo csv" 
@@ -64,73 +49,80 @@
                         [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn" 
                     />
 
-                    <app-input-text
+                    <app-input-field
                         [controlName]="form.get('eventName')"
                         labelTitle="Nome do evento/curso:"
                         placeholder="Primeiros socorros"
                         errorMessage="Nome do evento é obrigatório"
-                        id="eventName"
+                        [clickBtn]="clickBtn"
+                        inputId="eventName"
                     />
 
-                    <app-input-text
+                    <app-input-field
                         [controlName]="form.get('speakerName')"
                         labelTitle="Nome do(a) organizador(a):"
                         placeholder="José Maria"
                         errorMessage="Nome do organizador é obrigatório"
-                        id="speakerName"
+                        [clickBtn]="clickBtn"
+                        inputId="speakerName"
                     />
 
-                    <app-input-text
+                    <app-input-field
                         [controlName]="form.get('speakerRole')"
                         labelTitle="Cargo do(a) organizador(a):"
                         placeholder="Diretor"
                         errorMessage="Cargo do organizador é obrigatório"
-                        id="speakerRole"
+                        [clickBtn]="clickBtn"
+                        inputId="speakerRole"
                     />
 
-                    <app-input-text
+                    <app-input-field
                         [controlName]="form.get('eventWorkLoad')"
                         labelTitle="Carga horária:"
                         placeholder="120 horas"
                         errorMessage="Carga Horária é obrigatória"
-                        id="eventWorkLoad"
+                        [clickBtn]="clickBtn"
+                        inputId="eventWorkLoad"
                     />
-                    <app-input-text 
+                    <app-input-field 
                         [controlName]="form.get('eventDate')"
                         labelTitle="Data do evento/curso:"
                         placeholder="22-03-2022"
                         errorMessage="Data do evento é obrigatória"
-                        id="eventDate"
+                        [clickBtn]="clickBtn"
+                        inputId="eventDate"
                     />
-                    <app-input-text labelTitle="Local de emissão do certificado:" 
+                    <app-input-field labelTitle="Local de emissão do certificado:" 
                         [controlName]="form.get('eventLocale')"
                         errorMessage="O campo Nome é obrigatório"
                         placeholder="São Paulo - SP" 
                         errorMessage="Local de emissão é obrigatório"
-                        id="eventLocale"
+                        [clickBtn]="clickBtn"
+                        inputId="eventLocale"
                     />
                 </div>
             </div>
 
-            <div class="certificate__model ga-model">
+            <div class="certificate__model">
                 <div class="form-group ga-select">
                     <h3>
                         3. Escolha o modelo do certificado:
                     </h3>
                     <ul class="form-group__content">
-                        <li class="">
-                            <label for="firstModel" class="content__name">
-                                Certificado 1
-                                <input type="radio" id="firstModel" checked value="1"
-                                    formControlName="certificateModelId" name="certificateModelId">
-                            </label>
+                        <li>
+                            <app-input-radio 
+                                [controlName]="form.get('certificateModelId')"
+                                labelTitle="Certificado 1"
+                                valueInput="1"
+                                [isChecked]="true"
+                            />
                         </li>
                         <li>
-                            <label for="secondModel" class="content__name">
-                                Certificado 2
-                                <input type="radio" id="secondModel" value="2" formControlName="certificateModelId"
-                                    name="certificateModelId">
-                            </label>
+                            <app-input-radio 
+                                [controlName]="form.get('certificateModelId')"
+                                labelTitle="Certificado 2"
+                                valueInput="2"
+                            />    
                         </li>
                     </ul>
                 </div>

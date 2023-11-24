@@ -19,7 +19,7 @@ import { Pipe, PipeTransform } from "@angular/core";
     name: 'boolean'
 })
 export class BooleanPipe implements PipeTransform{
-    transform(value: string): string {
+    transform(value: boolean): string {
         return value ? 'True' : 'False';
     }
 }

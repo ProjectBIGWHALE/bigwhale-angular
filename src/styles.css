@@ -4,6 +4,7 @@
     --primary-color: #50c878;
     --secondary-color: #c9f2e3;
     --label-color: #25bfbf;
+    --radio-hover: #158E8E;
 }
 /* Como usar as variávais css: propriedade: var(nome-variável);
    exemplos:
@@ -25,6 +26,10 @@ body{
     font-size: 16px;
 }
 
+ul{
+    list-style: none;
+}
+
 #button-help, #button-home{
     position: absolute;
     right: 47px;
@@ -34,22 +39,6 @@ body{
 }
 #button-home {
     top: 47px;
-}
-
-
-input[type="text"], input[type="email"]{
-    outline: none;
-    border: 1px solid var(--label-color);
-    background-color: #FFF;
-    width: 100%;
-    height: 2rem;
-    padding: .5rem .75rem;
-    border-radius: 4px;
-    font-size: 1.1rem;
-}
-
-ul{
-    list-style: none;
 }
 
 .danger{

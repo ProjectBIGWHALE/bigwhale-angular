@@ -1,16 +1,29 @@
 <div class="compact-converter__container">
-    <h1>
+    <h1 class="compact-converter__title">
         Converter ZIP
     </h1>
     
-    <form [formGroup]="formCompact" (ngSubmit)="onSubmit()">
-        <app-input-file 
-            filelabelTitle="Selecione um ou mais arquivos ZIP"
-            buttonTitle="Arquivo zip" 
-            (fileContent)="onChangeFile($event)"
-            errorMessage="Selecione algum arquivo zip" 
-        />
-        <button type="submit"> enviar</button>
+    <form [formGroup]="formCompact" (ngSubmit)="onSubmit()" class="form">
+        <div class="form-group">
+            <app-input-file 
+                filelabelTitle="Selecione um ou mais arquivos ZIP"
+                buttonTitle="Arquivo zip" 
+                (fileContent)="onChangeFile($event)"
+                errorMessage="Selecione algum arquivo zip" 
+            />
+        </div>
+        <div class="form-group">
+            <label for="typeFile">
+                Selecione o tipo da compressão desejada:
+            </label>
+            <select name="action" id="typeFile">
+                <option class="options" value=".zip">.zip</option>
+                <option class="options" value=".tar.gz">.tar.gz</option>
+                <option class="options" value=".tar">.tar</option>
+                <option class="options" value=".7z">.7z</option>
+            </select>
+        </div>
+        <app-button-download (submitEmitter)="onSubmit" [isBtnValid]="formCompact.valid"/>
     </form>
 </div>
 

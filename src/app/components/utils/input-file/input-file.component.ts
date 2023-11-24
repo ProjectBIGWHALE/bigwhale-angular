@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class InputFileComponent {
 
-  @Input() controlName!: FormControl | any;
+  @Input() controlName!: FormControl;
   @Input() filelabelTitle: string = '';
   @Input() buttonTitle : string ='';
   @Input() errorMessage: string = 'O campo é obrigatório';

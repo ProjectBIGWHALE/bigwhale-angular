@@ -1,0 +1,32 @@
+.compact-converter__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.compact-converter__title{
+    margin-bottom: 2rem;
+}
+
+.form-group{
+    background-color: #fff;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    color: var(--label-color);
+    font-weight: 600;
+}

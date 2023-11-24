@@ -11,7 +11,8 @@ import { ButtonDownloadComponent } from './button-download/button-download.compo
 import { ButtonsHomeHelpComponent } from './buttons-home-help/buttons-home-help.component';
 import { LinesComponent } from './lines/lines.component';
 import { InputFileComponent } from './input-file/input-file.component';
-import { InputTextComponent } from './input-text/input-text.component';
+import { InputRadioComponent } from './input-radio/input-radio.component';
+import { InputFieldComponent } from './input-field/input-field.component';
 
 
 const importedComponents = [
@@ -19,7 +20,8 @@ const importedComponents = [
   ButtonsHomeHelpComponent,
   LinesComponent,
   InputFileComponent,
-  InputTextComponent,
+  InputFieldComponent,
+  InputRadioComponent,
   BooleanPipe
 ]
 

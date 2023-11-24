@@ -6,11 +6,13 @@
             type="button"
             (click)="onClick()"
             *ngIf="!fileName; else selected" 
-        >{{buttonTitle}}</button>
+        >   
+            <span class="btn-title" >{{buttonTitle}}</span>
+        </button>
         <ng-template  #selected>
-            <span class="btn-file enabled">
-                Arquivo selecionado: {{fileName}}
-            </span>
+            <p class="btn-file enabled">
+                Arquivo selecionado: <span class="file-name">{{fileName}}</span>
+            </p>
         </ng-template>
     </label>
     <div *ngIf="isSelected" class="danger">

@@ -1,11 +1,12 @@
-<div class="input-text__container">
-    <label class="label-title">
+<div class="input-field__container">
+    <label class="label-title" [htmlFor]="inputId">
         {{ labelTitle }}
     </label>
     <input [formControl]="controlName" 
-        type="text" 
-        class="input-text"
+        [type]="inputType" 
+        class="input-field"
         [placeholder]="placeholder"
+        [id]="inputId"
     >
     <div class="danger" *ngIf="isError()">
         <small>

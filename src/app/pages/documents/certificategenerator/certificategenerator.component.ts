@@ -48,10 +48,9 @@ export class CertificategeneratorComponent implements OnInit {
 
   submit(){
     this.clickBtn = true;  
-    console.log(this.form.value)
     if(this.form.valid){
       const formValues = this.form.value;
-
+ 
       this.certificateService.saveCertificate(formValues)
         .subscribe((res: any) => {
           const blob = new Blob([res], { type: 'application/zip' }); // Tipo do arquivo pode variar

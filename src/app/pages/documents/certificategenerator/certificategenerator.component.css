@@ -24,7 +24,7 @@
     gap: 1.5rem;
 }
 
-.certificate__content, .certificate__model{
+.certificate__model{
     display: grid;
     grid-template-rows: 1fr 4fr;
     width: 100%;
@@ -40,7 +40,6 @@ ul:is(.form-group, .form-group__content) {
     flex-direction: row;
 }
 
-
 .form-group__content{
     display: flex;
     flex-direction: column;
@@ -48,46 +47,6 @@ ul:is(.form-group, .form-group__content) {
     gap: .2rem;
     margin: 1rem 0;
 }
-
-.label-file{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.btn-file{
-    border: none;
-    margin-top: 10px;
-    cursor: pointer;
-    padding: 8px 18px;
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.content__name{
-    width: 100%;
-    font-weight: 600;
-}
-
-.content__input{
-    width: 100%;
-    padding: .75rem 1rem;
-    border-radius: 4px;
-    font-size: 1.1rem;
-
-}
-
-.content__input:hover::placeholder{
-    color: #fff;
-    transition: 500ms ease-out;
-}
-
-.content__input:hover{
-    transition: 400ms ease-in;
-    color: #fff;
-    background-color: #158E8E;
-}
-
 
 .certificate-preview__container{
     background-color: #fff;
@@ -111,60 +70,12 @@ ul:is(.form-group, .form-group__content) {
     padding: 0 1rem;
 }
 
-input[type="radio"] {
-    position: absolute;
-    bottom: 2.38rem;
-    height: 0;
-    width: 100%;
-}
-
-input[type="radio"]:checked::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #327070;
-}
-
-input[type="radio"]:checked::before {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 2.38rem;
-    background-color: #32707031;
-    border-radius: 4px;
-}
-
-input[type="radio"]:hover {
-    transition: width 1000ms;
-}
-
 ul.form-group__content{
     gap: .75rem;
     margin: 0;
-}
-
-ul > li {
-    margin-top: 1rem;
-}
-
-
-li > label {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: pointer;
-    position: relative;
-    padding: .5rem 1rem;
-    
+    padding-top: 1rem;
 }
-
-li > label:hover {
-    color: #fff;
-    background-color: #158E8E;
-    transition: 400ms ease-in;
-}
-
 
 .certificate-view{
     max-width: 100%;

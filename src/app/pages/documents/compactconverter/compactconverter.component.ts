@@ -9,13 +9,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CompactconverterComponent implements OnInit{
   formCompact!: FormGroup;
 
-  name: string =''
+  clickBtn: boolean = false;
 
   constructor(private fb: FormBuilder){};
 
   ngOnInit(): void {
       this.formCompact = this.fb.group({
-        name: ['', Validators['required']],
         fileZip: ['', Validators['required']]
       })
   }
@@ -28,5 +27,10 @@ export class CompactconverterComponent implements OnInit{
   
   onSubmit(){
     console.log(this.formCompact.value);
+    this.clickBtn = true;
+
+    if(this.formCompact.valid){
+
+    }
   }
 }
