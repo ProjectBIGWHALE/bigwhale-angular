@@ -19,6 +19,7 @@
                                 labelTitle="Participação"
                                 valueInput="PARTICIPATION"
                                 [isChecked]="true"
+                                inputId="participation"
                             />
                         </li>
                         <li>
@@ -26,6 +27,7 @@
                                 [controlName]="form.get('certificateTypeEnum')"
                                 labelTitle="Palestrante"
                                 valueInput="SPEAKER"
+                                inputId="speaker"
                             />
                         </li>
                         <li>
@@ -33,6 +35,7 @@
                                 [controlName]="form.get('certificateTypeEnum')"
                                 labelTitle="Curso"
                                 valueInput="COURCE"
+                                inputId="course"
                             />
                         </li>
                     </ul>
@@ -46,7 +49,8 @@
                         buttonTitle="Arquivo csv" 
                         (fileContent)="onChangeFile($event)"
                         errorMessage="Selecione algum arquivo csv"
-                        [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn" 
+                        [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn"
+                        fileTypeAccept=".csv" 
                     />
 
                     <app-input-field
@@ -115,13 +119,15 @@
                                 labelTitle="Certificado 1"
                                 valueInput="1"
                                 [isChecked]="true"
-                            />
-                        </li>
-                        <li>
-                            <app-input-radio 
+                                inputId="certificate1"
+                                />
+                            </li>
+                            <li>
+                                <app-input-radio 
                                 [controlName]="form.get('certificateModelId')"
                                 labelTitle="Certificado 2"
                                 valueInput="2"
+                                inputId="certificate2"
                             />    
                         </li>
                     </ul>
@@ -130,11 +136,11 @@
                     <h3>Exemplo do Certificado</h3>
                     <div class="certificate-preview__content">
                         <div class="certificate-view" 
-                            *ngIf="form.value.certificateModelId === '1'">
+                            [ngClass]="form.value.certificateModelId === '1' ? 'show-cetificate' : 'hide-certificate'">
                             <img class="certificate"
                             src="/assets/images/Certificado1_padrao.png" alt="Certificado 1 com titulo azul e um texto padrão">
                         </div>
-                        <div *ngIf="form.value.certificateModelId === '2'" class="certificate-view">
+                        <div  [ngClass]="form.value.certificateModelId === '2' ? 'show-cetificate' : 'hide-certificate'" class="certificate-view">
                             <img class="certificate" src="/assets/images/Certificado2_padrao.png" alt="Certificado 1 com titulo Preto e um texto padrão">
                         </div>
                     </div>

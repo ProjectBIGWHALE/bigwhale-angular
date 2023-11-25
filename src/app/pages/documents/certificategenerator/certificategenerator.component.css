@@ -85,3 +85,11 @@ ul.form-group__content{
 .certificate-view .certificate{
     width: 100%;
 }
+
+.show-certificate{
+    display: block;
+}
+
+.hide-certificate{
+    display: none;
+}

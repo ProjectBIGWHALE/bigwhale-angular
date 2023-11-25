@@ -13,7 +13,6 @@
 
 .disabled{
     background-color: #506d6de5;
-    cursor: none;
-    /* pointer-events: none; */
+    cursor: default;
     color: #ffffff99;
 }

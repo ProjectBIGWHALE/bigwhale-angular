@@ -1,29 +1,47 @@
 <div class="compact-converter__container">
     <h1 class="compact-converter__title">
-        Converter ZIP
+        Converter arquivos ZIP
     </h1>
-    
+
     <form [formGroup]="formCompact" (ngSubmit)="onSubmit()" class="form">
         <div class="form-group">
             <app-input-file 
-                filelabelTitle="Selecione um ou mais arquivos ZIP"
-                buttonTitle="Arquivo zip" 
-                (fileContent)="onChangeFile($event)"
+                filelabelTitle="Selecione um ou mais arquivos ZIP" 
+                buttonTitle="Arquivo zip"
+                (fileContent)="onChangeFile($event)" 
                 errorMessage="Selecione algum arquivo zip" 
+                fileTypeAccept=".zip"
+                [multiple]="true"
+                [isSelected]="formCompact.get('files')?.errors?.['required'] && clickBtn"
             />
         </div>
         <div class="form-group">
-            <label for="typeFile">
+            <p>
                 Selecione o tipo da compressão desejada:
-            </label>
-            <select name="action" id="typeFile">
-                <option class="options" value=".zip">.zip</option>
-                <option class="options" value=".tar.gz">.tar.gz</option>
-                <option class="options" value=".tar">.tar</option>
-                <option class="options" value=".7z">.7z</option>
-            </select>
+            </p>
+            <div class="select__container">
+                <select  name="action" id="typeFile" class="select__content"(change)="onChangeSelect($event)" >
+                    <option selected id="primaryOption">-- Selecione uma opção --</option>
+                    <option label=".zip" class="options" value="zip">.zip</option>
+                    <option label=".tar.gz" class="options" value="tar.gz">.tar.gz</option>
+                    <option label=".tar" class="options" value="tar">.tar</option>
+                    <option label=".7z" class="options" value="7z">.7z</option>
+                </select>
+                <i class="select__arrow"></i>
+            </div>
+            <div *ngIf="formCompact.controls['outputFormat'].errors && clickBtn" class="danger">
+                <small>Selecione um tipo</small>
+            </div>
+            <div class="outuput-file__container">
+                <p class="output-file__content">
+                    Saida do arquivo: <span id="outputFiles" class="output-file-name">{{
+                    formCompact.valid 
+                    ? showFiles(formCompact.value.files) 
+                    : 'Sem seleção'}}</span>
+                </p>
+            </div>
         </div>
-        <app-button-download (submitEmitter)="onSubmit" [isBtnValid]="formCompact.valid"/>
+        <app-button-download (submitEmitter)="onSubmit" [isBtnValid]="formCompact.valid" />
     </form>
 </div>
 

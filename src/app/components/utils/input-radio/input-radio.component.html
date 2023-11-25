@@ -1,5 +1,5 @@
 <div class="input-radio__container">
-    <label [htmlFor]="controlName" class="label-title">
+    <label [htmlFor]="inputId" class="label-title">
         {{labelTitle}}
         <input class="radio-appearance"
             type="radio" 
@@ -7,7 +7,7 @@
             [name]="controlName"
             [formControl]="controlName"
             [checked]="isChecked"
-            [id]="controlName"
+            [id]="inputId"
         >
     </label>
 </div>

@@ -11,5 +11,6 @@ export class InputRadioComponent {
   @Input() labelTitle: string = '';
   @Input() controlName!: FormControl | any;
   @Input() valueInput: string = ''; 
+  @Input() inputId: string = ''; 
   @Input() isChecked!: boolean;   
 }
