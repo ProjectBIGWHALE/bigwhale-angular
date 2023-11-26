@@ -1,16 +1,16 @@
 <div class="certificate__container">
-    <div>
+    <div class="certificate_description">
         <h1 class="content__title">
             Gerador de certificados
         </h1>
-        <p class="content__description">
+        <h3 class="content__description">
             Você pode criar certificados personalizados de forma rápida e fácil de para reconhecimento e autenticação.
-        </p>
+        </h3>
     </div>
     <form class="form" [formGroup]="form" (ngSubmit)="submit()">
         <div class="form__container">
-            <div class="certificate__content ga-data">
-                <div class="form-group ga-type">
+            <div class="certificate__content">
+                <div class="form-group">
                     <h3>1. Selecione o tipo de certificado:</h3>
                     <ul class="form-group__content">
                         <li>
@@ -83,10 +83,12 @@
                     <app-input-field
                         [controlName]="form.get('eventWorkLoad')"
                         labelTitle="Carga horária:"
-                        placeholder="120 horas"
-                        errorMessage="Carga Horária é obrigatória"
+                        placeholder="120"
+                        errorMessage="Digite apenas números"
                         [clickBtn]="clickBtn"
                         inputId="eventWorkLoad"
+                        (changeInput)="form.value.eventWorkLoad"
+                        validatorField="number"
                     />
                     <app-input-field 
                         [controlName]="form.get('eventDate')"
@@ -95,6 +97,8 @@
                         errorMessage="Data do evento é obrigatória"
                         [clickBtn]="clickBtn"
                         inputId="eventDate"
+                        (changeInput)="form.value.eventDate"
+                        validatorField="date"
                     />
                     <app-input-field labelTitle="Local de emissão do certificado:" 
                         [controlName]="form.get('eventLocale')"
@@ -107,8 +111,8 @@
                 </div>
             </div>
 
-            <div class="certificate__model">
-                <div class="form-group ga-select">
+            <div class="certificate__content">
+                <div class="form-group">
                     <h3>
                         3. Escolha o modelo do certificado:
                     </h3>
@@ -150,5 +154,6 @@
         <app-button-download (submitEmitter)="submit" [isBtnValid]="form.valid" />
     </form>
 </div>
-<app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'" />
-<app-buttons-homer-help [iconName]="'undo'" [idName]="'button-home'" [routerName]="'/home'" />
+<app-nav-home-help />
+<app-loading [isLoading]="certificateService.loading$ | async"/>
+<!-- <app-loading [isLoading]="true"/> -->

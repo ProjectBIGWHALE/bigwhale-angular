@@ -12,10 +12,13 @@ export class CertificategeneratorComponent implements OnInit {
   form!: FormGroup;
 
   certificate!: Certificate;
+  
+  isValidEventWorkLoad: boolean = true;
+  isValidEventDate: boolean = true;
 
   clickBtn: boolean = false;
 
-  constructor(private fb: FormBuilder, private certificateService: CertificateService) {}
+  constructor(private fb: FormBuilder, protected certificateService: CertificateService) {}
 
   fieldValidator(field: string){    
     return this.form.get(field)?.errors?.['required'] && this.form.get(field)?.touched;

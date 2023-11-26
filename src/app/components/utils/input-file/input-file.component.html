@@ -20,7 +20,7 @@
         </ng-template>
     </label>
     <div *ngIf="isSelected" class="danger">
-        <small>{{errorMessage}}</small>
+        <small *ngIf="isSelected">{{errorRequireMessage}}</small>
     </div>
     <input 
         type="file" 

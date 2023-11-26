@@ -7,9 +7,13 @@
         class="input-field"
         [placeholder]="placeholder"
         [id]="inputId"
+        (input)="onChangeInput($event)"
     >
-    <div class="danger" *ngIf="isError()">
-        <small>
+    <div class="danger" *ngIf="isError() || !isValid">
+        <small *ngIf="isError()">
+            {{ errorRequireMessage }}
+        </small>
+        <small *ngIf="!isError() && !isValid">
             {{ errorMessage }}
         </small>
     </div>

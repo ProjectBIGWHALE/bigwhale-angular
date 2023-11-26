@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from 'src/app/app-routing.module';
-import { UtilsModule } from 'src/app/components/utils/utils.module';
 
 import { CertificategeneratorComponent } from './certificategenerator/certificategenerator.component';
 import { CompactconverterComponent } from './compactconverter/compactconverter.component';
 import { ImageconverterComponent } from './imageconverter/imageconverter.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 const importedComponents = [
   CertificategeneratorComponent,
   CompactconverterComponent,
-  ImageconverterComponent,  
+  ImageconverterComponent,
 ]
 
 @NgModule({
@@ -20,9 +20,9 @@ const importedComponents = [
   imports: [
     CommonModule,
     AppRoutingModule,
-    UtilsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ComponentsModule
   ],
   exports: importedComponents,
 })

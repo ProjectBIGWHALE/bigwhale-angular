@@ -5,6 +5,8 @@
     --secondary-color: #c9f2e3;
     --label-color: #25bfbf;
     --radio-hover: #158E8E;
+    --bg-color: #f0faf3;
+    --main-bg-color: #cdcdcd
 }
 /* Como usar as variávais css: propriedade: var(nome-variável);
    exemplos:
@@ -19,26 +21,17 @@
     scroll-behavior: smooth;
     font-family: "Roboto Condensed", sans-serif;
 }
+html{
+    background: var(--main-bg-color);
+}
 
 body{
-    background: #d3d3d3;
     color: #0d0d0d;
     font-size: 16px;
 }
 
 ul{
     list-style: none;
-}
-
-#button-help, #button-home{
-    position: absolute;
-    right: 47px;
-}
-#button-help {
-    bottom: 47px;
-}
-#button-home {
-    top: 47px;
 }
 
 .danger{
@@ -49,11 +42,11 @@ ul{
     /* text-decoration: none; */
     background: var(--label-color);
     color: #fff;
-    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 2px rgba(0, 43, 0, 0.25);
 }
 
 .enabled:hover{
     transition: 400ms ease;
     background-color: #17a7a7;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 3px rgba(0, 43, 0, 0.25);
 }

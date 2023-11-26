@@ -1,6 +1,26 @@
 @media screen and (max-width: 816px) {
 
+    .form{
+        margin: 0;
+        margin-bottom: 4.75rem;
+        width: 98%;
+
+    }
     .form__container{
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+    .certificate__content{
+        max-width: 98%;
+    }
+
+    ul:is(.form-group, .form-group__content) {
+        flex-direction: column;
+    }
+
+    .certificate_description{
+        margin: 0;
+        text-align: center;
     }
 }

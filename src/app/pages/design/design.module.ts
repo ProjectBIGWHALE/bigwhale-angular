@@ -6,7 +6,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 
 import { AltercolorComponent } from './altercolor/altercolor.component';
 import { ColorspaletteComponent } from './colorspalette/colorspalette.component';
-import { UtilsModule } from 'src/app/components/utils/utils.module';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 const importedComponents = [
@@ -19,8 +19,8 @@ const importedComponents = [
   imports: [
     CommonModule,
     AppRoutingModule,
-    UtilsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ],
   exports: importedComponents
 })

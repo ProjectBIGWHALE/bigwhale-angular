@@ -5,9 +5,9 @@
     font-weight: bold;
     border: none;
     cursor: pointer;
-    font-size: 22px;
-    width: 200px;
-    height: 63px;
+    font-size: 1.25rem;
+    width: 12.5rem;
+    height: 4rem;
 }
 
 
@@ -15,4 +15,13 @@
     background-color: #506d6de5;
     cursor: default;
     color: #ffffff99;
+}
+
+@media screen and (max-width: 816px) {
+    .btn{
+        border-radius: 50px;
+        font-size: 1rem;
+        width: 8rem;
+        height: 2.75rem;
+    }
 }
