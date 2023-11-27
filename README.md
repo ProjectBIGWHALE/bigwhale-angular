@@ -33,6 +33,8 @@ E-mail: contact@mybigwhale.com
 <a href="https://github.com/LarissaLunguinho"> Larissa </a> <br>
 <a href="https://github.com/Daniellyfreitasc"> Danielly </a> <br>
 
+<a href="https://github.com/kduferreira"> Carlos Eduardo</a> <br>
+
 - Back-End: <br>
 <a href="https://github.com/erasmobezerra"> Erasmo </a> <br>
 <a href="https://github.com/bioramonmoratori"> Ramon </a> <br>
