@@ -1,9 +1,9 @@
 .container__collaborator {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    
     flex-wrap: wrap; /* quebra a linha de acordo com o tamanho da tela */
-    margin-bottom: 2em;
+    
   }
   
   .container__collaborator a {

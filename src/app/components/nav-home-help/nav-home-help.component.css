@@ -1,0 +1,21 @@
+.navbar-home-help__container{
+}
+
+.navbar-home-help__content{
+    width: 100%;
+}
+.btn-home, .btn-help{
+    
+}
+
+.btn-help {
+    bottom: 47px;
+}
+.btn-home {
+    top: 47px;
+}
+
+.btn-help, .btn-home{
+    position: absolute;
+    right: 47px;
+}

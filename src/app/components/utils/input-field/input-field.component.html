@@ -1,0 +1,20 @@
+<div class="input-field__container">
+    <label class="label-title" [htmlFor]="inputId">
+        {{ labelTitle }}
+    </label>
+    <input [formControl]="controlName" 
+        [type]="inputType" 
+        class="input-field"
+        [placeholder]="placeholder"
+        [id]="inputId"
+        (input)="onChangeInput($event)"
+    >
+    <div class="danger" *ngIf="isError() || !isValid">
+        <small *ngIf="isError()">
+            {{ errorRequireMessage }}
+        </small>
+        <small *ngIf="!isError() && !isValid">
+            {{ errorMessage }}
+        </small>
+    </div>
+</div>

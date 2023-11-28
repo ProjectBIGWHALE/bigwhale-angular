@@ -37,13 +37,13 @@ const routes: Routes = [
     path: 'documents', component: DocumentsComponent,
     children: [
       {
-        path: 'imageconverter', component: ImageconverterComponent, title: 'My big Whale - Conversor de Images'
+        path: 'image-converter', component: ImageconverterComponent, title: 'My big Whale - Conversor de Images'
       },
       {
-        path: 'compactconverter', component: CompactconverterComponent, title: 'My big Whale - Conversor ZIP'
+        path: 'compact-converter', component: CompactconverterComponent, title: 'My big Whale - Conversor ZIP'
       },
       {
-        path: 'certificategenerator', component: CertificategeneratorComponent, title: 'My big Whale - Certificados'
+        path: 'certificate-generator', component: CertificategeneratorComponent, title: 'My big Whale - Certificados'
       }
     ]
   },

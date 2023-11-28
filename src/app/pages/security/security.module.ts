@@ -7,6 +7,7 @@ import { UtilsModule } from 'src/app/components/utils/utils.module';
 
 import { CryptographComponent } from './cryptograph/cryptograph.component';
 import { QrcodegeneratorComponent } from './qrcodegenerator/qrcodegenerator.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 
 const importedComponents = [
@@ -20,7 +21,8 @@ const importedComponents = [
     CommonModule,
     AppRoutingModule,
     UtilsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
 
   ],
   exports: importedComponents

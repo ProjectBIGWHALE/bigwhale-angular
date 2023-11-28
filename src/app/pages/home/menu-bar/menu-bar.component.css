@@ -31,3 +31,18 @@
 .menu-bar__nav li a:hover {
   background-color: #50c878;
 }
+
+@media screen and (max-width: 650px) {
+  .menu-bar__nav {
+    
+    justify-content: center;
+    margin-right: 0;
+    
+  }
+
+  .menu-bar__nav li a{
+    
+    font-size: 12px;
+    
+}
+}
