@@ -1,0 +1,27 @@
+@media screen and (max-width: 816px) {
+    .navbar-home-help__container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        background-color: var(--label-color);
+        height: 4.5rem;
+        width: 100%;
+        box-shadow: 0 0 5px #000;
+    }
+    
+    .navbar-home-help__content{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0 1rem;
+    }    
+    .btn-help, .btn-home{
+        position: static;
+        scale: .8;
+    }
+}
+

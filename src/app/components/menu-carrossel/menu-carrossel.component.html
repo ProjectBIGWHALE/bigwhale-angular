@@ -4,20 +4,26 @@
 
    
         <div class="setas">
-            <button onclick=""><</button>
+            <button (click)="slider.next()"><</button>
         </div>
        
-        <div class="cards">
+        <div class="cards keen-slider" #sliderRef>
+            
             <app-card
-            img="https://cdn-icons-png.flaticon.com/512/69/69544.png"
-            title="Mudar cor de Imagem"
-            description="Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência."
+            id="cardTamanho"
+            class="keen-slider__slide"
+            *ngFor="let card of cards"
+            img="{{card.icon}}"
+            title="{{card.title}}"
+            description="{{card.description}}"
             ></app-card>
+
+
         </div>
 
         
         <div class="setas">
-            <button onclick="" class="inverter">></button>
+            <button (click)="slider.prev()" class="inverter">></button>
         </div>
             
     </div>
