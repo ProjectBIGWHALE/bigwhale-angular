@@ -1,6 +1,6 @@
 <div class="input-field__container">
     <label class="label-title" [htmlFor]="inputId">
-        {{ labelTitle }}
+        {{ textLabel }}
     </label>
     <input [formControl]="controlName" 
         [type]="inputType" 
@@ -18,3 +18,16 @@
         </small>
     </div>
 </div>
+
+<!-- Como Usar
+ esse exemplo do componente veio do certificate.generator.component.html
+<app-input-field
+    [controlName]="form.get('eventName')" // => Nome do formControlName
+    labelText="Nome do evento/curso:" // => "Label do input: Nome, Email, Telefone, ..."
+    placeholder="Primeiros socorros"  // placeholder do input
+    errorMessage="Nome do evento é obrigatório" // => Messagem de erro required
+    [clickBtn]="clickBtn"  // => verificar se o botão download foi clicadp
+    inputId="eventName"  // => id do input 
+    inputType="text" // => tipo do input. Esse input pode ser text, email, password, number ou algum com campos de texto
+/>
+-->

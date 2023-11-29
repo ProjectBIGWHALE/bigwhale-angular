@@ -1,6 +1,6 @@
 <div class="input-file__container">
     <label class="label-title" for="selectedFile">
-        {{filelabelTitle}}
+        {{fileLabelText}}
         <button 
             class="btn-file enabled" 
             type="button"
@@ -31,3 +31,19 @@
         [multiple]="multiple"   
     />
 </div>
+
+<!-- Como usar  
+esse exemplo do componente veio do certificate.generator.component.html
+
+<app-input-file
+    fileLabelText="Descrição do arquivo"
+    buttonTitle="Texto que aparece no input" 
+    (fileContent)="onChangeFile($event)"  // => a função que vai capturar o arquivo recebendo o event
+    errorMessage="Mensagem de error required"
+    [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn" // => vai definir o formControlName e e o validator
+    fileTypeAccept="typo de arquivos aceitos" 
+/>
+
+
+
+-->

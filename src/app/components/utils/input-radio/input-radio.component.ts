@@ -8,7 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class InputRadioComponent {
 
-  @Input() labelTitle: string = '';
+  @Input() labelText: string = '';
   @Input() controlName!: FormControl | any;
   @Input() valueInput: string = ''; 
   @Input() inputId: string = ''; 
