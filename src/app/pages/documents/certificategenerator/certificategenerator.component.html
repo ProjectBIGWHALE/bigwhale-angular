@@ -16,7 +16,7 @@
                         <li>
                             <app-input-radio 
                                 [controlName]="form.get('certificateTypeEnum')"
-                                labelTitle="Participação"
+                                labelText="Participação"
                                 valueInput="PARTICIPATION"
                                 [isChecked]="true"
                                 inputId="participation"
@@ -25,7 +25,7 @@
                         <li>
                             <app-input-radio 
                                 [controlName]="form.get('certificateTypeEnum')"
-                                labelTitle="Palestrante"
+                                labelText="Palestrante"
                                 valueInput="SPEAKER"
                                 inputId="speaker"
                             />
@@ -33,7 +33,7 @@
                         <li>
                             <app-input-radio 
                                 [controlName]="form.get('certificateTypeEnum')"
-                                labelTitle="Curso"
+                                labelText="Curso"
                                 valueInput="COURCE"
                                 inputId="course"
                             />
@@ -45,7 +45,7 @@
                         2. Preencha as informações do certificado
                     </h3>
                     <app-input-file
-                        filelabelTitle="Adicionar arquivo com os nomes dos participantes"
+                        fileLabelText="Arquivo com os nomes dos participantes"
                         buttonTitle="Arquivo csv" 
                         (fileContent)="onChangeFile($event)"
                         errorMessage="Selecione algum arquivo csv"
@@ -55,7 +55,7 @@
 
                     <app-input-field
                         [controlName]="form.get('eventName')"
-                        labelTitle="Nome do evento/curso:"
+                        labelText="Nome do evento/curso:"
                         placeholder="Primeiros socorros"
                         errorMessage="Nome do evento é obrigatório"
                         [clickBtn]="clickBtn"
@@ -64,7 +64,7 @@
 
                     <app-input-field
                         [controlName]="form.get('speakerName')"
-                        labelTitle="Nome do(a) organizador(a):"
+                        labelText="Nome do(a) organizador(a):"
                         placeholder="José Maria"
                         errorMessage="Nome do organizador é obrigatório"
                         [clickBtn]="clickBtn"
@@ -73,7 +73,7 @@
 
                     <app-input-field
                         [controlName]="form.get('speakerRole')"
-                        labelTitle="Cargo do(a) organizador(a):"
+                        labelText="Cargo do(a) organizador(a):"
                         placeholder="Diretor"
                         errorMessage="Cargo do organizador é obrigatório"
                         [clickBtn]="clickBtn"
@@ -82,7 +82,7 @@
 
                     <app-input-field
                         [controlName]="form.get('eventWorkLoad')"
-                        labelTitle="Carga horária:"
+                        labelText="Carga horária:"
                         placeholder="120"
                         errorMessage="Digite apenas números"
                         [clickBtn]="clickBtn"
@@ -92,7 +92,7 @@
                     />
                     <app-input-field 
                         [controlName]="form.get('eventDate')"
-                        labelTitle="Data do evento/curso:"
+                        labelText="Data do evento/curso:"
                         placeholder="22-03-2022"
                         errorMessage="Data do evento é obrigatória"
                         [clickBtn]="clickBtn"
@@ -100,7 +100,7 @@
                         (changeInput)="form.value.eventDate"
                         validatorField="date"
                     />
-                    <app-input-field labelTitle="Local de emissão do certificado:" 
+                    <app-input-field labelText="Local de emissão do certificado:" 
                         [controlName]="form.get('eventLocale')"
                         errorMessage="O campo Nome é obrigatório"
                         placeholder="São Paulo - SP" 
@@ -120,7 +120,7 @@
                         <li>
                             <app-input-radio 
                                 [controlName]="form.get('certificateModelId')"
-                                labelTitle="Certificado 1"
+                                labelText="Certificado 1"
                                 valueInput="1"
                                 [isChecked]="true"
                                 inputId="certificate1"
@@ -129,7 +129,7 @@
                             <li>
                                 <app-input-radio 
                                 [controlName]="form.get('certificateModelId')"
-                                labelTitle="Certificado 2"
+                                labelText="Certificado 2"
                                 valueInput="2"
                                 inputId="certificate2"
                             />    

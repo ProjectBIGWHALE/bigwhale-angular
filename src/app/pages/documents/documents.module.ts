@@ -8,11 +8,13 @@ import { CertificategeneratorComponent } from './certificategenerator/certificat
 import { CompactconverterComponent } from './compactconverter/compactconverter.component';
 import { ImageconverterComponent } from './imageconverter/imageconverter.component';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { DocumentsComponent } from './documents.component';
 
 const importedComponents = [
   CertificategeneratorComponent,
   CompactconverterComponent,
   ImageconverterComponent,
+  DocumentsComponent
 ]
 
 @NgModule({

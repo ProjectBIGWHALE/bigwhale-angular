@@ -6,7 +6,7 @@
     <form [formGroup]="formCompact" (ngSubmit)="onSubmit()" class="form">
         <div class="form-group">
             <app-input-file 
-                filelabelTitle="Selecione um ou mais arquivos ZIP" 
+                fileLabelText="Selecione um ou mais arquivos ZIP" 
                 buttonTitle="Arquivo zip"
                 (fileContent)="onChangeFile($event)" 
                 errorMessage="Selecione algum arquivo zip" 
@@ -45,5 +45,4 @@
     </form>
 </div>
 
-<app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'" />
-<app-buttons-homer-help [iconName]="'undo'" [idName]="'button-home'" [routerName]="'/home'" />
+<app-nav-home-help />
