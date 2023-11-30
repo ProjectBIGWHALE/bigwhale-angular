@@ -55,8 +55,8 @@ export class MenuCarrosselComponent {
 
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
-       
-
+   
+      rtl:true,
       breakpoints: {
 
         "(min-width: 500px)": {

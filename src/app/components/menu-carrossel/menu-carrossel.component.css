@@ -20,9 +20,10 @@
     display: flex;
     background: rgba(13, 13, 13, 0.2);
     align-items: center;
+    justify-content: center;
     height: 30em;
     margin: 15px 60px;
-    justify-content: space-between;
+   
 }
   
 .cards{

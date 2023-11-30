@@ -40,12 +40,7 @@
 
 
     
-  .container__card:active {
-    
-    bottom: 0; 
-    transform: scale(1.05);
-    /* Ao passar o mouse, o item aumentará em 5% */
-  }
+ 
 
   @media screen and (max-width: 600px) {
 
@@ -96,4 +91,30 @@
     }
     
   }
+
+  @media screen and (min-width: 1200px) {
+
+    .container__card{
+     
+      width: 18em;
+      
+    
+     
+    }
+    
+  }
+
+  @media screen and (min-width: 1700px) {
+
+    .container__card{
+     
+      width: 19em;
+      
+    
+     
+    }
+    
+  }
+
+  
   
