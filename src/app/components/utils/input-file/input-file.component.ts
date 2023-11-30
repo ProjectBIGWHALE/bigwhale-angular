@@ -10,7 +10,7 @@ import { FormControl, Validators } from '@angular/forms';
 export class InputFileComponent {
 
   @Input() controlName!: FormControl;
-  @Input() filelabelTitle: string = '';
+  @Input() fileLabelText: string = '';
   @Input() fileTypeAccept: string = '';
   @Input() buttonTitle : string ='';
   @Input() errorMessage: string = '';

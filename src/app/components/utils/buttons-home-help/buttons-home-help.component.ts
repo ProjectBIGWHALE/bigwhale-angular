@@ -11,7 +11,7 @@ export class ButtonsHomeHelpComponent {
   @Input() iconName: string = ''; 
   @Input() idName: string = ''; 
   @Input() routerName: string = ''; 
-  @Input() labelTitle: string = ''; 
+  @Input() labelText: string = ''; 
   @Input() linkId: string = ''; 
   @Input() btnId: string = ''; 
   

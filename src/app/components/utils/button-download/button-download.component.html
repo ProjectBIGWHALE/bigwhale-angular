@@ -1,3 +1,15 @@
-<button type="submit" class="btn" [class]="isBtnValid ? 'enabled' : 'disabled'" (click)="onSubmit()">
-    Download    
-</button>
+<div class="btn-download__container">
+    <button type="submit" class="btn" [class]="isBtnValid ? 'enabled' : 'disabled'" (click)="onSubmit()">
+        Download    
+    </button>
+</div>
+
+<!-- como Usa
+esse exemplo do componente veio do certificate.generator.component.html
+
+<app-button-download 
+    (submitEmitter)="submit"   // => enviar o formulário se ele estiver válido
+    [isBtnValid]="form.valid"  // => verificar formulário está valido para habilitar o click
+/>
+
+-->
