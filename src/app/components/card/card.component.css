@@ -32,10 +32,20 @@
   }
   
   .container__card:hover {
-    transform: scale(1.05);
+    position: absolute;
+    bottom: 5px;
+    /* transform: scale(1.05); */
     /* Ao passar o mouse, o item aumentará em 5% */
   }
 
+
+    
+  .container__card:active {
+    
+    bottom: 0; 
+    transform: scale(1.05);
+    /* Ao passar o mouse, o item aumentará em 5% */
+  }
 
   @media screen and (max-width: 600px) {
 
@@ -54,6 +64,19 @@
     .container__card{
      
       width: 12em;
+      
+    
+     
+    }
+    
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+    .container__card{
+     
+      width: 10em;
       
     
      

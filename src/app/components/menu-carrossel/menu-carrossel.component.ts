@@ -25,10 +25,10 @@ export class MenuCarrosselComponent {
   numberCards:number = 0
 
 
-  constructor() {
-    // Inicialize a variável com base no tamanho inicial da tela
-    this.atualizarTamanhoDaTela(window.innerWidth);
-  }
+  // constructor() {
+  //   // Inicialize a variável com base no tamanho inicial da tela
+  //   this.atualizarTamanhoDaTela(window.innerWidth);
+  // }
 
 
 
@@ -55,13 +55,36 @@ export class MenuCarrosselComponent {
 
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
-      rtl: true,
-      slides: {
-        perView: this.numberCards,
-        spacing: 1,
+       
+
+      breakpoints: {
+
+        "(min-width: 500px)": {
+          slides: { perView: 1, origin: 'center' },
+        },
+        "(min-width: 700px)": {
+          slides: { perView: 2, spacing: 1 },
+        },
+        "(min-width: 1200px)": {
+          slides: { perView: 3, spacing: 5 },
+        },
+        "(min-width: 1700px)": {
+          slides: { perView: 4, spacing: 10 },
+        },
       },
+      
     })
   }
+
+
+      
+      // loop: true,
+      // rtl: true,
+      // slides: {
+      //   perView: this.numberCards,
+      //   spacing: 1,
+   
+  
 
   ngOnDestroy() {
     if (this.slider) this.slider.destroy()
@@ -70,50 +93,50 @@ export class MenuCarrosselComponent {
 
 
  
-  // Atualize o valor da variável quando o tamanho da tela mudar
-  @HostListener('window:resize', ['$event'])
-  onResize(event: { target: { innerWidth: number; }; }) {
-    this.atualizarTamanhoDaTela(event.target.innerWidth);
+  // // Atualize o valor da variável quando o tamanho da tela mudar
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: { target: { innerWidth: number; }; }) {
+  //   this.atualizarTamanhoDaTela(event.target.innerWidth);
 
-        // Atualize o número de cartões no slider quando o tamanho da tela mudar
-        if (this.slider) {
-          this.slider.destroy();
-          this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-            loop: true,
-            rtl: true,
-            slides: {
-              perView: this.numberCards,
-              spacing: 1,
-            },
-          });
-        }
-  }
+  //       // Atualize o número de cartões no slider quando o tamanho da tela mudar
+  //       if (this.slider) {
+  //         this.slider.destroy();
+  //         this.slider = new KeenSlider(this.sliderRef.nativeElement, {
+  //           loop: true,
+  //           rtl: true,
+  //           slides: {
+  //             perView: this.numberCards,
+  //             spacing: 1,
+  //           },
+  //         });
+  //       }
+  // }
 
-  // Lógica para definir o valor da variável com base no tamanho da tela
-  private atualizarTamanhoDaTela(larguraDaTela: number) {
-    if (larguraDaTela < 800) {
+  // // Lógica para definir o valor da variável com base no tamanho da tela
+  // private atualizarTamanhoDaTela(larguraDaTela: number) {
+  //   if (larguraDaTela < 800) {
 
-      this.numberCards = 1
-      this.tamanhoDaTela = 'Pequeno';
-      console.log(this.tamanhoDaTela +" " + this.numberCards)
+  //     this.numberCards = 1
+  //     this.tamanhoDaTela = 'Pequeno';
+  //     console.log(this.tamanhoDaTela +" " + this.numberCards)
       
-    }else if (larguraDaTela < 1000) {
-      this.numberCards = 2
-      this.tamanhoDaTela = 'Médio';
-      console.log(this.tamanhoDaTela +" " +  this.numberCards)
+  //   }else if (larguraDaTela < 1000) {
+  //     this.numberCards = 2
+  //     this.tamanhoDaTela = 'Médio';
+  //     console.log(this.tamanhoDaTela +" " +  this.numberCards)
 
-    } 
-     else if (larguraDaTela < 1300) {
-      this.numberCards = 3
-      this.tamanhoDaTela = 'Médio';
-      console.log(this.tamanhoDaTela +" " +  this.numberCards)
+  //   } 
+  //    else if (larguraDaTela < 1300) {
+  //     this.numberCards = 3
+  //     this.tamanhoDaTela = 'Médio';
+  //     console.log(this.tamanhoDaTela +" " +  this.numberCards)
 
-    } else  {  
-      this.numberCards = 4
-      console.log(this.tamanhoDaTela + " " + this.numberCards)
-      this.tamanhoDaTela = 'Grande';
-    }
-  }
+  //   } else  {  
+  //     this.numberCards = 4
+  //     console.log(this.tamanhoDaTela + " " + this.numberCards)
+  //     this.tamanhoDaTela = 'Grande';
+  //   }
+  // }
 
 
 

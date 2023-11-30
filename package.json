@@ -39,5 +39,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.1.3"
-  }
+  },
+  "description": "- Whale Design - Whale Documents - Whale Security",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
