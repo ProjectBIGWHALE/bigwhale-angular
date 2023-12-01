@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu-bar',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-bar.component.css'],
 })
 export class MenuBarComponent {
+  constructor(private translate: TranslateService) {
 
+  }
 }

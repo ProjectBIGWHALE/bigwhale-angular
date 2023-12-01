@@ -1,0 +1,22 @@
+{
+  "MENU": {
+  "DESIGN": "Diseño",
+  "DOCUMENTS": "Documentos",
+  "SECURITY": "Seguridad",
+  "SUPPORT": "Soporte"
+  },
+
+  "MENU_ABOUT": {
+  "TITLE": "Sobre Nosotros",
+  "DESCRIPTION": "Nuestro equipo es apasionado por la programación y está dedicado a crear una experiencia excepcional para nuestros usuarios. My big Whale fue construido con todo el cuidado y experiencia utilizando los lenguajes Java y JavaScript. Estas tecnologías nos permitieron crear una plataforma innovadora y poderosa para la manipulación de imágenes y documentos. Nuestro objetivo es ofrecer herramientas de edición que combinen facilidad de uso con resultados profesionales, brindando a nuestros usuarios una experiencia única y productiva. Siempre estamos en busca de mejorar y expandir My big Whale, asegurando que sea la elección ideal para impulsar la creatividad y el éxito de nuestros clientes."
+  },
+
+  "MENU_LOGO": {
+  "DESCRIPTION": "Tu paleta de recursos para mejorar imágenes y manipular documentos."
+  },
+
+  "CARD": {
+  "title": "Cambiar color de imagen",
+  "description": "Puedes quitar fácilmente el fondo no deseado y obtener imágenes con transparencia."
+  }
+  }

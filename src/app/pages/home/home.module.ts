@@ -5,6 +5,7 @@ import { MenuAboutComponent } from './menu-about/menu-about.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { MenuLogoComponent } from './menu-logo/menu-logo.component';
 import { HomeComponent } from './home.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -17,6 +18,7 @@ import { HomeComponent } from './home.component';
   ],
   imports: [
     CommonModule,
+    TranslateModule,
     ComponentsModule
   ],
   exports: [

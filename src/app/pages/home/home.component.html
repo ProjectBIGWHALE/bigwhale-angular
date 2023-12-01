@@ -1,3 +1,9 @@
+<div class="translates_buttom">
+  <button (click)="switchToEnglish()"><img src="../../../assets/images/logo/US-United-State.png" alt="" srcset="" ></button>
+  <button (click)="switchToEspanol()"><img src="../../../assets/images/logo/ES-spain.png" alt="" srcset="" ></button>
+  <button (click)="switchToPortuguese()"><img src="../../../assets/images/logo/BR-Brazil.png" alt="" srcset="" ></button>
+</div>
+
 <div class="menu-bar">
     <app-menu-bar></app-menu-bar>
 </div>
@@ -7,7 +13,7 @@
 </div>
 
 <div class="menu-carrossel">
-   
+
 
     <app-menu-carrossel id="design"
     *ngFor="let card of menus.funcoes"
@@ -16,7 +22,7 @@
 
     ></app-menu-carrossel>
 
-    
+
 
 </div>
 
@@ -28,7 +34,7 @@
 
 <div class="collaborator">
 
-    
+
     <app-collaborator *ngFor="let colaborador of colaboradores"
     [name]="colaborador.nomeColaborador"
     [photo]="colaborador.imgSrc"
@@ -36,7 +42,7 @@
     [linkLinkedin]="colaborador.link"
     ></app-collaborator>
 
-    
+
 </div>
 
 <hr>
