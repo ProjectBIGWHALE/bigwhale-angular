@@ -20,5 +20,12 @@
  "CARD": {
   "title": "Mudar cor de Imagem",
   "description": "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência."
- }
- }
+ },
+
+ "MENU_CARROSSEL": {
+  "Design": "Design",
+  "Documentos": "Documentos",
+  "Segurança": "Securança"
+}
+}
+

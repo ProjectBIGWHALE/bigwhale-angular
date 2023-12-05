@@ -10,12 +10,11 @@
 <div class="menu-carrossel">
 
 
-    <app-menu-carrossel id="design"
+    <app-menu-carrossel
     *ngFor="let card of menus.funcoes"
-    title={{card.title}}
-    [cards]= card.cards
-
-    ></app-menu-carrossel>
+    [title]="'MENU_CARROSSEL.' + card.title | translate"
+    [cards]="card.cards"
+  ></app-menu-carrossel>
 
 
 

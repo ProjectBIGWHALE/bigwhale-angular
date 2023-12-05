@@ -1,31 +1,30 @@
 <section class="container__carrossel" >
-    <h2>{{ title }}</h2>
+    <h2>{{ title | translate  }}</h2>
     <div class="container__cards">
 
-   
+
         <div class="setas">
             <button (click)="slider.next()"><</button>
         </div>
-       
+
         <div class="cards keen-slider" #sliderRef>
-            
-            <app-card
-            
-            class="keen-slider__slide"
-            *ngFor="let card of cards"
-            img="{{card.icon}}"
-            title="{{card.title}}"
-            description="{{card.description}}"
-            ></app-card>
+
+          <app-card
+          class="keen-slider__slide"
+          *ngFor="let card of cards"
+          [img]="card.icon"
+          [title]="card.title | translate"
+          [description]="card.description | translate"
+        ></app-card>
 
 
         </div>
 
-        
+
         <div class="setas">
             <button (click)="slider.prev()" class="inverter">></button>
         </div>
-            
+
     </div>
 
 </section>
