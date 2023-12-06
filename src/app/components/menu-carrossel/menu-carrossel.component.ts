@@ -73,10 +73,10 @@ this.translateTitle();
         "(min-width: 500px)": {
           slides: { perView: 1, origin: 'center' },
         },
-        "(min-width: 700px)": {
+        "(min-width: 550px)": {
           slides: { perView: 2, spacing: 1 },
         },
-        "(min-width: 1200px)": {
+        "(min-width: 1100px)": {
           slides: { perView: 3, spacing: 5 },
         },
         "(min-width: 1700px)": {
