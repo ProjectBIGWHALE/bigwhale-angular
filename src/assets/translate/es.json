@@ -18,5 +18,11 @@
   "CARD": {
   "title": "Cambiar color de imagen",
   "description": "Puedes quitar fácilmente el fondo no deseado y obtener imágenes con transparencia."
+  },
+
+  "MENU_CARROSSEL": {
+    "Design": "Diseño",
+    "Documentos": "Documentos",
+    "Segurança": "Seguridad"
   }
   }

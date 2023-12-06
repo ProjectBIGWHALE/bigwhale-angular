@@ -1,7 +1,9 @@
-import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { CardModel } from 'src/app/models/cardModel';
 
 import KeenSlider, { KeenSliderInstance } from "keen-slider"
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-menu-carrossel',
@@ -10,13 +12,15 @@ import KeenSlider, { KeenSliderInstance } from "keen-slider"
      "../../../../node_modules/keen-slider/keen-slider.min.css",
     './menu-carrossel.component.css']
 })
-export class MenuCarrosselComponent {
+export class MenuCarrosselComponent implements OnInit  {
+
+  @Input() title: string = '';
+
+
+
 
   @Input()
-  title:string =''
-
-  @Input()
-  cards: CardModel[] =[] 
+  cards: CardModel[] =[]
 
   tamanhoDaTela: string = ''
 
@@ -24,15 +28,22 @@ export class MenuCarrosselComponent {
 
   numberCards:number = 0
 
-
+  constructor(public translate: TranslateService) {}
   // constructor() {
   //   // Inicialize a variável com base no tamanho inicial da tela
   //   this.atualizarTamanhoDaTela(window.innerWidth);
   // }
 
 
+  ngOnInit(): void {
+this.translateTitle();
+  }
+  private translateTitle(): void {
+    this.translate.get(`MENU_CARROSSEL.${this.title}`).subscribe((translation: string) => {
+      this.title = translation;
+    });
+  }
 
-  
 
 
   @ViewChild("sliderRef")
@@ -40,7 +51,7 @@ export class MenuCarrosselComponent {
 
   slider: any = null
 
- 
+
 
   ngAfterViewInit() {
 
@@ -50,12 +61,12 @@ export class MenuCarrosselComponent {
     // }else if(this.cardLenth >= 3){
     //   this.numberCards = 2
     // }
-  
+
   // console.log(this.numberCards)
 
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
-   
+
       rtl:true,
       breakpoints: {
 
@@ -72,19 +83,19 @@ export class MenuCarrosselComponent {
           slides: { perView: 4, spacing: 10 },
         },
       },
-      
+
     })
   }
 
 
-      
+
       // loop: true,
       // rtl: true,
       // slides: {
       //   perView: this.numberCards,
       //   spacing: 1,
-   
-  
+
+
 
   ngOnDestroy() {
     if (this.slider) this.slider.destroy()
@@ -92,7 +103,7 @@ export class MenuCarrosselComponent {
 
 
 
- 
+
   // // Atualize o valor da variável quando o tamanho da tela mudar
   // @HostListener('window:resize', ['$event'])
   // onResize(event: { target: { innerWidth: number; }; }) {
@@ -119,19 +130,19 @@ export class MenuCarrosselComponent {
   //     this.numberCards = 1
   //     this.tamanhoDaTela = 'Pequeno';
   //     console.log(this.tamanhoDaTela +" " + this.numberCards)
-      
+
   //   }else if (larguraDaTela < 1000) {
   //     this.numberCards = 2
   //     this.tamanhoDaTela = 'Médio';
   //     console.log(this.tamanhoDaTela +" " +  this.numberCards)
 
-  //   } 
+  //   }
   //    else if (larguraDaTela < 1300) {
   //     this.numberCards = 3
   //     this.tamanhoDaTela = 'Médio';
   //     console.log(this.tamanhoDaTela +" " +  this.numberCards)
 
-  //   } else  {  
+  //   } else  {
   //     this.numberCards = 4
   //     console.log(this.tamanhoDaTela + " " + this.numberCards)
   //     this.tamanhoDaTela = 'Grande';

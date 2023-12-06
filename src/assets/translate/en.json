@@ -20,5 +20,12 @@
     "CARD": {
     "title": "Change Image Color",
     "description": "You can easily remove unwanted background and obtain images with transparency."
+    },
+
+    "MENU_CARROSSEL": {
+      "Design": "Design",
+      "Documentos": "Documents",
+      "Segurança": "Security"
+
     }
     }
