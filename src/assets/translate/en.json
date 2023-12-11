@@ -27,5 +27,39 @@
       "Documentos": "Documents",
       "Segurança": "Security"
 
+    },
+    "altercolor": {
+      "title": "Image Color Modifier",
+      "colorSelectionLabel": "Selected color from the current image",
+      "newColorLabel": "New color for the updated image",
+      "clearButton": "Clear",
+      "downloadButton": "Download"
+    },
+    "qrcodegenerator": {
+      "title": "Create QR Code",
+      "selectType": "Select the type",
+      "link": "Link",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "urlLabel": "URL",
+      "corQR": "Choose the color of the QR Code:"
+
+    },
+
+      "cryptograph": {
+        "title": "Enhance the security of your files",
+        "description": "Use a strong encryption key to protect your document or, if you want to decrypt the document, use the correct key generated on our site to access its original content with greater security.",
+        "upload": "upload",
+        "chooseFile": "Choose file",
+        "fileRequiredError": "It is mandatory to select a file",
+        "enterPassword": "Enter the password:",
+        "passwordPlaceholder": "***************",
+        "showPassword": "show-password",
+        "passwordRequiredError": "Password required",
+        "encrypt": "Encrypt",
+        "decrypt": "Decrypt",
+        "selectOptionError": "Select one of the options",
+        "download": "Download"
+      }
     }
-    }
+

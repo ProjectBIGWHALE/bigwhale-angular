@@ -17,51 +17,48 @@ import { SecurityComponent } from './pages/security/security.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: '/home', pathMatch: 'full', title: 'My big Whale - Home'
-  },
-  {
-    path: 'home', component: HomeComponent, title: 'My big Whale - Home'
-  },
-  {
-    path: 'design', component: DesignComponent,
-    children: [
+    path: '', children: [
+      { path: 'home', component: HomeComponent, title: 'My big Whale - Home' },
       {
-        path: 'altercolor', component: AltercolorComponent, title: 'My big Whale - Home'
+        path: 'design', component: DesignComponent,
+        children: [
+          {
+            path: 'altercolor', component: AltercolorComponent, title: 'My big Whale - Home'
+          },
+          {
+            path: 'colorspalette', component: ColorspaletteComponent, title: 'My big Whale - Paleta de Cores'
+          }
+        ]
       },
       {
-        path: 'colorspalette', component: ColorspaletteComponent, title: 'My big Whale - Paleta de Cores'
+        path: 'documents', component: DocumentsComponent,
+        children: [
+          {
+            path: 'image-converter', component: ImageconverterComponent, title: 'My big Whale - Conversor de Images'
+          },
+          {
+            path: 'compact-converter', component: CompactconverterComponent, title: 'My big Whale - Conversor ZIP'
+          },
+          {
+            path: 'certificate-generator', component: CertificategeneratorComponent, title: 'My big Whale - Certificados'
+          }
+        ]
+      },
+      {
+        path: 'security', component: SecurityComponent,
+        children: [
+          {
+            path: 'cryptograph', component: CryptographComponent, title: 'My big Whale - Guardião'
+          },
+          {
+            path: 'qrcodegenerator', component: QrcodegeneratorComponent, title: 'My big Whale - QR Code'
+          }
+        ]
+      },
+      {
+        path: '**', component: NotFoundComponent, title: 'Page not Found'
       }
     ]
-  },
-  {
-    path: 'documents', component: DocumentsComponent,
-    children: [
-      {
-        path: 'image-converter', component: ImageconverterComponent, title: 'My big Whale - Conversor de Images'
-      },
-      {
-        path: 'compact-converter', component: CompactconverterComponent, title: 'My big Whale - Conversor ZIP'
-      },
-      {
-        path: 'certificate-generator', component: CertificategeneratorComponent, title: 'My big Whale - Certificados'
-      }
-    ]
-  },
-
-  {
-    path: 'security', component: SecurityComponent,
-    children: [
-      {
-        path: 'cryptograph', component: CryptographComponent, title: 'My big Whale - Guardião'
-      },
-      {
-        path: 'qrcodegenerator', component: QrcodegeneratorComponent, title: 'My big Whale - QR Code'
-      }
-    ]
-  },
-
-  {
-    path: '**', component: NotFoundComponent, title: "Page not Found"
   }
 ];
 
