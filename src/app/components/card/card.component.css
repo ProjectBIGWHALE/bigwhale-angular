@@ -31,12 +31,12 @@
     font-size: 20px;
   }
   
-  .container__card:hover {
+  /* .container__card:hover {
     position: absolute;
-    bottom: 5px;
+    bottom: 5px; */
     /* transform: scale(1.05); */
     /* Ao passar o mouse, o item aumentará em 5% */
-  }
+  /* } */
 
 
     
