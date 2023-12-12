@@ -16,28 +16,22 @@ export class MenuCarrosselComponent implements OnInit  {
 
   @Input() title: string = '';
 
-
-
-
   @Input()
   cards: CardModel[] =[]
 
-  tamanhoDaTela: string = ''
+
 
   cardLenth:number = 0
 
   numberCards:number = 0
 
   constructor(public translate: TranslateService) {}
-  // constructor() {
-  //   // Inicialize a variável com base no tamanho inicial da tela
-  //   this.atualizarTamanhoDaTela(window.innerWidth);
-  // }
-
 
   ngOnInit(): void {
-this.translateTitle();
+    this.translateTitle();
   }
+
+
   private translateTitle(): void {
     this.translate.get(`MENU_CARROSSEL.${this.title}`).subscribe((translation: string) => {
       this.title = translation;
@@ -55,14 +49,13 @@ this.translateTitle();
 
   ngAfterViewInit() {
 
-    // this.cardLenth = this.cards.length
-    // if(this.cardLenth >= 4){
-    //     this.numberCards = 3
-    // }else if(this.cardLenth >= 3){
-    //   this.numberCards = 2
-    // }
+    this.cardLenth = this.cards.length
+    if(this.cardLenth <= 5){
+     
+    
+  }
 
-  // console.log(this.numberCards)
+  console.log(this.numberCards)
 
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
@@ -74,27 +67,22 @@ this.translateTitle();
           slides: { perView: 1, origin: 'center' },
         },
         "(min-width: 550px)": {
-          slides: { perView: 2, spacing: 1 },
+          slides: { perView: ajusteCard( this.cardLenth, 0 ), spacing: 1 },
         },
         "(min-width: 1100px)": {
-          slides: { perView: 3, spacing: 5 },
+          slides: { perView: ajusteCard( this.cardLenth, 1 ), spacing: 5 },
         },
         "(min-width: 1700px)": {
-          slides: { perView: 4, spacing: 10 },
+          
+          slides: { perView: ajusteCard( this.cardLenth, 2 ), spacing: 10 },
+          
         },
       },
 
     })
   }
 
-
-
-      // loop: true,
-      // rtl: true,
-      // slides: {
-      //   perView: this.numberCards,
-      //   spacing: 1,
-
+ 
 
 
   ngOnDestroy() {
@@ -104,51 +92,53 @@ this.translateTitle();
 
 
 
-  // // Atualize o valor da variável quando o tamanho da tela mudar
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event: { target: { innerWidth: number; }; }) {
-  //   this.atualizarTamanhoDaTela(event.target.innerWidth);
-
-  //       // Atualize o número de cartões no slider quando o tamanho da tela mudar
-  //       if (this.slider) {
-  //         this.slider.destroy();
-  //         this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-  //           loop: true,
-  //           rtl: true,
-  //           slides: {
-  //             perView: this.numberCards,
-  //             spacing: 1,
-  //           },
-  //         });
-  //       }
-  // }
-
-  // // Lógica para definir o valor da variável com base no tamanho da tela
-  // private atualizarTamanhoDaTela(larguraDaTela: number) {
-  //   if (larguraDaTela < 800) {
-
-  //     this.numberCards = 1
-  //     this.tamanhoDaTela = 'Pequeno';
-  //     console.log(this.tamanhoDaTela +" " + this.numberCards)
-
-  //   }else if (larguraDaTela < 1000) {
-  //     this.numberCards = 2
-  //     this.tamanhoDaTela = 'Médio';
-  //     console.log(this.tamanhoDaTela +" " +  this.numberCards)
-
-  //   }
-  //    else if (larguraDaTela < 1300) {
-  //     this.numberCards = 3
-  //     this.tamanhoDaTela = 'Médio';
-  //     console.log(this.tamanhoDaTela +" " +  this.numberCards)
-
-  //   } else  {
-  //     this.numberCards = 4
-  //     console.log(this.tamanhoDaTela + " " + this.numberCards)
-  //     this.tamanhoDaTela = 'Grande';
-  //   }
-  // }
 
 
 
+}
+
+
+function ajusteCard ( numeroCards:number, opcaoCase:number): number{
+
+ 
+ 
+  switch(opcaoCase){
+    case 0:
+      if(numeroCards <= 2){    
+        console.log("550px - 2")
+        return 1;
+      }else{
+        return 2
+      }
+    
+      
+    
+    case 1:
+      if(numeroCards <= 3){console.log("1100px - 3")
+        return 2;
+      }else{
+        return 3
+      }
+      
+      
+
+    case 2:
+      if(numeroCards <= 3){console.log("1700px - 4")
+        return 2;
+      }else if(numeroCards == 4){
+        return 3;
+      }else{
+        return 4
+      }
+      
+      
+
+
+  }
+
+  return 0
+
+  
+
+  
 }
