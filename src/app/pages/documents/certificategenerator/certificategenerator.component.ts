@@ -12,15 +12,15 @@ export class CertificategeneratorComponent implements OnInit {
   form!: FormGroup;
 
   certificate!: Certificate;
-  
+
   isValidEventWorkLoad: boolean = true;
   isValidEventDate: boolean = true;
 
   clickBtn: boolean = false;
 
-  constructor(private fb: FormBuilder, protected certificateService: CertificateService) {}
+  constructor(private fb: FormBuilder, protected certificateService: CertificateService, ) {}
 
-  fieldValidator(field: string){    
+  fieldValidator(field: string){
     return this.form.get(field)?.errors?.['required'] && this.form.get(field)?.touched;
   }
 
@@ -36,24 +36,24 @@ export class CertificategeneratorComponent implements OnInit {
       dateIssue: [''],
       eventLocale: ['', Validators['required']],
       certificateModelId: ['1', Validators['required']],
-    }); 
+    });
   }
 
-  onChangeFile(selectedFile: File): void{  
+  onChangeFile(selectedFile: File): void{
      this.form.patchValue({
       worksheet: selectedFile,
      });
   }
 
   onClick(){
-    return document.getElementById("worksheet")?.click(); 
+    return document.getElementById("worksheet")?.click();
   }
 
   submit(){
-    this.clickBtn = true;  
+    this.clickBtn = true;
     if(this.form.valid){
       const formValues = this.form.value;
- 
+
       this.certificateService.saveCertificate(formValues)
         .subscribe((res: any) => {
           const blob = new Blob([res], { type: 'application/zip' }); // Tipo do arquivo pode variar

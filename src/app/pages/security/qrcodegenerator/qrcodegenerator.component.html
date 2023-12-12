@@ -1,28 +1,28 @@
 <main class="qr-code__container">
-  <h1 class="container__title" role="hea" aria-level="1">Cria QR Code</h1>
+  <h1 class="container__title" role="hea" aria-level="1">{{ 'qrcodegenerator.title' | translate }}</h1>
   <form th:action="@{/security/qrcodegenerator}" class="form" method="POST" enctype="multipart/form-data"
     th:object="${form}" id="form">
     <ol class="qr-code__list">
 
       <!-- Radio inputs -->
       <li class="form-group__list">
-        <h3 class="list__title">Selecione o tipo</h3>
+        <h3 class="list__title">{{ 'qrcodegenerator.selectType' | translate }}</h3>
         <ul class="form-group list__items" id="ul-types">
           <li class="items__group">
             <label for="link-checked" class="item-name">
-              Link
+              {{ 'qrcodegenerator.link' | translate }}
               <input type="radio" name="types" id="link-checked" class="radio" checked value="link">
             </label>
           </li>
           <li class="items__group">
             <label for="email-checked" class="item-name">
-              Email
+              {{ 'qrcodegenerator.email' | translate }}
               <input type="radio" name="types" id="email-checked" class="radio" value="email">
             </label>
           </li>
           <li class="items__group">
             <label for="wapp-cheked" class="item-name">
-              Whatsapp
+              {{ 'qrcodegenerator.whatsapp' | translate }}
               <input type="radio" name="types" id="wapp-cheked" class="radio" value="whatsapp">
             </label>
           </li>
@@ -98,7 +98,7 @@
       <!-- Choose color input-->
       <li class="form-group__list">
         <div class="list-color__content">
-          <h3 class="list__title">Escolha a cor do QR Code:</h3>
+          <h3 class="list__title">{{ 'qrcodegenerator.corQR' | translate }}</h3>
           <div class="form-group content__img">
             <label for="get-color" class="form-group__title">Cor: </label>
             <input type="text" id="get-color" maxlength="22" name="get-color" class="field__input-color"

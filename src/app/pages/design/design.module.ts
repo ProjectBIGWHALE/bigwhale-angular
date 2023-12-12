@@ -8,6 +8,7 @@ import { AltercolorComponent } from './altercolor/altercolor.component';
 import { ColorspaletteComponent } from './colorspalette/colorspalette.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { DesignComponent } from './design.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const importedComponents = [
@@ -21,6 +22,7 @@ const importedComponents = [
   imports: [
     CommonModule,
     AppRoutingModule,
+    TranslateModule,
     ReactiveFormsModule,
     ComponentsModule
   ],

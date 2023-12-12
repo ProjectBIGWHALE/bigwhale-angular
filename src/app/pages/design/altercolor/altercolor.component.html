@@ -1,5 +1,5 @@
 <header>
-  <h1>Modificador de cores em imagem</h1>
+  <h1>{{'altercolor.title' | translate}}</h1>
 </header>
 
 <form th:action="@{/design/altercolor}" method="POST"
@@ -21,7 +21,7 @@ enctype="multipart/form-data" th:object="${form}">
         <div class="input_colors">
           <div>
             <!-- INPUT da cor a ser alterada   -->
-            <p>Cor selecionada da imagem atual</p>
+            <p>{{'altercolor.colorSelectionLabel' | translate}}</p>
             <span class="material-symbols-outlined">colors</span>
             <input th:field="*{colorOfImage}" type="text" id="dropper" />
             <span th:errors="*{colorOfImage}" class="text-danger"></span>
@@ -29,7 +29,7 @@ enctype="multipart/form-data" th:object="${form}">
 
           <div>
             <!-- Pincel pra escolher a nova cor  -->
-            <p>Nova cor para imagem atualizada</p>
+            <p>{{'altercolor.newColorLabel' | translate}}</p>
             <button class="icon-button" type="button" onclick="imageCircleColor()">
               <span class="material-symbols-outlined">colorize</span>
             </button>

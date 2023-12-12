@@ -24,5 +24,38 @@
     "Design": "Diseño",
     "Documentos": "Documentos",
     "Segurança": "Seguridad"
-  }
+  },
+  "altercolor": {
+    "title": "Modificador de colores en imagen",
+    "colorSelectionLabel": "Color seleccionado de la imagen actual",
+    "newColorLabel": "Nuevo color para la imagen actualizada",
+    "clearButton": "Borrar",
+    "downloadButton": "Download"
+  },
+  "qrcodegenerator": {
+    "title": "Crear código QR",
+    "selectType": "Selecciona el tipo",
+    "link": "Enlace",
+    "email": "Correo electrónico",
+    "whatsapp": "WhatsApp",
+    "urlLabel": "URL",
+    "corQR": "Elige el color del Código QR:"
+  },
+
+    "cryptograph": {
+      "title": "Aumenta la seguridad de tus archivos",
+      "description": "Utiliza una clave de cifrado fuerte para proteger tu documento o, si deseas descifrar el documento, utiliza la clave correcta que se generó en nuestro sitio para acceder a su contenido original con mayor seguridad.",
+      "upload": "upload",
+      "chooseFile": "Elegir archivo",
+      "fileRequiredError": "Es obligatorio seleccionar un archivo",
+      "enterPassword": "Ingresa la contraseña:",
+      "showPassword": "show-password",
+      "passwordRequiredError": "Contraseña obligatoria",
+      "encrypt": "Cifrar",
+      "decrypt": "Descifrar",
+      "selectOptionError": "Selecciona una de las opciones",
+      "download": "Download"
+    }
+
+
   }

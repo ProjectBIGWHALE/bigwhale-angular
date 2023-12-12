@@ -9,6 +9,7 @@ import { CryptographComponent } from './cryptograph/cryptograph.component';
 import { QrcodegeneratorComponent } from './qrcodegenerator/qrcodegenerator.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { SecurityComponent } from './security.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const importedComponents = [
@@ -23,6 +24,7 @@ const importedComponents = [
     CommonModule,
     AppRoutingModule,
     UtilsModule,
+    TranslateModule,
     ReactiveFormsModule,
     ComponentsModule
 
