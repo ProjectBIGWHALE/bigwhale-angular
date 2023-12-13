@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -17,4 +18,6 @@ export class CardComponent {
   @Input()
   link:string = ''
 
+
+  constructor(public translate: TranslateService) {}
 }

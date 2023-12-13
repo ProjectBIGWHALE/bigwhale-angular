@@ -12,6 +12,7 @@ import { ButtonsHomeHelpComponent } from './buttons-home-help/buttons-home-help.
 import { InputFileComponent } from './input-file/input-file.component';
 import { InputRadioComponent } from './input-radio/input-radio.component';
 import { InputFieldComponent } from './input-field/input-field.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const importedComponents = [
@@ -30,6 +31,7 @@ const importedComponents = [
     CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    TranslateModule,
     FormsModule
   ],
   exports: importedComponents

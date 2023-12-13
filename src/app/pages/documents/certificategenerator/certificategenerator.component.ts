@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 import { Certificate } from 'src/app/models/Certificate.interface';
 import { CertificateService } from 'src/app/services/certificate.service';
 
@@ -18,7 +19,7 @@ export class CertificategeneratorComponent implements OnInit {
 
   clickBtn: boolean = false;
 
-  constructor(private fb: FormBuilder, protected certificateService: CertificateService, ) {}
+  constructor(private fb: FormBuilder, protected certificateService: CertificateService, public translate: TranslateService ) {}
 
   fieldValidator(field: string){
     return this.form.get(field)?.errors?.['required'] && this.form.get(field)?.touched;

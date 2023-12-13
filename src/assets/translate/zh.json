@@ -1,0 +1,126 @@
+{
+  "MENU": {
+    "DESIGN": "设计",
+    "DOCUMENTS": "文件",
+    "SECURITY": "安全",
+    "SUPPORT": "支持"
+  },
+
+  "MENU_ABOUT": {
+    "TITLE": "关于我们",
+    "DESCRIPTION": "我们的团队热衷于编程，致力于为我们的用户创造卓越的体验。My big Whale是用Java和JavaScript语言精心构建的，这些技术使我们能够创建一个创新且功能强大的平台，用于图像和文档的处理。我们的目标是提供结合了易用性和专业结果的编辑工具，为用户提供独特且高效的体验。我们始终致力于改进和扩展My big Whale，确保它是激发客户创造力和成功的理想选择。"
+  },
+
+  "MENU_LOGO": {
+    "DESCRIPTION": "您的图像和文档处理资源调色板。"
+  },
+
+  "CARD": {
+    "Mudar cor de Imagem": "更改图像颜色",
+    "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.": "您可以轻松删除不需要的背景并获得带有透明度的图像。",
+    "Gerar paleta de cores": "生成调色板",
+    "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design.": "自动提取图像的主要颜色并为设计项目获取灵感。",
+    "Gerar Certificado": "生成证书",
+    "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.": "您可以快速轻松地创建定制的证书，用于识别和认证。",
+    "Converter Imagem": "转换图像",
+    "Converta imagens em vários formatos de forma rápida e prática.": "快速方便地将图像转",
+    "Proteger Arquivos": "保护文件",
+    "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.": "使用只有您知道的密钥加密和解密文件。",
+    "Gerar QR-CODE": "生成二维码",
+    "Você pode gerar um QR-CODE personalizado com facilidade.": "您可以轻松生成自定义的二维码。"
+  },
+
+  "MENU_CARROSSEL": {
+    "Design": "设计",
+    "Documentos": "文件",
+    "Segurança": "安全"
+  },
+
+  "altercolor": {
+    "title": "图像颜色修改器",
+    "colorSelectionLabel": "当前图像的选定颜色",
+    "newColorLabel": "更新后的图像的新颜色",
+    "clearButton": "清除",
+    "downloadButton": "下载"
+  },
+  "certificategenerator": {
+    "title": "证书生成器",
+    "description": "您可以快速轻松地创建自定义证书，用于认可和身份验证。",
+    "type": "选择证书类型：",
+    "participation": "参与",
+    "speaker": "讲者",
+    "course": "课程",
+    "info": "填写证书信息",
+    "archives": "参与者姓名文件",
+    "archivesCSV": "CSV 文件",
+    "nameEvent": "急救",
+    "errorEvent": "事件名称为必填项",
+    "name": "Wang Wei",
+    "office": "主管",
+    "errorName": "组织者名称为必填项",
+    "errorOffice": "组织者职位为必填项",
+    "dateformat": "2022-03-22",
+    "errorDate": "事件日期为必填项",
+    "errorLocate": "姓名字段为必填项",
+    "locate": "圣保罗 - 圣保罗",
+    "errorEmission": "发行地点为必填项",
+    "model": "选择证书模板：",
+    "certificate": "证书",
+    "number": "只能输入数字",
+    "examplecertificate": "证书示例"
+},
+
+  "compactconverter": {
+    "title": "转换ZIP文件",
+    "fileLabelText": "选择一个或多个ZIP文件",
+    "buttonTitle": "Zip文件",
+    "errorMessage": "选择一些ZIP文件",
+    "title2": "选择所需的压缩类型：",
+    "option": "选择一个选项",
+    "selection": "选择一个类型",
+    "output": "文件输出：",
+    "output2": "没有选择"
+  },
+
+  "qrcodegenerator": {
+    "title": "生成QR码",
+    "selectType": "选择类型",
+    "link": "链接",
+    "email": "电子邮件",
+    "whatsapp": "WhatsApp",
+    "urlLabel": "网址",
+    "corQR": "颜色：",
+    "Download": "下载"
+  },
+
+  "cryptograph": {
+    "title": "增强文件安全性",
+    "description": "使用强大的加密密钥保护您的文件，或者如果您希望解密文件，请使用在我们网站上生成的正确密钥以更安全地访问其原始内容。",
+    "upload": "上传",
+    "chooseFile": "选择文件",
+    "fileRequiredError": "必须选择文件",
+    "enterPassword": "输入密码：",
+    "passwordPlaceholder": "***************",
+    "showPassword": "显示密码",
+    "passwordRequiredError": "必须输入密码",
+    "encrypt": "加密",
+    "decrypt": "解密",
+    "selectOptionError": "选择其中一个选项",
+    "download": "下载"
+  },
+
+  "button":{
+    "download": "下载"
+
+  },
+  "input-file": {
+    "fileLabelText": "文件描述",
+    "buttonTitle": "选择文件",
+    "selectedFileMessage": "已选择的文件",
+    "errorRequireMessage": "这是必填项"
+  },
+  "input-field": {
+    "errorRequireMessage": "该字段为必填项"
+  }
+}
+

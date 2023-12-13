@@ -22,7 +22,7 @@
                   {"id":1,"icon":"https://cdn-icons-png.flaticon.com/512/69/69544.png", "title": "Converter Imagem","description": "Converta imagens em vários formatos de forma rápida e prática." },
                   {"id":1,"icon":"https://cdn-icons-png.flaticon.com/512/69/69544.png", "title": "Converter ZIP","description": "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!" },
                   {"id":1,"icon":"https://cdn-icons-png.flaticon.com/512/69/69544.png", "title": "Mudar cor de Imagem","description": "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência." },
-            
+
                 ]
           },
 
