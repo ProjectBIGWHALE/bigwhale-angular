@@ -17,10 +17,7 @@
     "DESCRIPTION": "Your palette of features to enhance images and manipulate documents."
     },
 
-    "CARD": {
-    "title": "Change Image Color",
-    "description": "You can easily remove unwanted background and obtain images with transparency."
-    },
+  
 
     "MENU_CARROSSEL": {
       "Design": "Design",
@@ -28,6 +25,24 @@
       "Segurança": "Security"
 
     },
+      "CARD": {
+        "Mudar cor de Imagem": "Change Image Color",
+        "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.": "You can easily remove the unwanted background and get images with transparency.",
+        "Gerar paleta de cores": "Generate Color Palette",
+        "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design.": "To automatically extract the main colors from your image and get inspiration for your design projects.",
+        "Gerar Certificado": "Generate Certificate",
+        "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.": "You can create custom certificates quickly and easily for recognition and authentication.",
+        "Converter Imagem": "Convert Image",
+        "Converta imagens em vários formatos de forma rápida e prática.": "Convert images to various formats quickly and conveniently.",
+        "Converter ZIP": "Convert ZIP",
+        "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!": "Easily convert a .ZIP file to another compression format of your choice!",
+        "Proteger Arquivos": "Protect Files",
+        "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.": "Protect your file by encrypting and decrypting it with a key that only you know.",
+        "Gerar QR-CODE": "Generate QR Code",
+        "Você pode gerar um QR-CODE personalizado com facilidade.": "You can generate a custom QR code with ease."
+      },
+
+
     "altercolor": {
       "title": "Image Color Modifier",
       "colorSelectionLabel": "Selected color from the current image",

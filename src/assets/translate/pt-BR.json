@@ -18,8 +18,25 @@
 },
 
  "CARD": {
-  "title": "Mudar cor de Imagem",
-  "description": "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência."
+  "Mudar cor de Imagem": "Mudar cor de Imagem",
+  "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.": "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.",
+  "Gerar paleta de cores": "Gerar paleta de cores",
+  "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design.": "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design",
+
+  "Gerar Certificado": "Gerar Certificado",
+  "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.": "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.",
+
+  "Converter Imagem": "Converter Imagem",
+  "Converta imagens em vários formatos de forma rápida e prática.": "Converta imagens em vários formatos de forma rápida e prática.",
+
+  "Converter ZIP": "Converter ZIP",
+  "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!": "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!",
+
+
+  "Proteger Arquivos": "Proteger Arquivos",
+  "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.": "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.",
+  "Gerar QR-CODE": "Gerar QR-CODE ",
+  "Você pode gerar um QR-CODE personalizado com facilidade.": "Você pode gerar um QR-CODE personalizado com facilidade."
  },
 
  "MENU_CARROSSEL": {

@@ -1,5 +1,5 @@
 <section class="container__carrossel" >
-    <h2>{{ title | translate  }}</h2>
+    <h2>{{ title  }}</h2>
     <div class="container__cards">
 
 
@@ -13,8 +13,9 @@
           class="keen-slider__slide"
           *ngFor="let card of cards"
           [img]="card.icon"
-          [title]="card.title | translate"
-          [description]="card.description | translate"
+          [title]="'CARD.' + card.title | translate"
+          [description]="'CARD.' + card.description | translate"
+
         ></app-card>
 
 
