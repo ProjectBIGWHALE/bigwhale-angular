@@ -45,6 +45,46 @@
     "clearButton": "Borrar",
     "downloadButton": "Download"
   },
+
+  "certificategenerator": {
+    "title": "Generador de Certificados",
+    "description": "Puede crear certificados personalizados de forma rápida y fácil para reconocimiento y autenticación.",
+    "type": "Seleccione el tipo de certificado:",
+    "participation": "Participación",
+    "speaker": "Conferencista",
+    "course": "Curso",
+    "info": "Complete la información del certificado",
+    "archives": "Archivo con los nombres de los participantes",
+    "archivesCSV": "Archivo CSV",
+    "nameEvent": "Primeros Auxilios",
+    "errorEvent": "El nombre del evento es obligatorio",
+    "name": "Alberto Martínez",
+    "office": "Director",
+    "errorName": "El nombre del organizador es obligatorio",
+    "errorOffice": "El cargo del organizador es obligatorio",
+    "dateformat": "22-03-2022",
+    "errorDate": "La fecha del evento es obligatoria",
+    "errorLocate": "El campo Nombre es obligatorio",
+    "locate": "São Paulo - SP",
+    "errorEmission": "La ubicación de emisión es obligatoria",
+    "model": "Elija el modelo del certificado:",
+    "certificate": "Certificado",
+    "number": "Ingrese solo números",
+    "examplecertificate": "Ejemplo de Certificado"
+},
+
+
+  "compactconverter": {
+    "title": "Convertir archivos ZIP",
+    "fileLabelText": "Seleccione uno o más archivos ZIP",
+    "buttonTitle": "Archivo zip",
+    "errorMessage": "Seleccione algún archivo ZIP",
+    "title2": "Seleccione el tipo de compresión deseado:",
+    "option": "Seleccione una opción",
+    "selection": "Seleccione un tipo",
+    "output": "Salida del archivo:",
+    "output2": "Sin selección"
+  },
   "qrcodegenerator": {
     "title": "Crear código QR",
     "selectType": "Selecciona el tipo",
@@ -52,7 +92,8 @@
     "email": "Correo electrónico",
     "whatsapp": "WhatsApp",
     "urlLabel": "URL",
-    "corQR": "Elige el color del Código QR:"
+    "corQR": "Elige el color del Código QR:",
+    "Download": "Download"
   },
 
     "cryptograph": {
@@ -68,7 +109,21 @@
       "decrypt": "Descifrar",
       "selectOptionError": "Selecciona una de las opciones",
       "download": "Download"
-    }
+    },
 
+    "button":{
+      "download": "download"
+
+    },
+    "input-file": {
+    "fileLabelText": "Descripción del Archivo",
+    "buttonTitle": "Seleccionar Archivo",
+    "selectedFileMessage": "Archivo Seleccionado",
+    "errorRequireMessage": "Este campo es obligatorio"
+  },
+
+  "input-field": {
+    "errorRequireMessage": "Este campo es obligatorio"
+  }
 
   }

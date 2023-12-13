@@ -43,6 +43,44 @@
     "clearButton": "清除",
     "downloadButton": "下载"
   },
+  "certificategenerator": {
+    "title": "证书生成器",
+    "description": "您可以快速轻松地创建自定义证书，用于认可和身份验证。",
+    "type": "选择证书类型：",
+    "participation": "参与",
+    "speaker": "讲者",
+    "course": "课程",
+    "info": "填写证书信息",
+    "archives": "参与者姓名文件",
+    "archivesCSV": "CSV 文件",
+    "nameEvent": "急救",
+    "errorEvent": "事件名称为必填项",
+    "name": "Wang Wei",
+    "office": "主管",
+    "errorName": "组织者名称为必填项",
+    "errorOffice": "组织者职位为必填项",
+    "dateformat": "2022-03-22",
+    "errorDate": "事件日期为必填项",
+    "errorLocate": "姓名字段为必填项",
+    "locate": "圣保罗 - 圣保罗",
+    "errorEmission": "发行地点为必填项",
+    "model": "选择证书模板：",
+    "certificate": "证书",
+    "number": "只能输入数字",
+    "examplecertificate": "证书示例"
+},
+
+  "compactconverter": {
+    "title": "转换ZIP文件",
+    "fileLabelText": "选择一个或多个ZIP文件",
+    "buttonTitle": "Zip文件",
+    "errorMessage": "选择一些ZIP文件",
+    "title2": "选择所需的压缩类型：",
+    "option": "选择一个选项",
+    "selection": "选择一个类型",
+    "output": "文件输出：",
+    "output2": "没有选择"
+  },
 
   "qrcodegenerator": {
     "title": "生成QR码",
@@ -51,7 +89,8 @@
     "email": "电子邮件",
     "whatsapp": "WhatsApp",
     "urlLabel": "网址",
-    "corQR": "选择QR码颜色："
+    "corQR": "颜色：",
+    "Download": "下载"
   },
 
   "cryptograph": {
@@ -68,5 +107,20 @@
     "decrypt": "解密",
     "selectOptionError": "选择其中一个选项",
     "download": "下载"
+  },
+
+  "button":{
+    "download": "下载"
+
+  },
+  "input-file": {
+    "fileLabelText": "文件描述",
+    "buttonTitle": "选择文件",
+    "selectedFileMessage": "已选择的文件",
+    "errorRequireMessage": "这是必填项"
+  },
+  "input-field": {
+    "errorRequireMessage": "该字段为必填项"
   }
 }
+

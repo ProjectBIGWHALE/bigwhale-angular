@@ -53,6 +53,46 @@
     "downloadButton": "Download"
   },
 
+  "certificategenerator": {
+    "title": "Gerador de certificados",
+    "description" : "Você pode criar certificados personalizados de forma rápida e fácil de para reconhecimento e autenticação.",
+    "type" : " Selecione o tipo de certificado:",
+    "participation": "Participação",
+    "speaker": "Palestrante",
+    "course": "Curso",
+    "info":"Preencha as informações do certificado",
+    "archives": "Arquivo com os nomes dos participantes",
+    "archivesCSV": "Arquivo csv",
+    "nameEvent": "Primeiros socorros",
+    "errorEvent": "Nome do evento é obrigatório",
+    "name": "Jose Maria",
+    "office": "Diretor",
+    "errorName": "Nome do organizador é obrigatório",
+    "errorOffice": "Cargo do organizador é obrigatório",
+    "dateformat": "22/03/2022",
+    "errorDate": "Data do evento é obrigatória",
+    "errorLocate": "O campo Nome é obrigatório",
+    "locate":"São Paulo - SP",
+    "errorEmission": "Local de emissão é obrigatório",
+
+    "model": "Escolha o modelo do certificado:",
+    "certificate": "Certificado",
+    "examplecertificate": "Exemplo do Certificado"
+    },
+
+
+  "compactconverter": {
+    "title": "Converter arquivos ZIP",
+  "fileLabelText": "Selecione um ou mais arquivos ZIP",
+  "buttonTitle": "Arquivo zip ",
+  "errorMessage": "Selecione algum arquivo zip",
+  "title2": " Selecione o tipo da compressão desejada:",
+  "opção": "Selecione uma opção ",
+  "selecao": "Selecione um tipo",
+  "output": "Saida do arquivo:",
+  "output2": "Sem seleção"
+  },
+
 
 "qrcodegenerator": {
   "title": "Criar QR Code",
@@ -61,7 +101,8 @@
   "email": "E-mail",
   "whatsapp": "WhatsApp",
   "urlLabel": "URL",
-  "corQR": "Escolha a cor do QR Code:"
+  "corQR": "Escolha a cor do QR Code:",
+  "Download": "Download"
 },
 
 
@@ -79,10 +120,22 @@
     "decrypt": "Descriptografar",
     "selectOptionError": "Selecione uma das opções",
     "download": "Download"
+  },
+
+
+  "button":{
+    "download": "download"
+
+  },
+
+  "input-file": {
+  "fileLabelText": "Descrição do Arquivo",
+    "buttonTitle": "Selecionar Arquivo",
+    "selectedFileMessage": "Arquivo Selecionado",
+    "errorRequireMessage": "Esse campo é obrigatorio"
+  },
+  "input-field": {
+    "errorRequireMessage": "Esse campo é obrigatorio"
   }
-
-
-
-
 }
 

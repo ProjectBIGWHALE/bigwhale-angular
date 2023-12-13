@@ -44,7 +44,45 @@
     "newColorLabel": "Nouvelle couleur pour l'image mise à jour",
     "clearButton": "Effacer",
     "downloadButton": "Télécharger"
+  },"compactconverter": {
+    "title": "Convertir des fichiers ZIP",
+    "fileLabelText": "Sélectionnez un ou plusieurs fichiers ZIP",
+    "buttonTitle": "Fichier zip",
+    "errorMessage": "Sélectionnez un fichier ZIP",
+    "title2": "Sélectionnez le type de compression souhaité :",
+    "option": "Sélectionnez une option",
+    "selection": "Sélectionnez un type",
+    "output": "Sortie du fichier :",
+    "output2": "Aucune sélection"
   },
+
+  "certificategenerator": {
+    "title": "Générateur de Certificats",
+    "description": "Vous pouvez créer des certificats personnalisés rapidement et facilement pour la reconnaissance et l'authentification.",
+    "type": "Sélectionnez le type de certificat :",
+    "participation": "Participation",
+    "speaker": "Conférencier",
+    "course": "Cours",
+    "info": "Remplissez les informations du certificat",
+    "archives": "Fichier avec les noms des participants",
+    "archivesCSV": "Fichier CSV",
+    "nameEvent": "Premiers Secours",
+    "errorEvent": "Le nom de l'événement est obligatoire",
+    "name": "Émilie Martin",
+    "office": "Directeur",
+    "errorName": "Le nom de l'organisateur est obligatoire",
+    "errorOffice": "La fonction de l'organisateur est obligatoire",
+    "dateformat": "22-03-2022",
+    "errorDate": "La date de l'événement est obligatoire",
+    "errorLocate": "Le champ Nom est obligatoire",
+    "locate": "São Paulo - SP",
+    "errorEmission": "Le lieu d'émission est obligatoire",
+    "model": "Choisissez le modèle du certificat :",
+    "certificate": "Certificat",
+    "number": "Veuillez saisir uniquement des chiffres",
+    "examplecertificate": "Exemple de Certificat"
+},
+
 
   "qrcodegenerator": {
     "title": "Générateur de code QR",
@@ -53,7 +91,8 @@
     "email": "E-mail",
     "whatsapp": "WhatsApp",
     "urlLabel": "URL",
-    "corQR": "Choisissez la couleur du code QR :"
+    "corQR": "Choisissez la couleur du code QR :",
+    "Download": "Download"
   },
 
   "cryptograph": {
@@ -70,5 +109,21 @@
     "decrypt": "Déchiffrer",
     "selectOptionError": "Sélectionnez l'une des options",
     "download": "Télécharger"
+  },
+
+  "button":{
+    "download": "download"
+
+  },
+  "input-file": {
+    "fileLabelText": "Description du Fichier",
+    "buttonTitle": "Sélectionner un Fichier",
+    "selectedFileMessage": "Fichier Sélectionné",
+    "errorRequireMessage": "Ce champ est obligatoire"
+  },
+  "input-field": {
+    "errorRequireMessage": "Ce champ est obligatoire"
   }
 }
+
+

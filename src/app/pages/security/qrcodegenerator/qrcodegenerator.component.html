@@ -36,7 +36,7 @@
         <!-- qrCode para link -->
         <div class="form-group__container">
           <div class="form-group form-group__content" id="form-group-link">
-            <label for="link">Url</label>
+            <label for="link">{{'qrcodegenerator.urlLabel' | translate}}</label>
             <input type="text" class="link__field" name="link" th:field="*{link}" id="link"
               placeholder="https://mybigwhale.com" />
           </div>
@@ -100,7 +100,7 @@
         <div class="list-color__content">
           <h3 class="list__title">{{ 'qrcodegenerator.corQR' | translate }}</h3>
           <div class="form-group content__img">
-            <label for="get-color" class="form-group__title">Cor: </label>
+            <label for="get-color" class="form-group__title">{{'qrcodegenerator.corQR' | translate}} </label>
             <input type="text" id="get-color" maxlength="22" name="get-color" class="field__input-color"
               placeholder="color, #FF0000, rgb(255,0,0)" th:field="*{pixelColor}">
             <div class="get-color__field">
@@ -122,7 +122,7 @@
         <!-- imagem que será exibida no préview -->
       </div>
       <div class="btn-download__content">
-        <button class="btn btn-download" id="btnSubmit" type="submit">Download</button>
+        <button class="btn btn-download" id="btnSubmit" type="submit">{{'qrcodegenerator.Download' | translate}}</button>
       </div>
     </div>
   </form>
