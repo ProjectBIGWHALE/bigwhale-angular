@@ -20,12 +20,16 @@ import { HomeModule } from './pages/home/home.module';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
+
+import { HttpErrorInterceptor } from './interceptor/HttpErrorInterceptor';
+import { ServiceUnavailableComponent } from './pages/service-unavailable/service-unavailable.component';
 //import { LanguageInterceptor } from './interceptor/language.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
+    ServiceUnavailableComponent,
 
   ],
   imports: [
@@ -47,7 +51,10 @@ import { HomeComponent } from './pages/home/home.component';
       },
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

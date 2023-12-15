@@ -5,15 +5,18 @@
     <div class="not-fount__headers">
       <div class="headers-texts">
         <h1>OPS! :( </h1>
-        <h2>Erro 404</h2>
+        <h2>503</h2>
       </div >
       <div class="headers-img"><img src="assets/images/404_and_503/Logo_desfalecida.png" alt=""></div>
     </div>
     <div class="not-fount__context">
-      <h3>Desculpe, a página que voce procura não foi encontrada.</h3>
-      <p>Verifique se o endereço informado está correto. Se o problema persistir, nao esqueça de nos avisar.</p>
-      <button class="bt-content" [routerLink]="['/home']">Voltar à página inicial</button>
+      <h3>Atenção, o serviço não está disponível.</h3>
+      <p>
 
+        <a id="refreshLink" (click)="refreshPage()">Clique aqui</a>
+        para atualizar a página. Se o problema persistir, não esqueça de nos avisar.
+      </p>
     </div>
+
   </div>
 </div>
