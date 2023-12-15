@@ -1,7 +1,7 @@
 <div class="btn-download__container">
-    <button type="submit" class="btn" [class]="isBtnValid ? 'enabled' : 'disabled'" (click)="onSubmit()">
-       {{'button.download' | translate}}
-    </button>
+  <button type="submit" class="btn" [ngClass]="{'enabled': isBtnValid, 'disabled': !isBtnValid}" (click)="onSubmit()">
+     {{'button.download' | translate}}
+  </button>
 </div>
 
 <!-- como Usa
