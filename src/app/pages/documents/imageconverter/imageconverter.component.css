@@ -1,0 +1,60 @@
+.imageconverter__container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: 3%; /* Utilizando porcentagem para ajustar a margem superior */
+  padding: 2em; /* Utilizando em para ajustar o padding */
+}
+
+.imageconverter__header {
+  text-align: center;
+  margin-bottom: 2%; /* Ajustando a margem inferior */
+  margin-top: 4%; /* Ajustando a margem superior */
+}
+
+.imageconverter__header > h1 {
+  margin-bottom: 1em; /* Ajustando a margem inferior do h1 */
+}
+
+.imageconverter__header > h2 {
+  font-weight: normal;
+}
+
+.imageconverter__others {
+  text-align: center;
+  font-size: 1.125em; /* Utilizando em para ajustar o tamanho da fonte */
+  margin-bottom: 2em; /* Ajustando a margem inferior */
+}
+
+.imageconverter__input {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 0 2em; /* Ajustando o padding horizontal */
+  margin-bottom: 3%;
+}
+
+.imageconverter__options {
+  background-color: #f2f2f2;
+}
+
+.imageconverter__donwload {
+  display: flex;
+  justify-content: center;
+}
+
+.select__content {
+  border-radius: 2px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 1.125em; /* Utilizando em para ajustar o tamanho da fonte */
+  transition: 0.2s;
+}
+
+/* Media Query para ajustes em telas menores */
+@media screen and (max-width: 768px) {
+  .imageconverter__input {
+    padding: 0 1em; /* Ajustando o padding horizontal para telas menores */
+  }
+
+  /* Adicione mais ajustes conforme necessário para telas menores */
+}

@@ -1,1 +1,27 @@
-<p>colorspalette works!</p>
+<div class="colorspallete__container">
+  <header class="colorspallete__headers">
+    <h1>Paleta de Cores a partir de imagens</h1>
+    <h3>Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design</h3>
+  </header>
+
+
+<form id="uploadForm" action="/design/colorspallete" method="post" enctype="multipart/form-data">
+
+  <div class="colorspallete__form-group">
+<label for="image" class="custom-button"> Selecionar Imagem</label>
+<input type="file" id="image" onchange="submitForm()" style="display: none;">
+
+  </div>
+  <p>Ou arreste e solte o arquivo aqui</p>
+<div class="content">
+  <div id="drop-area" class="drop-class"></div>
+  <div class="form-action">
+    <button type="submit" style="display: none;"></button>
+  </div>
+</div>
+
+</form>
+
+<div class="colorspallete__img"><img  class="image-logo" src="assets/images/logo/logo.png" alt="logo 50% transparente"></div>
+</div>
+<app-nav-home-help></app-nav-home-help>

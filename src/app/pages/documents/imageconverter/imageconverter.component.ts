@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./imageconverter.component.css']
 })
 export class ImageconverterComponent {
+onChangeSelect($event: Event) {
+throw new Error('Method not implemented.');
+}
 
 }

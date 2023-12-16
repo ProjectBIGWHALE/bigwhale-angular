@@ -10,6 +10,7 @@ import { CompactconverterComponent } from './pages/documents/compactconverter/co
 import { CertificategeneratorComponent } from './pages/documents/certificategenerator/certificategenerator.component';
 import { CryptographComponent } from './pages/security/cryptograph/cryptograph.component';
 import { QrcodegeneratorComponent } from './pages/security/qrcodegenerator/qrcodegenerator.component';
+import { ServiceUnavailableComponent } from './pages/service-unavailable/service-unavailable.component';
 
 import { DesignComponent } from './pages/design/design.component';
 import { DocumentsComponent } from './pages/documents/documents.component';
@@ -54,6 +55,9 @@ const routes: Routes = [
             path: 'qrcodegenerator', component: QrcodegeneratorComponent, title: 'My big Whale - QR Code'
           }
         ]
+      },
+      {
+        path: 'service-unavailable', component: ServiceUnavailableComponent, title: 'Erro 503 - Serviço Indisponível'
       },
       {
         path: '**', component: NotFoundComponent, title: 'Page not Found'

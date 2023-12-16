@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
   styleUrls: ['./not-found.component.css']
 })
-export class NotFoundComponent {
+export class NotFoundComponent  {
+
 
 }

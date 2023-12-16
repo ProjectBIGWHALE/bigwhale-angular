@@ -1,0 +1,57 @@
+.not-fount__container {
+  background-color: #ffffff;
+  display: flex;
+  border: 1px solid red;
+  margin-top: 30px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.not-fount__content {
+  margin-top: 30px;
+  width: 80%; /* Adiciona uma largura máxima ao conteúdo para garantir boa leitura */
+  max-width: 600px; /* Define uma largura máxima para telas maiores */
+}
+
+.not-fount__headers {
+  display: flex;
+  flex-direction: column; /* Altera para coluna para melhor empilhamento em telas menores */
+  align-items: center;
+  text-align: center; /* Centraliza o texto */
+}
+
+.not-fount__headers h1, .not-fount__headers h2 {
+  font-size: 4vw; /* Torna o tamanho da fonte responsivo */
+}
+
+.headers-texts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; /* Adiciona um espaçamento superior para separar do cabeçalho */
+}
+
+.not-fount__headers img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner pai */
+  max-width: 600px; /* Define uma largura máxima para telas maiores */
+  margin-top: 20px; /* Adiciona um espaçamento superior para separar do texto */
+}
+
+.not-fount__context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Centraliza o texto */
+  margin-top: 20px; /* Adiciona um espaçamento superior para separar do cabeçalho */
+}
+
+.bt-content {
+  border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px; /* Adiciona um espaçamento superior para separar do conteúdo anterior */
+}
+  

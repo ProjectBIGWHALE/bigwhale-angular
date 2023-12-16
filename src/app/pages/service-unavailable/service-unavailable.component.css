@@ -62,12 +62,9 @@ justify-content: center;
 
   margin-bottom: 10px;
 }
-.bt-content {
-  border: none;
-  background-color: transparent;
-  font-weight: bolder;
-  font-size: 18px;
-  cursor: pointer;
+.not-fount__context   a {
+cursor: pointer;
+  text-decoration: underline;
 }
 @media only screen and (max-width: 600px) {
   .not-fount__headers {
@@ -80,4 +77,6 @@ justify-content: center;
 .not-fount__context{
   text-align: center;
 }
+
 }
+

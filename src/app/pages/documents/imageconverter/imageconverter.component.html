@@ -1,1 +1,35 @@
-<p>imageconverter works!</p>
+<div class="imageconverter__container">
+  <div class="imageconverter__header">
+    <h1>Conversor Online de imagens</h1>
+    <h2> Formatos suportados: ( JPG, JPEG, BMP, GIF)</h2>
+  </div>
+
+<form th:action="@{/design/altercolor}" method="POST"
+enctype="multipart/form-data" th:object="${form}">
+
+<div  class="imageconverter__others">
+
+  <div class="imageconverter__input">
+    <label>Escolha uma imagem: </label>
+    <input type="file" name="image" id="image" accept=".bmp, .jpg, .jpeg, .gif" required="">
+  </div>
+  <div class="imageconverter__options">
+
+    <p>Formato desejado:  <select name="action" id="typeFile" class="select__content" (change)="onChangeSelect($event)">
+      <option selected id="primaryOption">{{  ('jpeg')  }}</option>
+      <option label="jpg" class="options" value="jpg">jpg</option>
+      <option label="bpm" class="options" value="bpm">bpm</option>
+      <option label="gif" class="options" value="gif">gif</option>
+      <option label="png" class="options" value="png">png</option>
+      <option label="tiff" class="options" value="tiff">tiff</option>
+    </select> </p>
+  </div>
+</div>
+<div class="imageconverter__donwload">
+
+  <app-button-download></app-button-download>
+</div>
+
+</form>
+</div>
+<app-nav-home-help></app-nav-home-help>
