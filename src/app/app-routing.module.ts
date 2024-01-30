@@ -18,7 +18,6 @@ import { SecurityComponent } from './pages/security/security.component';
 
 const routes: Routes = [
   {
-<<<<<<< Updated upstream
     path: '', children: [
       { path: 'home', component: HomeComponent, title: 'My big Whale - Home' },
       {
@@ -64,58 +63,11 @@ const routes: Routes = [
         path: '**', component: NotFoundComponent, title: 'Page not Found'
       }
     ]
-=======
-    path: '', redirectTo: '/home', pathMatch: 'full', title: 'My big Whale - Home'
-  },
-  {
-    path: 'home', component: HomeComponent, title: 'My big Whale - Home'
-  },
-  {
-    path: 'design',   
-    children: [
-      {
-        path: 'alter-color', component: AltercolorComponent, title: 'My big Whale - Home'
-      },
-      {
-        path: 'colors-palette', component: ColorspaletteComponent, title: 'My big Whale - Paleta de Cores'
-      }
-    ]
-  },
-  {
-    path: 'documents', 
-    children: [
-      {
-        path: 'image-converter', component: ImageconverterComponent, title: 'My big Whale - Conversor de Images'
-      },
-      {
-        path: 'compact-converter', component: CompactconverterComponent, title: 'My big Whale - Conversor ZIP'
-      },
-      {
-        path: 'certificate-generator', component: CertificategeneratorComponent, title: 'My big Whale - Certificados'
-      }
-    ]
-  },
-
-  {
-    path: 'security', 
-    children: [
-      {
-        path: 'cryptograph', component: CryptographComponent, title: 'My big Whale - Guardião'
-      },
-      {
-        path: 'qrcodegenerator', component: QrcodegeneratorComponent, title: 'My big Whale - QR Code'
-      }
-    ]
-  },
-
-  {
-    path: '**', component: NotFoundComponent, title: "Page not Found"
->>>>>>> Stashed changes
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
