@@ -24,8 +24,7 @@ const importedComponents = [
     AppRoutingModule,
     TranslateModule,
     ReactiveFormsModule,
-    ComponentsModule,
-    AppRoutingModule
+    ComponentsModule
   ],
   exports: importedComponents
 })

@@ -1,12 +1,6 @@
 .menu-logo{
     margin-top: 5em;
 }
-.menu-bar{
-    position: fixed;
-    top: .5rem;
-    right: 0;
-    z-index: 1;
-}
 
 .menu-about{
     margin-top: 5em;
