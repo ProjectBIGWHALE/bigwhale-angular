@@ -1,4 +1,5 @@
 <div class="input-file__container">
+<<<<<<< Updated upstream
   <label class="label-title" for="selectedFile">
       {{ 'input-file.fileLabelText' | translate }}
       <button
@@ -31,3 +32,39 @@
       [multiple]="multiple"
   />
 </div>
+=======
+    <label class="label-title" for="selectedFile">
+        {{filelabelTitle}}
+        <button 
+            class="btn-file enabled" 
+            type="button"
+            (click)="onClick()"
+            *ngIf="!filesNames[0]; else selected" 
+        >   
+            <span class="btn-title" >{{buttonTitle}}</span>
+        </button>
+        <ng-template  #selected>
+            <p class="btn-file enabled">
+                Arquivo selecionado: 
+                <span *ngFor="let fileName of filesNames" 
+                class="file-name">
+                    {{fileName}}
+                </span>
+            </p>
+        </ng-template>
+    </label>
+    <div *ngIf="isSelected || invalidType" class="danger">
+        <small *ngIf="isSelected">{{errorRequireMessage}}</small>
+        <small *ngIf="invalidType">{{errorMessage}}</small>
+        
+    </div>
+    <input 
+        type="file" 
+        style="display: none;" 
+        id="selectedFile" 
+        [accept]="fileTypeAccept" 
+        (change)="onChangeFile($event)" 
+        [multiple]="multiple"   
+    />
+</div>
+>>>>>>> Stashed changes
