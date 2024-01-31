@@ -48,7 +48,7 @@
                         fileLabelText="{{'certificategenerator.archives'| translate}}"
                         buttonTitle="Arquivo csv"
                         (fileContent)="onChangeFile($event)"
-                        errorMessage="{{'certificategenerator.archivesCSV'| translate}}"
+                        errorMessage="{{'Selecione um arquivo com extensão csv'| translate}}"
                         [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn"
                         fileTypeAccept=".csv"
                     />

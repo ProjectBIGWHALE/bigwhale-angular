@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
 
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -12,16 +12,13 @@ import { CryptographComponent } from './pages/security/cryptograph/cryptograph.c
 import { QrcodegeneratorComponent } from './pages/security/qrcodegenerator/qrcodegenerator.component';
 import { ServiceUnavailableComponent } from './pages/service-unavailable/service-unavailable.component';
 
-import { DesignComponent } from './pages/design/design.component';
-import { DocumentsComponent } from './pages/documents/documents.component';
-import { SecurityComponent } from './pages/security/security.component';
 
 const routes: Routes = [
   {
     path: '', children: [
       { path: 'home', component: HomeComponent, title: 'My big Whale - Home' },
       {
-        path: 'design', component: DesignComponent,
+        path: 'design',
         children: [
           {
             path: 'altercolor', component: AltercolorComponent, title: 'My big Whale - Home'
@@ -32,7 +29,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'documents', component: DocumentsComponent,
+        path: 'documents',
         children: [
           {
             path: 'image-converter', component: ImageconverterComponent, title: 'My big Whale - Conversor de Images'
@@ -46,7 +43,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'security', component: SecurityComponent,
+        path: 'security', 
         children: [
           {
             path: 'cryptograph', component: CryptographComponent, title: 'My big Whale - Guardião'
