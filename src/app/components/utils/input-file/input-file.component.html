@@ -19,8 +19,9 @@
           </p>
       </ng-template>
   </label>
-  <div *ngIf="isSelected" class="danger">
+  <div *ngIf="isSelected || invalidFile" class="danger">
       <small *ngIf="isSelected">{{ 'input-file.errorRequireMessage' | translate }}</small>
+      <small *ngIf="invalidFile">{{ errorMessage | translate }}</small>
   </div>
   <input
       type="file"

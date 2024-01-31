@@ -22,13 +22,19 @@ export class InputFileComponent {
   @Output() fileContent = new EventEmitter<any>();
 
   filesNames: string[] = []
+  invalidFile: boolean = false
 
 
   onChangeFile(target:any){
     if(target.srcElement.files?.length > 0){
       for(let i = 0; i < target.srcElement.files?.length ; i ++)  {
-        this.filesNames.push(target.srcElement.files[i].name);
+        let fileName = target.srcElement.files[i].name;
+        this.invalidFile = `.${fileName.split('.')[1]}` !== this.fileTypeAccept
+        if(this.invalidFile) return null
+        this.filesNames.push(fileName);
       }
+      
+      
 
       if(!this.multiple){
         const selectedFile: File = target.srcElement.files[0];
