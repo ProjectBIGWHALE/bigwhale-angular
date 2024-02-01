@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {dataFake}from '../../dataFake/colaboradore'
+import { dataFake } from '../../dataFake/colaboradore';
 import { dataFakeCard } from 'src/app/dataFake/data-card';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
+import { CardModel } from 'src/app/models/cardModel';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
+  colaboradores = dataFake;
+  pages = dataFakeCard;
+  cards: CardModel[] = [];
 
-
-  colaboradores = dataFake
-  menus = dataFakeCard
-
-
-  constructor(private router: Router, private languageService: LanguageService) {}
+  constructor(
+    private router: Router,
+    private languageService: LanguageService
+  ) {}
   ngOnInit(): void {
     const savedLanguage = this.languageService.getLanguage();
     this.languageService.updateRoutesLanguage(savedLanguage);
@@ -32,15 +34,10 @@ export class HomeComponent implements OnInit{
   //  translate.setDefaultLang('pt-BR');
 
   //  const browserLang = translate.getBrowserLang();
- //   translate.use(browserLang?.match(/pt-BR|en|es/) ? browserLang : 'pt-BR');
- // }
-
-
-
+  //   translate.use(browserLang?.match(/pt-BR|en|es/) ? browserLang : 'pt-BR');
+  // }
 
   switchLanguage(language: string): void {
     this.languageService.setLanguage(language);
   }
-
 }
-

@@ -10,6 +10,7 @@ import { MenuCarrosselComponent } from './menu-carrossel/menu-carrossel.componen
 import { NavHomeHelpComponent } from './nav-home-help/nav-home-help.component';
 import { LoadingComponent } from './loading/loading.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     UtilsModule,
     TranslateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   exports: [
     UtilsModule,

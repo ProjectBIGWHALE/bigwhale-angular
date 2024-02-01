@@ -10,9 +10,6 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class MenuBarComponent {
 
-
-
-
   constructor(private router: Router, private languageService: LanguageService, public translate: TranslateService) {
     translate.setDefaultLang('pt-BR');
 

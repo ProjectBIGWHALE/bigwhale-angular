@@ -18,9 +18,6 @@ export class MenuCarrosselComponent implements OnInit  {
 
   @Input()
   cards: CardModel[] =[]
-
-
-
   cardLenth:number = 0
 
   numberCards:number = 0
@@ -31,28 +28,22 @@ export class MenuCarrosselComponent implements OnInit  {
     this.translateTitle();
   }
 
-
   private translateTitle(): void {
     this.translate.get(`MENU_CARROSSEL.${this.title}`).subscribe((translation: string) => {
       this.title = translation;
     });
   }
-
-
-
   @ViewChild("sliderRef")
   sliderRef!: ElementRef<HTMLElement>;
 
   slider: any = null
 
-
-
   ngAfterViewInit() {
 
     this.cardLenth = this.cards.length
     if(this.cardLenth <= 5){
-     
-    
+      console.log('ok');
+      
   }
 
   console.log(this.numberCards)
@@ -99,9 +90,6 @@ export class MenuCarrosselComponent implements OnInit  {
 
 
 function ajusteCard ( numeroCards:number, opcaoCase:number): number{
-
- 
- 
   switch(opcaoCase){
     case 0:
       if(numeroCards <= 2){    
@@ -110,17 +98,13 @@ function ajusteCard ( numeroCards:number, opcaoCase:number): number{
       }else{
         return 2
       }
-    
-      
-    
+     
     case 1:
       if(numeroCards <= 3){console.log("1100px - 3")
         return 2;
       }else{
         return 3
       }
-      
-      
 
     case 2:
       if(numeroCards <= 3){console.log("1700px - 4")
@@ -130,15 +114,7 @@ function ajusteCard ( numeroCards:number, opcaoCase:number): number{
       }else{
         return 4
       }
-      
-      
-
-
   }
 
   return 0
-
-  
-
-  
 }

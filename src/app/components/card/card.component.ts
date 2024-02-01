@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -10,13 +9,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class CardComponent {
 
   @Input()
-  img: string =''
+  icon: string =''
   @Input()
   title: string =''
   @Input()
   description: string=''
   @Input()
-  link:string = ''
+  router:string = ''
 
 
   constructor(public translate: TranslateService) {}
