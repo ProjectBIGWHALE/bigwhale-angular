@@ -1,6 +1,7 @@
 export type CardModel = {
-    id:number
-    icon: string 
-    title: string
-    description: string
+    id: number,
+    icon: string,
+    title: string,
+    description: string,
+    router: string
 }

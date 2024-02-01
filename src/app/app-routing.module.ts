@@ -21,10 +21,10 @@ const routes: Routes = [
         path: 'design',
         children: [
           {
-            path: 'altercolor', component: AltercolorComponent, title: 'My big Whale - Home'
+            path: 'alter-color', component: AltercolorComponent, title: 'My big Whale - Home'
           },
           {
-            path: 'colorspalette', component: ColorspaletteComponent, title: 'My big Whale - Paleta de Cores'
+            path: 'colors-palette', component: ColorspaletteComponent, title: 'My big Whale - Paleta de Cores'
           }
         ]
       },
@@ -49,7 +49,7 @@ const routes: Routes = [
             path: 'cryptograph', component: CryptographComponent, title: 'My big Whale - Guardião'
           },
           {
-            path: 'qrcodegenerator', component: QrcodegeneratorComponent, title: 'My big Whale - QR Code'
+            path: 'qrcode-generator', component: QrcodegeneratorComponent, title: 'My big Whale - QR Code'
           }
         ]
       },

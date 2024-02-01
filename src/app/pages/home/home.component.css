@@ -16,7 +16,45 @@
 .container__footer{
     display: flex;
     flex-direction: row;
-    padding: 56px 125px;
+    padding: 3.5rem 7.5rem;
     justify-content: space-between;
 }
 
+.menu__carrossel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-title__content{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 4.25rem;
+}
+
+.page__title{
+    background-color: var(--primary-color);
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: absolute;
+    left: 0;
+}
+
+.page__cards{
+    background-color: #808080;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card{
+    width: 20rem;
+}
