@@ -1,49 +1,48 @@
 <div class="compact-converter__container">
-    <h1 class="compact-converter__title">
-        Converter arquivos ZIP
-    </h1>
+  <h1 class="compact-converter__title">
+      {{ 'compactconverter.title' | translate }}
+  </h1>
 
-    <form [formGroup]="formCompact" (ngSubmit)="onSubmit()" class="form">
-        <div class="form-group">
-            <app-input-file 
-                filelabelTitle="Selecione um ou mais arquivos ZIP" 
-                buttonTitle="Arquivo zip"
-                (fileContent)="onChangeFile($event)" 
-                errorMessage="Selecione algum arquivo zip" 
-                fileTypeAccept=".zip"
-                [multiple]="true"
-                [isSelected]="formCompact.get('files')?.errors?.['required'] && clickBtn"
-            />
-        </div>
-        <div class="form-group">
-            <p>
-                Selecione o tipo da compressão desejada:
-            </p>
-            <div class="select__container">
-                <select  name="action" id="typeFile" class="select__content"(change)="onChangeSelect($event)" >
-                    <option selected id="primaryOption">-- Selecione uma opção --</option>
-                    <option label=".zip" class="options" value="zip">.zip</option>
-                    <option label=".tar.gz" class="options" value="tar.gz">.tar.gz</option>
-                    <option label=".tar" class="options" value="tar">.tar</option>
-                    <option label=".7z" class="options" value="7z">.7z</option>
-                </select>
-                <i class="select__arrow"></i>
-            </div>
-            <div *ngIf="formCompact.controls['outputFormat'].errors && clickBtn" class="danger">
-                <small>Selecione um tipo</small>
-            </div>
-            <div class="outuput-file__container">
-                <p class="output-file__content">
-                    Saida do arquivo: <span id="outputFiles" class="output-file-name">{{
-                    formCompact.valid 
-                    ? showFiles(formCompact.value.files) 
-                    : 'Sem seleção'}}</span>
-                </p>
-            </div>
-        </div>
-        <app-button-download (submitEmitter)="onSubmit" [isBtnValid]="formCompact.valid" />
-    </form>
+  <form [formGroup]="formCompact" (ngSubmit)="onSubmit()" class="form">
+      <div class="form-group">
+          <app-input-file
+              fileLabelText="{{ 'compactconverter.fileLabelText' | translate }}"
+              buttonTitle="{{ 'compactconverter.buttonTitle' | translate }}"
+              (fileContent)="onChangeFile($event)"
+              errorMessage="{{ 'compactconverter.errorMessage' | translate }}"
+              fileTypeAccept=".zip"
+              [multiple]="true"
+              [isSelected]="formCompact.get('files')?.errors?.['required'] && clickBtn"
+          />
+      </div>
+      <div class="form-group">
+          <p>
+              {{ 'compactconverter.title2' | translate }}
+          </p>
+          <div class="select__container">
+              <select name="action" id="typeFile" class="select__content" (change)="onChangeSelect($event)">
+                  <option selected id="primaryOption">{{ '-- ' + ('compactconverter.option' | translate) + ' --' }}</option>
+                  <option label=".zip" class="options" value="zip">.zip</option>
+                  <option label=".tar.gz" class="options" value="tar.gz">.tar.gz</option>
+                  <option label=".tar" class="options" value="tar">.tar</option>
+                  <option label=".7z" class="options" value="7z">.7z</option>
+              </select>
+              <i class="select__arrow"></i>
+          </div>
+          <div *ngIf="formCompact.controls['outputFormat'].errors && clickBtn" class="danger">
+              <small>{{ 'compactconverter.selection' | translate }}</small>
+          </div>
+          <div class="outuput-file__container">
+              <p class="output-file__content">
+                  {{ 'compactconverter.output' | translate }} <span id="outputFiles" class="output-file-name">{{
+                  formCompact.valid
+                  ? showFiles(formCompact.value.files)
+                  : ('compactconverter.output2' | translate) }}</span>
+              </p>
+          </div>
+      </div>
+      <app-button-download (submitEmitter)="onSubmit" [isBtnValid]="formCompact.valid" />
+  </form>
 </div>
 
-<app-buttons-homer-help [iconName]="'question_mark'" [idName]="'button-help'" [routerName]="'/help'" />
-<app-buttons-homer-help [iconName]="'undo'" [idName]="'button-home'" [routerName]="'/home'" />
+<app-nav-home-help />

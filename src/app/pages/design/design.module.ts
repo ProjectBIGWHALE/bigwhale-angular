@@ -7,11 +7,14 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { AltercolorComponent } from './altercolor/altercolor.component';
 import { ColorspaletteComponent } from './colorspalette/colorspalette.component';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { DesignComponent } from './design.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const importedComponents = [
   ColorspaletteComponent,
   AltercolorComponent,
+  DesignComponent
 ]
 
 @NgModule({
@@ -19,6 +22,7 @@ const importedComponents = [
   imports: [
     CommonModule,
     AppRoutingModule,
+    TranslateModule,
     ReactiveFormsModule,
     ComponentsModule
   ],

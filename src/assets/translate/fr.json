@@ -1,0 +1,129 @@
+{
+  "MENU": {
+    "DESIGN": "Conception",
+    "DOCUMENTS": "Documents",
+    "SECURITY": "Sécurité",
+    "SUPPORT": "Soutien"
+  },
+
+  "MENU_ABOUT": {
+    "TITLE": "À propos de nous",
+    "DESCRIPTION": "Notre équipe est passionnée par la programmation et dédiée à créer une expérience exceptionnelle pour nos utilisateurs. My big Whale a été construit avec soin et expertise en utilisant les langages Java et JavaScript. Ces technologies nous ont permis de créer une plateforme innovante et puissante pour la manipulation d'images et de documents. Notre objectif est d'offrir des outils d'édition alliant facilité d'utilisation et résultats professionnels, offrant à nos utilisateurs une expérience unique et productive. Nous cherchons toujours à améliorer et étendre My big Whale, en nous assurant qu'il est le choix idéal pour stimuler la créativité et le succès de nos clients."
+  },
+
+  "MENU_LOGO": {
+    "DESCRIPTION": "Votre palette de ressources pour améliorer les images et manipuler les documents."
+  },
+
+  "CARD": {
+    "Mudar cor de Imagem": "Changer la couleur de l'image",
+    "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.": "Vous pouvez facilement supprimer l'arrière-plan indésirable et obtenir des images avec transparence.",
+    "Gerar paleta de cores": "Générer une palette de couleurs",
+    "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design.": "Pour extraire automatiquement les couleurs principales de votre image et obtenir de l'inspiration pour vos projets de conception.",
+    "Gerar Certificado": "Générer un certificat",
+    "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.": "Vous pouvez créer des certificats personnalisés rapidement et facilement pour la reconnaissance et l'authentification.",
+    "Converter Imagem": "Convertir une image",
+    "Converta imagens em vários formatos de forma rápida e prática.": "Convertir des images en différents formats rapidement et facilement.",
+    "Converter ZIP": "Convertir ZIP",
+    "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!": "Convertir facilement un fichier .ZIP en un autre format de compression de votre choix !",
+    "Proteger Arquivos": "Protéger les fichiers",
+    "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.": "Protégez votre fichier en le cryptant et le décryptant avec une clé que vous seul connaissez.",
+    "Gerar QR-CODE": "Générer un code QR",
+    "Você pode gerar um QR-CODE personalizado com facilidade.": "Vous pouvez générer un code QR personnalisé facilement."
+  },
+
+  "MENU_CARROSSEL": {
+    "Design": "Conception",
+    "Documents": "Documents",
+    "Sécurité": "Sécurité"
+  },
+
+  "altercolor": {
+    "title": "Modificateur de couleurs d'image",
+    "colorSelectionLabel": "Couleur sélectionnée de l'image actuelle",
+    "newColorLabel": "Nouvelle couleur pour l'image mise à jour",
+    "clearButton": "Effacer",
+    "downloadButton": "Télécharger"
+  },"compactconverter": {
+    "title": "Convertir des fichiers ZIP",
+    "fileLabelText": "Sélectionnez un ou plusieurs fichiers ZIP",
+    "buttonTitle": "Fichier zip",
+    "errorMessage": "Sélectionnez un fichier ZIP",
+    "title2": "Sélectionnez le type de compression souhaité :",
+    "option": "Sélectionnez une option",
+    "selection": "Sélectionnez un type",
+    "output": "Sortie du fichier :",
+    "output2": "Aucune sélection"
+  },
+
+  "certificategenerator": {
+    "title": "Générateur de Certificats",
+    "description": "Vous pouvez créer des certificats personnalisés rapidement et facilement pour la reconnaissance et l'authentification.",
+    "type": "Sélectionnez le type de certificat :",
+    "participation": "Participation",
+    "speaker": "Conférencier",
+    "course": "Cours",
+    "info": "Remplissez les informations du certificat",
+    "archives": "Fichier avec les noms des participants",
+    "archivesCSV": "Fichier CSV",
+    "nameEvent": "Premiers Secours",
+    "errorEvent": "Le nom de l'événement est obligatoire",
+    "name": "Émilie Martin",
+    "office": "Directeur",
+    "errorName": "Le nom de l'organisateur est obligatoire",
+    "errorOffice": "La fonction de l'organisateur est obligatoire",
+    "dateformat": "22-03-2022",
+    "errorDate": "La date de l'événement est obligatoire",
+    "errorLocate": "Le champ Nom est obligatoire",
+    "locate": "São Paulo - SP",
+    "errorEmission": "Le lieu d'émission est obligatoire",
+    "model": "Choisissez le modèle du certificat :",
+    "certificate": "Certificat",
+    "number": "Veuillez saisir uniquement des chiffres",
+    "examplecertificate": "Exemple de Certificat"
+},
+
+
+  "qrcodegenerator": {
+    "title": "Générateur de code QR",
+    "selectType": "Sélectionnez le type",
+    "link": "Lien",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "urlLabel": "URL",
+    "corQR": "Choisissez la couleur du code QR :",
+    "Download": "Download"
+  },
+
+  "cryptograph": {
+    "title": "Renforcez la sécurité de vos fichiers",
+    "description": "Utilisez une clé de chiffrement robuste pour protéger votre document ou, si vous souhaitez déchiffrer le document, utilisez la clé correcte générée sur notre site pour accéder à son contenu original en toute sécurité.",
+    "upload": "Télécharger",
+    "chooseFile": "Choisir le fichier",
+    "fileRequiredError": "Il est obligatoire de sélectionner un fichier",
+    "enterPassword": "Saisissez le mot de passe :",
+    "passwordPlaceholder": "***************",
+    "showPassword": "Afficher le mot de passe",
+    "passwordRequiredError": "Mot de passe obligatoire",
+    "encrypt": "Chiffrer",
+    "decrypt": "Déchiffrer",
+    "selectOptionError": "Sélectionnez l'une des options",
+    "download": "Télécharger"
+  },
+
+  "button":{
+    "download": "download"
+
+  },
+  "input-file": {
+    "fileLabelText": "Description du Fichier",
+    "buttonTitle": "Sélectionner un Fichier",
+    "selectedFileMessage": "Fichier Sélectionné",
+    "errorRequireMessage": "Ce champ est obligatoire"
+  },
+  "input-field": {
+    "errorRequireMessage": "Ce champ est obligatoire"
+  }
+}
+
+

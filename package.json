@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
     "ionicons": "^7.2.1",
     "keen-slider": "^6.8.5",
     "rxjs": "~7.8.0",
@@ -32,12 +34,18 @@
     "@angular/cli": "~16.2.2",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "css-loader": "^6.8.1",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "style-loader": "^3.3.3",
     "typescript": "~5.1.3"
-  }
+  },
+  "description": "- Whale Design - Whale Documents - Whale Security",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

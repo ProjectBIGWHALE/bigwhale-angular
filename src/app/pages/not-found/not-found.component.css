@@ -1,0 +1,83 @@
+.not-fount__container{
+  background-color: #ffffff;
+  display: flex;
+border: 1px solid red;
+margin-top: 30px;
+min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+.not-fount__content{
+  margin-top: 30px;
+}
+.not-fount__headers{
+  display: flex;
+  flex-direction: row; /* Mantém flex-direction em row */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.not-fount__headers h1,
+.not-fount__headers h2 {
+  font-size: 4vw; /* Utiliza a unidade vw para ajustar o tamanho em relação à largura da viewport */
+}
+
+
+.not-fount__headers h1  {
+  color: #3F514A;
+}
+.not-fount__headers h2  {
+  color: #FF0000;
+}
+.headers-texts{
+  position: relative;
+  top: 10px;
+  display: flex;
+flex-direction: column;
+
+margin-right: 30px;
+justify-content: center;
+}
+.not-fount__headers img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner pai */
+  max-width: 600px;
+  margin-top: 20px;
+}
+.not-fount__context{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.not-fount__context h3 {
+  color: #3F514A;
+
+  margin-bottom: 10px;
+}
+.not-fount__context p {
+
+  margin-bottom: 10px;
+}
+.bt-content {
+  border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  font-size: 18px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .not-fount__headers {
+    flex-direction: column;
+  }
+  .not-fount__headers h1,
+.not-fount__headers h2 {
+  font-size: 10vw; /* Utiliza a unidade vw para ajustar o tamanho em relação à largura da viewport */
+}
+.not-fount__context{
+  text-align: center;
+}
+}

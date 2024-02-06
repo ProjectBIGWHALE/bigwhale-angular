@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from 'src/app/app-routing.module';
 
@@ -9,16 +9,15 @@ import { BooleanPipe } from 'src/app/pipes/booleanPipe/boolean.pipe';
 
 import { ButtonDownloadComponent } from './button-download/button-download.component';
 import { ButtonsHomeHelpComponent } from './buttons-home-help/buttons-home-help.component';
-import { LinesComponent } from './lines/lines.component';
 import { InputFileComponent } from './input-file/input-file.component';
 import { InputRadioComponent } from './input-radio/input-radio.component';
 import { InputFieldComponent } from './input-field/input-field.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const importedComponents = [
   ButtonDownloadComponent,
   ButtonsHomeHelpComponent,
-  LinesComponent,
   InputFileComponent,
   InputFieldComponent,
   InputRadioComponent,
@@ -32,6 +31,8 @@ const importedComponents = [
     CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    TranslateModule,
+    FormsModule
   ],
   exports: importedComponents
 })

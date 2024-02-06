@@ -6,17 +6,22 @@
     <app-menu-logo></app-menu-logo>
 </div>
 
-<div class="menu-carrossel">
-   
-
-    <app-menu-carrossel id="design"
+<div class="menu__carrossel" *ngFor="let page of pages; index as i">
+    <div class="carrossel-title__content" [id]="page.id">
+        <h2 class="page__title" >{{page.title}}</h2>
+    </div>
+    <div class="page__cards">
+        <div *ngFor="let card of page.cards; index as i" class="card">
+            <app-card [icon]="card.icon" [title]="card.title" [description]="card.description" [router]="card.router" />
+        </div>
+    </div>
+    <!-- 
+    <app-menu-carrossel
     *ngFor="let card of menus.funcoes"
-    title={{card.title}}
-    [cards]= card.cards
-
-    ></app-menu-carrossel>
-
-    
+    [title]="'MENU_CARROSSEL.' + card.title | translate"
+    [cards]="card.cards"
+  ></app-menu-carrossel>
+ -->
 
 </div>
 
@@ -26,17 +31,14 @@
 
 </div>
 
-<div class="collaborator">
+<div class="collaborator" id="collaborators">
 
-    
-    <app-collaborator *ngFor="let colaborador of colaboradores"
-    [name]="colaborador.nomeColaborador"
-    [photo]="colaborador.imgSrc"
-    [altText]="colaborador.altText"
-    [linkLinkedin]="colaborador.link"
-    ></app-collaborator>
 
-    
+    <app-collaborator *ngFor="let colaborador of colaboradores" [name]="colaborador.nomeColaborador"
+        [photo]="colaborador.imgSrc" [altText]="colaborador.altText"
+        [linkLinkedin]="colaborador.link"></app-collaborator>
+
+
 </div>
 
 <hr>

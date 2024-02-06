@@ -1,39 +1,39 @@
 <div class="certificate__container">
     <div class="certificate_description">
         <h1 class="content__title">
-            Gerador de certificados
+           {{'certificategenerator.title' | translate}}
         </h1>
         <h3 class="content__description">
-            Você pode criar certificados personalizados de forma rápida e fácil de para reconhecimento e autenticação.
+           {{'certificategenerator.description' | translate}}
         </h3>
     </div>
     <form class="form" [formGroup]="form" (ngSubmit)="submit()">
         <div class="form__container">
             <div class="certificate__content">
                 <div class="form-group">
-                    <h3>1. Selecione o tipo de certificado:</h3>
+                    <h3>1. {{'certificategenerator.type' | translate}}</h3>
                     <ul class="form-group__content">
                         <li>
-                            <app-input-radio 
+                            <app-input-radio
                                 [controlName]="form.get('certificateTypeEnum')"
-                                labelTitle="Participação"
+                                labelText=  "{{'certificategenerator.participation' |  translate}}"
                                 valueInput="PARTICIPATION"
                                 [isChecked]="true"
                                 inputId="participation"
                             />
                         </li>
                         <li>
-                            <app-input-radio 
+                            <app-input-radio
                                 [controlName]="form.get('certificateTypeEnum')"
-                                labelTitle="Palestrante"
+                                labelText="{{'certificategenerator.speaker' | translate}}"
                                 valueInput="SPEAKER"
                                 inputId="speaker"
                             />
                         </li>
                         <li>
-                            <app-input-radio 
+                            <app-input-radio
                                 [controlName]="form.get('certificateTypeEnum')"
-                                labelTitle="Curso"
+                                labelText="{{'certificategenerator.course'| translate}}"
                                 valueInput="COURCE"
                                 inputId="course"
                             />
@@ -42,69 +42,69 @@
                 </div>
                 <div class="form-group">
                     <h3>
-                        2. Preencha as informações do certificado
+                        2. {{'certificategenerator.info' | translate}}
                     </h3>
                     <app-input-file
-                        filelabelTitle="Adicionar arquivo com os nomes dos participantes"
-                        buttonTitle="Arquivo csv" 
+                        fileLabelText="{{'certificategenerator.archives'| translate}}"
+                        buttonTitle="Arquivo csv"
                         (fileContent)="onChangeFile($event)"
-                        errorMessage="Selecione algum arquivo csv"
+                        errorMessage="{{'Selecione um arquivo com extensão csv'| translate}}"
                         [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn"
-                        fileTypeAccept=".csv" 
+                        fileTypeAccept=".csv"
                     />
 
                     <app-input-field
                         [controlName]="form.get('eventName')"
-                        labelTitle="Nome do evento/curso:"
-                        placeholder="Primeiros socorros"
-                        errorMessage="Nome do evento é obrigatório"
+                        labelText="Nome do evento/curso:"
+                        placeholder="{{'certificategenerator.nameEvent' | translate}}"
+                        errorMessage="{{'certificategenerator.errorEvent' | translate}}"
                         [clickBtn]="clickBtn"
                         inputId="eventName"
                     />
 
                     <app-input-field
                         [controlName]="form.get('speakerName')"
-                        labelTitle="Nome do(a) organizador(a):"
-                        placeholder="José Maria"
-                        errorMessage="Nome do organizador é obrigatório"
+                        labelText="Nome do(a) organizador(a):"
+                        placeholder="{{'certificategenerator.name'| translate}}"
+                        errorMessage="{{'certificategenerator.errorName'| translate}}"
                         [clickBtn]="clickBtn"
                         inputId="speakerName"
                     />
 
                     <app-input-field
                         [controlName]="form.get('speakerRole')"
-                        labelTitle="Cargo do(a) organizador(a):"
-                        placeholder="Diretor"
-                        errorMessage="Cargo do organizador é obrigatório"
+                        labelText="Cargo do(a) organizador(a):"
+                        placeholder="{{'certificategenerator.office' | translate}}"
+                        errorMessage="{{'certificategenerator.errorOffice'| translate}}"
                         [clickBtn]="clickBtn"
                         inputId="speakerRole"
                     />
 
                     <app-input-field
                         [controlName]="form.get('eventWorkLoad')"
-                        labelTitle="Carga horária:"
+                        labelText="Carga horária:"
                         placeholder="120"
-                        errorMessage="Digite apenas números"
+                        errorMessage="{{'certificategenerator.number' | translate  }}"
                         [clickBtn]="clickBtn"
                         inputId="eventWorkLoad"
                         (changeInput)="form.value.eventWorkLoad"
                         validatorField="number"
                     />
-                    <app-input-field 
+                    <app-input-field
                         [controlName]="form.get('eventDate')"
-                        labelTitle="Data do evento/curso:"
-                        placeholder="22-03-2022"
-                        errorMessage="Data do evento é obrigatória"
+                        labelText="Data do evento/curso:"
+                        placeholder="{{'certificategenerator.dateformat'| translate}}"
+                        errorMessage="{{'certificategenerator.errorDate'| translate}}"
                         [clickBtn]="clickBtn"
                         inputId="eventDate"
                         (changeInput)="form.value.eventDate"
                         validatorField="date"
                     />
-                    <app-input-field labelTitle="Local de emissão do certificado:" 
+                    <app-input-field labelText="Local de emissão do certificado:"
                         [controlName]="form.get('eventLocale')"
-                        errorMessage="O campo Nome é obrigatório"
-                        placeholder="São Paulo - SP" 
-                        errorMessage="Local de emissão é obrigatório"
+                        errorMessage="{{'certificategenerator.errorLocate' | translate}}"
+                        placeholder="{{'certificategenerator.locate' | translate}}"
+                        errorMessage="{{'certificategenerator.errorEmission' | translate}}"
                         [clickBtn]="clickBtn"
                         inputId="eventLocale"
                     />
@@ -114,32 +114,32 @@
             <div class="certificate__content">
                 <div class="form-group">
                     <h3>
-                        3. Escolha o modelo do certificado:
+                        3. {{'certificategenerator.model' | translate}}
                     </h3>
                     <ul class="form-group__content">
                         <li>
-                            <app-input-radio 
+                            <app-input-radio
                                 [controlName]="form.get('certificateModelId')"
-                                labelTitle="Certificado 1"
+                                labelText="{{'certificategenerator.certificate' | translate}} 1"
                                 valueInput="1"
                                 [isChecked]="true"
                                 inputId="certificate1"
                                 />
                             </li>
                             <li>
-                                <app-input-radio 
+                                <app-input-radio
                                 [controlName]="form.get('certificateModelId')"
-                                labelTitle="Certificado 2"
+                                labelText="{{'certificategenerator.certificate' | translate}}  2"
                                 valueInput="2"
                                 inputId="certificate2"
-                            />    
+                            />
                         </li>
                     </ul>
                 </div>
                 <div class="certificate-preview__container ga-preview">
-                    <h3>Exemplo do Certificado</h3>
+                    <h3>{{'certificategenerator.examplecertificate' | translate}}</h3>
                     <div class="certificate-preview__content">
-                        <div class="certificate-view" 
+                        <div class="certificate-view"
                             [ngClass]="form.value.certificateModelId === '1' ? 'show-cetificate' : 'hide-certificate'">
                             <img class="certificate"
                             src="/assets/images/Certificado1_padrao.png" alt="Certificado 1 com titulo azul e um texto padrão">

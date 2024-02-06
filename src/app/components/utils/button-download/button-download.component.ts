@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-button-download',
@@ -11,9 +12,11 @@ export class ButtonDownloadComponent implements OnInit{
 
   @Input() isBtnValid!: boolean;
 
+  constructor(public translate: TranslateService) {}
   ngOnInit(): void {
-      
+
   }
+
 
   onSubmit(){
     this.submitEmitter.emit();

@@ -9,6 +9,8 @@ import { CollaboratorComponent } from './collaborator/collaborator.component';
 import { MenuCarrosselComponent } from './menu-carrossel/menu-carrossel.component';
 import { NavHomeHelpComponent } from './nav-home-help/nav-home-help.component';
 import { LoadingComponent } from './loading/loading.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LoadingComponent } from './loading/loading.component';
   imports: [
     CommonModule,
     UtilsModule,
-    ReactiveFormsModule
+    TranslateModule,
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   exports: [
     UtilsModule,

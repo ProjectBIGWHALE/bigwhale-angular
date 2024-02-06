@@ -1,0 +1,71 @@
+.colorspallete__container {
+  flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    padding: 2em;
+
+
+  }
+
+.colorspallete__headers{
+    text-align: center   ;
+ margin-bottom: 4%;
+ margin-top: 4%;
+}
+.colorspallete__headers > h1{
+margin-bottom: 10px;
+}
+.colorspallete__headers > h3{
+margin-bottom: 10px;
+font-weight: normal;
+}
+form {
+  display: block;
+  margin-top: 0;
+}
+.colorspallete__form-group label.custom-button{
+background: #25BFBF;
+color: #fff;
+transition: background 0.3s ease;
+}
+
+.colorspallete__form-group label{
+font-size: 32px;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+padding: 10px;
+border-radius: 3px;
+cursor: pointer;
+  }
+#uploadForm  p{
+border: 2px dotted #25BFBF;
+text-align: center;
+margin: -1px -22% 0px -14%;
+padding: 15px 0;
+}
+
+.colorspallete__img img {
+position: absolute;
+bottom: 10%;
+width: 25%;
+left: 2%;
+opacity: 0.5;
+}
+
+
+app-nav-home-help {
+      height: 60px;
+    }
+
+    /* Media Query para ajustes em telas menores */
+@media screen and (max-width: 768px) {
+      .colorspallete__container {
+        padding: 1em;
+      }
+.colorspallete__headers {
+      margin-bottom: 2%;
+      margin-top: 2%;
+      }
+
+
+    }

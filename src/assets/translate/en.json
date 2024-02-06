@@ -1,0 +1,137 @@
+
+
+  {
+    "MENU": {
+    "DESIGN": "Design",
+    "DOCUMENTS": "Documents",
+    "SECURITY": "Security",
+    "SUPPORT": "Support"
+    },
+
+    "MENU_ABOUT": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "Our team is passionate about programming and dedicated to creating an exceptional experience for our users. My Big Whale has been built with utmost care and expertise using Java and JavaScript languages. These technologies have enabled us to create an innovative and powerful platform for image and document manipulation. Our goal is to provide editing tools that blend ease of use with professional results, offering our users a unique and productive experience. We are constantly striving to enhance and expand My Big Whale, ensuring it is the ideal choice to boost the creativity and success of our customers."
+    },
+
+    "MENU_LOGO": {
+    "DESCRIPTION": "Your palette of features to enhance images and manipulate documents."
+    },
+
+
+
+    "MENU_CARROSSEL": {
+      "Design": "Design",
+      "Documentos": "Documents",
+      "Segurança": "Security"
+
+    },
+      "CARD": {
+        "Mudar cor de Imagem": "Change Image Color",
+        "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.": "You can easily remove the unwanted background and get images with transparency.",
+        "Gerar paleta de cores": "Generate Color Palette",
+        "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design.": "To automatically extract the main colors from your image and get inspiration for your design projects.",
+        "Gerar Certificado": "Generate Certificate",
+        "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.": "You can create custom certificates quickly and easily for recognition and authentication.",
+        "Converter Imagem": "Convert Image",
+        "Converta imagens em vários formatos de forma rápida e prática.": "Convert images to various formats quickly and conveniently.",
+        "Converter ZIP": "Convert ZIP",
+        "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!": "Easily convert a .ZIP file to another compression format of your choice!",
+        "Proteger Arquivos": "Protect Files",
+        "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.": "Protect your file by encrypting and decrypting it with a key that only you know.",
+        "Gerar QR-CODE": "Generate QR Code",
+        "Você pode gerar um QR-CODE personalizado com facilidade.": "You can generate a custom QR code with ease."
+      },
+
+
+    "altercolor": {
+      "title": "Image Color Modifier",
+      "colorSelectionLabel": "Selected color from the current image",
+      "newColorLabel": "New color for the updated image",
+      "clearButton": "Clear",
+      "downloadButton": "Download"
+    },
+
+    "certificategenerator": {
+      "title": "Certificate Generator",
+      "description": "You can create custom certificates quickly and easily for recognition and authentication.",
+      "type": "Select the certificate type:",
+      "participation": "Participation",
+      "speaker": "Speaker",
+      "course": "Course",
+      "info": "Fill in the certificate information",
+      "archives": "File with participant names",
+      "archivesCSV": "CSV File",
+      "nameEvent": "First Aid",
+      "errorEvent": "Event name is mandatory",
+      "name": "Michael Thomas",
+      "office": "Director",
+      "errorName": "Organizer name is mandatory",
+      "errorOffice": "Organizer's position is mandatory",
+      "dateformat": "03-22-2022",
+      "errorDate": "Event date is mandatory",
+      "errorLocate": "Name field is mandatory",
+      "locate": "São Paulo - SP",
+      "errorEmission": "Issuing location is mandatory",
+      "model": "Choose the certificate template:",
+      "certificate": "Certificate",
+      "number": "Enter only numbers",
+      "examplecertificate": "Certificate Example"
+  },
+
+    "compactconverter": {
+      "title": "Convert ZIP Files",
+      "fileLabelText": "Select one or more ZIP files",
+      "buttonTitle": "Zip file",
+      "errorMessage": "Select some ZIP file",
+      "title2": "Select the desired compression type:",
+      "option": "Select an option",
+      "selection": "Select a type",
+      "output": "File output:",
+      "output2": "No selection"
+    },
+
+    "qrcodegenerator": {
+      "title": "Create QR Code",
+      "selectType": "Select the type",
+      "link": "Link",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "urlLabel": "URL",
+      "corQR": "Choose the color of the QR Code:",
+      "Download": "Download"
+
+    },
+
+      "cryptograph": {
+        "title": "Enhance the security of your files",
+        "description": "Use a strong encryption key to protect your document or, if you want to decrypt the document, use the correct key generated on our site to access its original content with greater security.",
+        "upload": "upload",
+        "chooseFile": "Choose file",
+        "fileRequiredError": "It is mandatory to select a file",
+        "enterPassword": "Enter the password:",
+        "passwordPlaceholder": "***************",
+        "showPassword": "show-password",
+        "passwordRequiredError": "Password required",
+        "encrypt": "Encrypt",
+        "decrypt": "Decrypt",
+        "selectOptionError": "Select one of the options",
+        "download": "Download"
+      },
+
+      "button":{
+        "download": "download"
+
+      },
+      "input-file": {
+        "fileLabelText": "File Description",
+        "buttonTitle": "Select File",
+        "selectedFileMessage": "Selected File",
+        "errorRequireMessage": "This field is required"
+
+      },
+      "input-field": {
+          "errorRequireMessage": "This field is required"
+      }
+    }
+
+

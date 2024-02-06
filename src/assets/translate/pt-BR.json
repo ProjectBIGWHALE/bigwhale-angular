@@ -1,0 +1,141 @@
+{
+  "MENU":{
+    "DESIGN": "Design",
+    "DOCUMENTS": "Documentos",
+    "SECURITY": "Segurança",
+    "SUPPORT": "Apoie"
+  },
+
+  "MENU_ABOUT": {
+  "TITLE": "Sobre Nós",
+  "DESCRIPTION": "Nossa equipe é apaixonada por programação e dedicada a criar uma experiência excepcional para nossos usuários. O My big Whale foi construído com todo o cuidado e expertise utilizando as linguagens Java e JavaScript. Essas tecnologias nos permitiram criar uma plataforma inovadora e poderosa para a manipulação de imagens e documentos. Nosso objetivo é oferecer ferramentas de edição que combinem facilidade de uso com resultados profissionais, proporcionando aos nossos usuários uma experiência única e produtiva. Estamos sempre em busca de aprimorar e expandir o My big Whale, garantindo que ele seja a escolha ideal para impulsionar a criatividade e o sucesso de nossos clientes."
+
+
+},
+
+"MENU_LOGO": {
+  "DESCRIPTION": "Sua paleta de recursos para aprimorar imagens e manipular documentos."
+},
+
+ "CARD": {
+  "Mudar cor de Imagem": "Mudar cor de Imagem",
+  "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.": "Você pode facilmente retirar o plano de fundo indesejado e obter imagens com transparência.",
+  "Gerar paleta de cores": "Gerar paleta de cores",
+  "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design.": "Para extrair automaticamente as cores principais da sua imagem e obter inspiração para os seus projetos de design",
+
+  "Gerar Certificado": "Gerar Certificado",
+  "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.": "Você pode criar certificados personalizados de forma rápida e fácil para reconhecimento e autenticação.",
+
+  "Converter Imagem": "Converter Imagem",
+  "Converta imagens em vários formatos de forma rápida e prática.": "Converta imagens em vários formatos de forma rápida e prática.",
+
+  "Converter ZIP": "Converter ZIP",
+  "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!": "Converta facilmente um arquivo .ZIP em outro formato de compressão do seu interesse!",
+
+
+  "Proteger Arquivos": "Proteger Arquivos",
+  "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.": "Proteja seu arquivo criptografando e descriptografando-o com uma chave que ninguém mais conhece.",
+  "Gerar QR-CODE": "Gerar QR-CODE ",
+  "Você pode gerar um QR-CODE personalizado com facilidade.": "Você pode gerar um QR-CODE personalizado com facilidade."
+ },
+
+ "MENU_CARROSSEL": {
+  "Design": "Design",
+  "Documentos": "Documentos",
+  "Segurança": "Segurança"
+},
+
+  "altercolor": {
+    "title": "Modificador de cores em imagem",
+    "colorSelectionLabel": "Cor selecionada da imagem atual",
+    "newColorLabel": "Nova cor para imagem atualizada",
+    "clearButton": "Limpar",
+    "downloadButton": "Download"
+  },
+
+  "certificategenerator": {
+    "title": "Gerador de certificados",
+    "description" : "Você pode criar certificados personalizados de forma rápida e fácil de para reconhecimento e autenticação.",
+    "type" : " Selecione o tipo de certificado:",
+    "participation": "Participação",
+    "speaker": "Palestrante",
+    "course": "Curso",
+    "info":"Preencha as informações do certificado",
+    "archives": "Arquivo com os nomes dos participantes",
+    "archivesCSV": "Arquivo csv",
+    "nameEvent": "Primeiros socorros",
+    "errorEvent": "Nome do evento é obrigatório",
+    "name": "Jose Maria",
+    "office": "Diretor",
+    "errorName": "Nome do organizador é obrigatório",
+    "errorOffice": "Cargo do organizador é obrigatório",
+    "dateformat": "22/03/2022",
+    "errorDate": "Data do evento é obrigatória",
+    "errorLocate": "O campo Nome é obrigatório",
+    "locate":"São Paulo - SP",
+    "errorEmission": "Local de emissão é obrigatório",
+
+    "model": "Escolha o modelo do certificado:",
+    "certificate": "Certificado",
+    "examplecertificate": "Exemplo do Certificado"
+    },
+
+
+  "compactconverter": {
+    "title": "Converter arquivos ZIP",
+  "fileLabelText": "Selecione um ou mais arquivos ZIP",
+  "buttonTitle": "Arquivo zip ",
+  "errorMessage": "Selecione algum arquivo zip",
+  "title2": " Selecione o tipo da compressão desejada:",
+  "opção": "Selecione uma opção ",
+  "selecao": "Selecione um tipo",
+  "output": "Saida do arquivo:",
+  "output2": "Sem seleção"
+  },
+
+
+"qrcodegenerator": {
+  "title": "Criar QR Code",
+  "selectType": "Selecione o tipo",
+  "link": "Link",
+  "email": "E-mail",
+  "whatsapp": "WhatsApp",
+  "urlLabel": "URL",
+  "corQR": "Escolha a cor do QR Code:",
+  "Download": "Download"
+},
+
+
+  "cryptograph": {
+    "title": "Aumente a segurança de seus arquivos",
+    "description": "Utilize uma chave de criptografia forte para proteger o seu documento ou, se você quiser descriptografar o documento, utilize a chave correta que foi gerada no nosso site para acessar o seu conteúdo original com maior segurança.",
+    "upload": "upload",
+    "chooseFile": "Escolher arquivo",
+    "fileRequiredError": "É obrigatório selecionar um arquivo",
+    "enterPassword": "Insira a senha:",
+    "passwordPlaceholder": "***************",
+    "showPassword": "show-password",
+    "passwordRequiredError": "Senha obrigatória",
+    "encrypt": "Criptografar",
+    "decrypt": "Descriptografar",
+    "selectOptionError": "Selecione uma das opções",
+    "download": "Download"
+  },
+
+
+  "button":{
+    "download": "download"
+
+  },
+
+  "input-file": {
+  "fileLabelText": "Descrição do Arquivo",
+    "buttonTitle": "Selecionar Arquivo",
+    "selectedFileMessage": "Arquivo Selecionado",
+    "errorRequireMessage": "Esse campo é obrigatorio"
+  },
+  "input-field": {
+    "errorRequireMessage": "Esse campo é obrigatorio"
+  }
+}
+

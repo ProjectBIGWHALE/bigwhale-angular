@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CompactService } from '../../../services/compact.service';
 import { Compact } from 'src/app/models/Compact.interface';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-compactconverter',
@@ -15,7 +16,7 @@ export class CompactconverterComponent implements OnInit{
 
   selectClick:boolean = false;
 
-  constructor(private fb: FormBuilder, private compactService: CompactService){};
+  constructor(private fb: FormBuilder, private compactService: CompactService, public translate: TranslateService){};
 
   ngOnInit(): void {
       this.formCompact = this.fb.group({
@@ -24,14 +25,14 @@ export class CompactconverterComponent implements OnInit{
       })
   }
 
-  onChangeFile(fileContent: FileList | null){ 
+  onChangeFile(fileContent: FileList | null){
     if(fileContent === null ) return  fileContent;
     return this.formCompact.patchValue({
       files: fileContent
-    })    
+    })
   }
-  
-    onChangeSelect(event: any){     
+
+    onChangeSelect(event: any){
       this.formCompact.patchValue({
         outputFormat: event.target.value
       })
@@ -40,22 +41,22 @@ export class CompactconverterComponent implements OnInit{
     showFiles(files: FileList){
       const names: string[] =[];
       for(let i = 0; i < files.length; i++){
-        let name = files[i].name; 
+        let name = files[i].name;
         name = name.replace('.zip', `.${this.formCompact.value.outputFormat}`);
         names.push(`${name}`)
       }
       return names;
     }
-  
+
   onSubmit(){
     this.clickBtn = true;
     if(this.formCompact.valid){
-      const formValues: Compact = this.formCompact.value  
-        
+      const formValues: Compact = this.formCompact.value
+
       this.compactService.downloadFileCompact(formValues).
         subscribe({
           next: (res: any) =>{
-            const blob = new Blob([res], { type: `application/json`});            
+            const blob = new Blob([res], { type: `application/json`});
             const urlDownload = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = urlDownload;
@@ -65,7 +66,7 @@ export class CompactconverterComponent implements OnInit{
             window.URL.revokeObjectURL(urlDownload);
           },
           error: err => console.error(err)
-          
+
         })
     }
   }
