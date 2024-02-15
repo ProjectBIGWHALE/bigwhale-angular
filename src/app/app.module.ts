@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
-
 
 import { AppRoutingModule } from './app-routing.module';
 //modulos de importações
@@ -24,6 +22,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpErrorInterceptor } from './interceptor/HttpErrorInterceptor';
 import { ServiceUnavailableComponent } from './pages/service-unavailable/service-unavailable.component';
 //import { LanguageInterceptor } from './interceptor/language.interceptor';
+
+// Gerenciar como as URLs são manipuladas no aplicativo.
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -50,9 +51,11 @@ import { ServiceUnavailableComponent } from './pages/service-unavailable/service
         deps: [HttpClient],
       },
     }),
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+    { provide: LocationStrategy, useClass: HashLocationStrategy},
 
   ],
   bootstrap: [AppComponent]
