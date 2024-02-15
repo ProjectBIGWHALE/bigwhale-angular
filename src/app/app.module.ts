@@ -26,6 +26,9 @@ import { ServiceUnavailableComponent } from './pages/service-unavailable/service
 // Gerenciar como as URLs são manipuladas no aplicativo.
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +55,8 @@ import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/c
       },
     }),
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    MatDatepickerModule
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy},

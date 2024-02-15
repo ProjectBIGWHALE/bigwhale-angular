@@ -62,7 +62,7 @@ export class CompactconverterComponent implements OnInit{
             link.href = urlDownload;
             link.download = `file.${formValues.outputFormat}`;
             link.click();
-            document.removeChild(link);
+            link.remove(); 
             window.URL.revokeObjectURL(urlDownload);
           },
           error: err => console.error(err)

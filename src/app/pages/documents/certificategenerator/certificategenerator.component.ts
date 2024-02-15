@@ -28,13 +28,12 @@ export class CertificategeneratorComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       certificateTypeEnum: ['PARTICIPATION', Validators['required']],
-      worksheet: ['', Validators['required']],
+      csvFile: ['', Validators['required']],
       eventName: ['', Validators['required']],
       speakerName: ['', Validators['required']],
       speakerRole: ['', Validators['required']],
       eventWorkLoad: ['', Validators['required']],
       eventDate: ['', Validators['required']],
-      dateIssue: [''],
       eventLocale: ['', Validators['required']],
       certificateModelId: ['1', Validators['required']],
     });
@@ -42,17 +41,30 @@ export class CertificategeneratorComponent implements OnInit {
 
   onChangeFile(selectedFile: File): void{
      this.form.patchValue({
-      worksheet: selectedFile,
+      csvFile: selectedFile,
      });
   }
 
   onClick(){
-    return document.getElementById("worksheet")?.click();
+    return document.getElementById("csvFile")?.click();
+  }
+
+  formatDate(date: string): string {
+    // Formato esperado: DD/MM/AAAA
+    const parts = date.split('/');
+    const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+    return formattedDate;
   }
 
   submit(){
     this.clickBtn = true;
     if(this.form.valid){
+      // Formata a data antes de enviar para a API
+      const formattedDate = this.formatDate(this.form.value.eventDate);
+      this.form.patchValue({
+        eventDate: formattedDate
+      });
+
       const formValues = this.form.value;
 
       this.certificateService.saveCertificate(formValues)
