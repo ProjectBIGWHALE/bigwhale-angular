@@ -8,14 +8,15 @@ import { Observable } from "rxjs";
 })
 
 export class CompactService{
-    private readonly urlApi:string = "http://localhost:8080/api/v1/documents/compactconverter";
+    //private readonly urlApi:string = "http://localhost:8080/api/v1/documents/zip-file-converter";
+    private readonly urlApi:string = "https://api.mybigwhale.com/api/v1/documents/zip-file-converter";
 
     constructor(private http: HttpClient){}
 
     downloadFileCompact(form: Compact): Observable<Compact>{
         const formData = new FormData();
         for(let i = 0; i < form.files.length; i++){
-            formData.append('files'+i, form.files[i]);
+            formData.append('files', form.files[i]);
         }        
         formData.append('outputFormat', form.outputFormat);
         
@@ -23,6 +24,7 @@ export class CompactService{
             this.urlApi, 
             formData,
             { responseType: 'blob' as 'json'}
-            )
+        )
     }
+    
 }
