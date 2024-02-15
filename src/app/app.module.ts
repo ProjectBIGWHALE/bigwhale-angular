@@ -23,12 +23,6 @@ import { HttpErrorInterceptor } from './interceptor/HttpErrorInterceptor';
 import { ServiceUnavailableComponent } from './pages/service-unavailable/service-unavailable.component';
 //import { LanguageInterceptor } from './interceptor/language.interceptor';
 
-// Gerenciar como as URLs são manipuladas no aplicativo.
-import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
-
-
-import { MatDatepickerModule } from '@angular/material/datepicker';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,14 +48,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
         deps: [HttpClient],
       },
     }),
-    ReactiveFormsModule,
-    CommonModule,
-    MatDatepickerModule
   ],
   providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy},
-
-  ],
+    { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
