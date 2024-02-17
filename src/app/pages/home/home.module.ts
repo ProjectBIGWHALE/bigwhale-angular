@@ -14,12 +14,12 @@ import { TranslateModule } from '@ngx-translate/core';
     MenuAboutComponent,
     MenuBarComponent,
     MenuLogoComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     CommonModule,
     TranslateModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   exports: [
     MenuAboutComponent,

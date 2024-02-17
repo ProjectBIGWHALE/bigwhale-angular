@@ -3,7 +3,7 @@
     flex-direction: column;
     color: var(--label-color);
     gap: .2rem;
-    margin: 1rem 0;
+    margin: .5em 0;
     align-items: center;
 }
 
@@ -12,12 +12,10 @@
     flex-direction: column;
     width: 100%;
     font-weight: 600;
-    margin-bottom: .5rem;
 }
 
 .btn-file{
     border: none;
-    margin-top: .25rem;
     cursor: pointer;
     padding: 4px 18px;
     font-size: 1rem;

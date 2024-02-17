@@ -11,18 +11,19 @@
         <h2 class="page__title" >{{page.title}}</h2>
     </div>
     <div class="page__cards">
-        <div *ngFor="let card of page.cards; index as i" class="card">
-            <app-card [icon]="card.icon" [title]="card.title" [description]="card.description" [router]="card.router" />
+        <div *ngFor="let card of page.cards; index as j" class="card" [ngClass]="{'active': card.id-1 === currentIndex[j]}">
+                <app-card
+                [icon]="card.icon" 
+                [title]="card.title" 
+                [description]="card.description" 
+                [router]="card.router" 
+                />
         </div>
     </div>
-    <!-- 
-    <app-menu-carrossel
-    *ngFor="let card of menus.funcoes"
-    [title]="'MENU_CARROSSEL.' + card.title | translate"
-    [cards]="card.cards"
-  ></app-menu-carrossel>
- -->
-
+    <div class="carrossel__controlls">
+        <button type="button" (click)="nextCard(i, page.cards.length)">proximo</button>
+        <button type="button">anterior</button>
+    </div>
 </div>
 
 
@@ -33,11 +34,9 @@
 
 <div class="collaborator" id="collaborators">
 
-
     <app-collaborator *ngFor="let colaborador of colaboradores" [name]="colaborador.nomeColaborador"
         [photo]="colaborador.imgSrc" [altText]="colaborador.altText"
         [linkLinkedin]="colaborador.link"></app-collaborator>
-
 
 </div>
 

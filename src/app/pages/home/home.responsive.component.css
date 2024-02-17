@@ -1,0 +1,51 @@
+@media screen and (max-width: 816px){
+    .menu-bar{
+        display: none;
+    }
+
+    .page__cards{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        gap: 0;
+    }
+
+    /* .card{
+        width: 100%;
+    } */
+
+    .card {
+        width: 100%;
+        padding: 20px;
+        margin: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        /* display: none; */
+      }
+
+    .container__footer{
+        padding: 0;
+    }
+
+    .menu__carrossel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card.active {
+        display: block;
+      }
+      
+      .controls {
+        margin-top: 20px;
+      }
+      
+      button {
+        padding: 5px 10px;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+
+}

@@ -28,6 +28,8 @@ export class CertificategeneratorComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       certificateTypeEnum: ['PARTICIPATION', Validators['required']],
+      certificateModelId: ['1', Validators['required']],
+      worksheet: ['', Validators['required']],
       csvFile: ['', Validators['required']],
       eventName: ['', Validators['required']],
       speakerName: ['', Validators['required']],
@@ -35,7 +37,6 @@ export class CertificategeneratorComponent implements OnInit {
       eventWorkLoad: ['', Validators['required']],
       eventDate: ['', Validators['required']],
       eventLocale: ['', Validators['required']],
-      certificateModelId: ['1', Validators['required']],
     });
   }
 

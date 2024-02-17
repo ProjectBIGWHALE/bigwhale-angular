@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent {
+export class CardComponent implements OnInit{
 
   @Input()
   icon: string =''
@@ -15,8 +15,14 @@ export class CardComponent {
   @Input()
   description: string=''
   @Input()
-  router:string = ''
+  router:string = '';
+
+
 
 
   constructor(public translate: TranslateService) {}
+
+  ngOnInit(): void {  
+  }
+  
 }

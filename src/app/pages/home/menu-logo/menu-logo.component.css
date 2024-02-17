@@ -15,18 +15,22 @@
 
 }
 
+.logo{
+    width: 100%;
+}
+
 
 
 @media screen and (max-width: 500px){
 
-    .logo{
+    .logo__content{
         display: flex;
         justify-content: center;
-        
+        align-items: center;
     }
-    .logo img{
+    .logo{
        
-        width: 87%;
+        width: 100%;
         margin-top: 1em;
         margin-left: 0;
     }
