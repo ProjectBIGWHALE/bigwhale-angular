@@ -18,6 +18,7 @@ export class MenuCarrosselComponent implements OnInit  {
 
   @Input()
   cards: CardModel[] =[]
+
   cardLenth:number = 0
 
   numberCards:number = 0
@@ -45,9 +46,6 @@ export class MenuCarrosselComponent implements OnInit  {
       console.log('ok');
       
   }
-
-  console.log(this.numberCards)
-
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
       loop: true,
 

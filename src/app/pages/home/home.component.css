@@ -53,8 +53,14 @@
     justify-content: center;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
 }
 
 .card{
+    /* min-width: 20rem; */
     width: 20rem;
+}
+
+.carrossel__controlls{
+    display: none;
 }
