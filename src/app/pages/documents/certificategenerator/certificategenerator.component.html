@@ -49,7 +49,7 @@
                         buttonTitle="Arquivo csv"
                         (fileContent)="onChangeFile($event)"
                         errorMessage="{{'Selecione um arquivo com extensão csv'| translate}}"
-                        [isSelected]="form.get('worksheet')?.errors?.['required'] && clickBtn"
+                        [isSelected]="form.get('csvFile')?.errors?.['required'] && clickBtn"
                         fileTypeAccept=".csv"
                     />
 

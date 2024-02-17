@@ -8,7 +8,8 @@ import { Certificate } from 'src/app/models/Certificate.interface';
 })
 export class CertificateService{
     
-    private readonly urlApi:string = "http://localhost:8080/api/v1/documents/certificategenerator";
+    //private readonly urlApi:string = "http://localhost:8080/api/v1/documents/certificate-generator";
+    private readonly urlApi:string = "https://api.mybigwhale.com/api/v1/documents/certificate-generator"
 
     private loadingSubject = new BehaviorSubject<boolean>(false);
     public loading$ = this.loadingSubject.asObservable();
@@ -17,12 +18,17 @@ export class CertificateService{
 
     saveCertificate(form: Certificate):Observable<Certificate>{
         //iniciar o loading 
+
         this.loadingSubject.next(true);
 
         form.dateIssue = this.getDateIssue();        
 
         const formData = new FormData();
                 
+        this.loadingSubject.next(true);       
+
+        const formData = new FormData();
+        formData.append('csvFile', form.csvFile);
         formData.append('certificateTypeEnum', form.certificateTypeEnum);
         formData.append('certificateModelId', form.certificateModelId.toString());
         formData.append('csvFileDto', form.worksheet, form.worksheet.name);
@@ -31,7 +37,6 @@ export class CertificateService{
         formData.append('speakerRole', form.speakerRole);
         formData.append('eventWorkLoad', form.eventWorkLoad);
         formData.append('eventDate', form.eventDate);
-        formData.append('dateIssue', form.dateIssue);
         formData.append('eventLocale', form.eventLocale);
         
         return this.http.post<Certificate>(this.urlApi, formData, {
