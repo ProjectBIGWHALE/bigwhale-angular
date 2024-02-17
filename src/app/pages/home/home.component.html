@@ -33,6 +33,7 @@
 </div>
 
 <div class="collaborator" id="collaborators">
+
     <app-collaborator *ngFor="let colaborador of colaboradores" [name]="colaborador.nomeColaborador"
         [photo]="colaborador.imgSrc" [altText]="colaborador.altText"
         [linkLinkedin]="colaborador.link"></app-collaborator>
