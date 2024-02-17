@@ -51,6 +51,10 @@ ul:is(.form-group, .form-group__content) {
     margin: 1rem 0;
 }
 
+.form-title{
+    margin-bottom: .5rem;
+}
+
 .certificate__content{
     width: 100%;
     display: flex;

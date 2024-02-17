@@ -19,11 +19,13 @@ export class CertificateService{
         //iniciar o loading 
         this.loadingSubject.next(true);
 
-        form.dateIssue = this.getDateIssue();
+        form.dateIssue = this.getDateIssue();        
 
         const formData = new FormData();
-        formData.append('csvFileDto', form.worksheet, form.worksheet.name);
+                
         formData.append('certificateTypeEnum', form.certificateTypeEnum);
+        formData.append('certificateModelId', form.certificateModelId.toString());
+        formData.append('csvFileDto', form.worksheet, form.worksheet.name);
         formData.append('eventName', form.eventName);
         formData.append('speakerName', form.speakerName);
         formData.append('speakerRole', form.speakerRole);
@@ -31,7 +33,6 @@ export class CertificateService{
         formData.append('eventDate', form.eventDate);
         formData.append('dateIssue', form.dateIssue);
         formData.append('eventLocale', form.eventLocale);
-        formData.append('certificateModelId', form.certificateModelId.toString());
         
         return this.http.post<Certificate>(this.urlApi, formData, {
             responseType: 'blob' as 'json',  // Indica que a resposta é um blob (arquivo)
@@ -49,7 +50,7 @@ export class CertificateService{
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
-        const dateIssue = `${this.addZero(day)}-${this.addZero(month)}-${year}`;
+        const dateIssue = `${year}-${this.addZero(month)}-${this.addZero(day)}`;
         return dateIssue;
     }
 

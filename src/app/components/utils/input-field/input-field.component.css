@@ -3,7 +3,7 @@
     flex-direction: column;
     color: var(--label-color);
     gap: 0.25rem;
-    margin: 1rem 0;
+    margin: .5rem 0;
 }
 
 .label-title{

@@ -3,7 +3,7 @@
         <h1 class="content__title">
            {{'certificategenerator.title' | translate}}
         </h1>
-        <h3 class="content__description">
+        <h3 class="form-title" class="content__description">
            {{'certificategenerator.description' | translate}}
         </h3>
     </div>
@@ -11,7 +11,7 @@
         <div class="form__container">
             <div class="certificate__content">
                 <div class="form-group">
-                    <h3>1. {{'certificategenerator.type' | translate}}</h3>
+                    <h3 class="form-title">1. {{'certificategenerator.type' | translate}}</h3>
                     <ul class="form-group__content">
                         <li>
                             <app-input-radio
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
                 <div class="form-group">
-                    <h3>
+                    <h3 class="form-title">
                         2. {{'certificategenerator.info' | translate}}
                     </h3>
                     <app-input-file
@@ -55,7 +55,7 @@
 
                     <app-input-field
                         [controlName]="form.get('eventName')"
-                        labelText="Nome do evento/curso:"
+                        textLabel="Nome do evento/curso:"
                         placeholder="{{'certificategenerator.nameEvent' | translate}}"
                         errorMessage="{{'certificategenerator.errorEvent' | translate}}"
                         [clickBtn]="clickBtn"
@@ -64,7 +64,7 @@
 
                     <app-input-field
                         [controlName]="form.get('speakerName')"
-                        labelText="Nome do(a) organizador(a):"
+                        textLabel="Nome do(a) organizador(a):"
                         placeholder="{{'certificategenerator.name'| translate}}"
                         errorMessage="{{'certificategenerator.errorName'| translate}}"
                         [clickBtn]="clickBtn"
@@ -73,7 +73,7 @@
 
                     <app-input-field
                         [controlName]="form.get('speakerRole')"
-                        labelText="Cargo do(a) organizador(a):"
+                        textLabel="Cargo do(a) organizador(a):"
                         placeholder="{{'certificategenerator.office' | translate}}"
                         errorMessage="{{'certificategenerator.errorOffice'| translate}}"
                         [clickBtn]="clickBtn"
@@ -82,9 +82,9 @@
 
                     <app-input-field
                         [controlName]="form.get('eventWorkLoad')"
-                        labelText="Carga horária:"
+                        textLabel="Carga horária:"
                         placeholder="120"
-                        errorMessage="{{'certificategenerator.number' | translate  }}"
+                        errorMessage="{{'Somente números' | translate  }}"
                         [clickBtn]="clickBtn"
                         inputId="eventWorkLoad"
                         (changeInput)="form.value.eventWorkLoad"
@@ -92,15 +92,16 @@
                     />
                     <app-input-field
                         [controlName]="form.get('eventDate')"
-                        labelText="Data do evento/curso:"
+                        textLabel="Data do evento/curso:"
                         placeholder="{{'certificategenerator.dateformat'| translate}}"
                         errorMessage="{{'certificategenerator.errorDate'| translate}}"
                         [clickBtn]="clickBtn"
                         inputId="eventDate"
                         (changeInput)="form.value.eventDate"
                         validatorField="date"
+                        inputType="date"
                     />
-                    <app-input-field labelText="Local de emissão do certificado:"
+                    <app-input-field textLabel="Local de emissão do certificado:"
                         [controlName]="form.get('eventLocale')"
                         errorMessage="{{'certificategenerator.errorLocate' | translate}}"
                         placeholder="{{'certificategenerator.locate' | translate}}"
@@ -113,7 +114,7 @@
 
             <div class="certificate__content">
                 <div class="form-group">
-                    <h3>
+                    <h3 class="form-title">
                         3. {{'certificategenerator.model' | translate}}
                     </h3>
                     <ul class="form-group__content">
@@ -137,7 +138,7 @@
                     </ul>
                 </div>
                 <div class="certificate-preview__container ga-preview">
-                    <h3>{{'certificategenerator.examplecertificate' | translate}}</h3>
+                    <h3 class="form-title">{{'certificategenerator.examplecertificate' | translate}}</h3>
                     <div class="certificate-preview__content">
                         <div class="certificate-view"
                             [ngClass]="form.value.certificateModelId === '1' ? 'show-cetificate' : 'hide-certificate'">
@@ -156,4 +157,3 @@
 </div>
 <app-nav-home-help />
 <app-loading [isLoading]="certificateService.loading$ | async"/>
-<!-- <app-loading [isLoading]="true"/> -->
