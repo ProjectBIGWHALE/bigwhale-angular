@@ -1,3 +1,16 @@
+.container {
+    min-width: 360px;
+    margin: 0 32px;
+    padding: 0 2em; /* Adicionando espaço de 20px nas laterais */
+    /*background-color: #ADEAEA; */
+    
+}
+
+.menu-bar, .menu-logo, .menu-about, .menu__carrossel, .collaborator{
+    margin-top: 2em; /* Adicionando margem superior para os elementos específicos */
+}
+
+
 .menu-logo{
     margin-top: 5em;
 }

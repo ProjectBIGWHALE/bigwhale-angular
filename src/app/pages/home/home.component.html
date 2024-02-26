@@ -1,48 +1,51 @@
-<div class="menu-bar">
-    <app-menu-bar></app-menu-bar>
-</div>
-
-<div class="menu-logo">
-    <app-menu-logo></app-menu-logo>
-</div>
-
-<div class="menu__carrossel" *ngFor="let page of pages; index as i">
-    <div class="carrossel-title__content" [id]="page.id">
-        <h2 class="page__title" >{{page.title}}</h2>
+<div class="container">
+        
+    <div class="menu-bar">
+        <app-menu-bar></app-menu-bar>
     </div>
-    <div class="page__cards">
-        <div *ngFor="let card of page.cards; index as j" class="card" [ngClass]="{'active': card.id-1 === currentIndex[j]}">
-                <app-card
-                [icon]="card.icon" 
-                [title]="card.title" 
-                [description]="card.description" 
-                [router]="card.router" 
-                />
+
+    <div class="menu-logo">
+        <app-menu-logo></app-menu-logo>
+    </div>
+
+    <div class="menu__carrossel" *ngFor="let page of pages; index as i">
+        <div class="carrossel-title__content" [id]="page.id">
+            <h2 class="page__title" >{{page.title}}</h2>
+        </div>
+        <div class="page__cards">
+            <div *ngFor="let card of page.cards; index as j" class="card" [ngClass]="{'active': card.id-1 === currentIndex[j]}">
+                    <app-card
+                    [icon]="card.icon" 
+                    [title]="card.title" 
+                    [description]="card.description" 
+                    [router]="card.router" 
+                    />
+            </div>
+        </div>
+        <div class="carrossel__controlls">
+            <button type="button" (click)="nextCard(i, page.cards.length)">proximo</button>
+            <button type="button">anterior</button>
         </div>
     </div>
-    <div class="carrossel__controlls">
-        <button type="button" (click)="nextCard(i, page.cards.length)">proximo</button>
-        <button type="button">anterior</button>
+
+
+    <div class="menu-about">
+        <app-menu-about></app-menu-about>
+
     </div>
+
+    <div class="collaborator" id="collaborators">
+
+        <app-collaborator *ngFor="let colaborador of colaboradores" [name]="colaborador.nomeColaborador"
+            [photo]="colaborador.imgSrc" [altText]="colaborador.altText"
+            [linkLinkedin]="colaborador.link"></app-collaborator>
+
+    </div>
+
+    <hr>
+
+    <footer class="container__footer">
+        <p>© Whale - 2023</p>
+        <p>contact mybigwhale.com</p>
+    </footer>
 </div>
-
-
-<div class="menu-about">
-    <app-menu-about></app-menu-about>
-
-</div>
-
-<div class="collaborator" id="collaborators">
-
-    <app-collaborator *ngFor="let colaborador of colaboradores" [name]="colaborador.nomeColaborador"
-        [photo]="colaborador.imgSrc" [altText]="colaborador.altText"
-        [linkLinkedin]="colaborador.link"></app-collaborator>
-
-</div>
-
-<hr>
-
-<footer class="container__footer">
-    <p>© Whale - 2023</p>
-    <p>contact mybigwhale.com</p>
-</footer>

@@ -3,7 +3,7 @@
 :root {
     --primary-color: #50c878;
     --secondary-color: #c9f2e3;
-    --label-color: #25bfbf;
+    --label-color: #25c1c1;
     --radio-hover: #158E8E;
     --bg-color: #f0faf3;
     --main-bg-color: #cdcdcd
@@ -22,7 +22,7 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 html{
-    background: var(--main-bg-color);
+    background: var(--secondary-color);
 }
 
 body{
