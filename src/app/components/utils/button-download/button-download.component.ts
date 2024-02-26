@@ -13,10 +13,7 @@ export class ButtonDownloadComponent implements OnInit{
   @Input() isBtnValid!: boolean;
 
   constructor(public translate: TranslateService) {}
-  ngOnInit(): void {
-
-  }
-
+  ngOnInit(): void {}
 
   onSubmit(){
     this.submitEmitter.emit();

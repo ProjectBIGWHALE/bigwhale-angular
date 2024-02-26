@@ -16,21 +16,27 @@
   background: #25BFBF;
   width: 200px;
   height: 63px;
-  transition: 0.2s;
+  transition: background-color 0.2s; /* Adicionando transição para a cor de fundo */
   color: #fff;
 }
 
+/* Adicionando estilo para quando o botão está desabilitado */
 .disabled {
   background-color: #506d6de5;
   cursor: default;
   color: #ffffff99;
 }
 
+.btn-download__container .btn:hover:enabled {
+  background: #1a9a9a; /* Nova cor de fundo ao passar o mouse */
+}
+
+
 @media screen and (max-width: 816px) {
   .btn {
-      border-radius: 50px;
-      font-size: 1rem;
-      width: 8rem;
-      height: 2.75rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    width: 8rem;
+    height: 2.75rem;
   }
 }
