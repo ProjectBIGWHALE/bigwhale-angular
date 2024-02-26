@@ -27,10 +27,9 @@ export class CertificategeneratorComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      certificateTypeEnum: ['PARTICIPATION', Validators['required']],
-      certificateModelId: ['1', Validators['required']],
-      worksheet: ['', Validators['required']],
       csvFile: ['', Validators['required']],
+      certificateTypeEnum: ['PARTICIPATION', Validators['required']],
+      certificateModelId: ['1', Validators['required']],      
       eventName: ['', Validators['required']],
       speakerName: ['', Validators['required']],
       speakerRole: ['', Validators['required']],
@@ -51,15 +50,30 @@ export class CertificategeneratorComponent implements OnInit {
   }
 
   formatDate(date: string): string {
+    console.log(date)
+    if (!date || date === 'undefined-undefined-undefined') {
+        return ''; // Retorna uma string vazia se a data for indefinida ou no formato inválido
+    }
+
+    // Verifica se a data está no formato (undefined-undefined-AAAA-MM-DD) e retorna apenas a parte correspondente à data
+    const parts = date.split('-');
+    if (parts.length === 4 && parts[3].length === 10) {
+        return parts[3];
+    }
+
     // Formato esperado: DD/MM/AAAA
-    const parts = date.split('/');
-    const formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+    if (parts.length !== 3) {
+        return ''; // Retorna uma string vazia se o formato da data for inválido
+    }
+
+    const formattedDate = `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
     return formattedDate;
-  }
+}
 
   submit(){
     this.clickBtn = true;
     if(this.form.valid){
+      
       // Formata a data antes de enviar para a API
       const formattedDate = this.formatDate(this.form.value.eventDate);
       this.form.patchValue({
