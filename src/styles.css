@@ -1,13 +1,13 @@
-
 /* Variáveis das cores principais */
 :root {
     --primary-color: #50c878;
     --secondary-color: #c9f2e3;
     --label-color: #25c1c1;
     --radio-hover: #158E8E;
-    --bg-color: #f0faf3;
-    --main-bg-color: #cdcdcd
+    --bg-color: #86e4d8;
+    --main-bg-color: #cdcdcd;
 }
+
 /* Como usar as variávais css: propriedade: var(nome-variável);
    exemplos:
      - em background -> background-color: var(--primary-color);
@@ -21,20 +21,22 @@
     scroll-behavior: smooth;
     font-family: "Roboto Condensed", sans-serif;
 }
-html{
-    background: var(--secondary-color);
+
+html {
+    background: var(--bg-color);
+    background: linear-gradient(90deg, var(--bg-color) 9%, var(--secondary-color) 40%, var(--secondary-color) 80%, var(--bg-color) 127%)
 }
 
-body{
+body {
     color: #0d0d0d;
     font-size: 16px;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.danger{
+.danger {
     color: #F00;
 }
 
@@ -45,11 +47,18 @@ ul{
     box-shadow: 0px 4px 4px 2px rgba(0, 43, 0, 0.25);
 }
 
-.enabled:hover{
+.enabled:hover {
     transition: 400ms ease;
     background-color: #17a7a7;
     box-shadow: 0px 3px 3px rgba(0, 43, 0, 0.25);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

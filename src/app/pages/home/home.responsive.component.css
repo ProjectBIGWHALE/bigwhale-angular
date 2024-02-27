@@ -18,9 +18,8 @@
         width: 100%;
         padding: 20px;
         margin: 10px;
-        background-color: #f0f0f0;
+        background-color: var(--bg-color);
         border-radius: 5px;
-        /* display: none; */
       }
 
     .container__footer{

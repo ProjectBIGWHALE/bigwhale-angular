@@ -16,7 +16,7 @@ export class CompactconverterComponent implements OnInit{
 
   selectClick:boolean = false;
 
-  constructor(private fb: FormBuilder, private compactService: CompactService, public translate: TranslateService){};
+  constructor(private fb: FormBuilder, protected compactService: CompactService, public translate: TranslateService){};
 
   ngOnInit(): void {
       this.formCompact = this.fb.group({

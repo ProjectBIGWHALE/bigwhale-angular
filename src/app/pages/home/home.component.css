@@ -1,7 +1,5 @@
 .container {
-    min-width: 360px;
-    margin: 0 32px;
-    padding: 0 2em; /* Adicionando espaço de 20px nas laterais */
+    /* min-width: 360px; */
     /*background-color: #ADEAEA; */
     
 }

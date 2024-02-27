@@ -2,7 +2,7 @@
   height: 25em;
   margin: 1.5em 0;
   border-radius: 8px;
-  background: #c9f2e3;
+  background: var(--secondary-color);
   box-shadow: 8px 8px 4px 0px #3f514a;
   transition: 0.3s;
   text-align: center;
