@@ -16,6 +16,18 @@ export class AltercolorComponent {
 
   }
 
+  onDragOver(event: DragEvent){
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  onDrop(event:DragEvent){
+    event.preventDefault();
+    event.stopPropagation();
+
+    console.log(event.dataTransfer?.files);
+    
+  }
+
   saveLanguage() {
     this.languageService.setLanguage(this.languageService.getLanguage());
   }
